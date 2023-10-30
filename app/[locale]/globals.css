@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.group:hover + .drop-menu-container {
+  overflow: visible;
+}
+.info-card h3 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}

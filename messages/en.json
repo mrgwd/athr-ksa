@@ -1,0 +1,437 @@
+{
+  "Index": {
+    "nav": {
+      "home": "Home",
+      "whoAreWe": "Who are we?",
+      "profile": {
+        "h1": "Our Work",
+        "op1": "Online stores",
+        "op2": "Web development",
+        "op3": "Social media"
+      },
+      "contact": "Contact"
+    },
+    "home": {
+      "heading": "With management system from",
+      "athr": "ATHR",
+      "paragraph1": "improve the beauty of your",
+      "paragraph2": "website and get a higher rate",
+      "paragraph3": "of appearance in search results.",
+      "mainButton": "Contact"
+    },
+    "about": {
+      "heading": "Who are we?",
+      "p1": "A leading institution in the software and e-marketing industry in the Middle East",
+      "p2": "We aims to help our distinguished partners from the entities, institutions and companies improve their visibility and lead them to leadership through innovative solutions using many tools and choosing the best tools to obtain the best results. Our goals are to contribute to building emerging projects and transforming ideas and dreams into tangible products. We improve your visibility on the Internet and social networking sites and make it easier to reach you. We help plan your campaigns and choose the appropriate platforms and the most appropriate tools. We develop your work methodology and be your creative partner and help you in progress and achievement."
+    },
+    "services": {
+      "heading": "Services",
+      "onlineStores": {
+        "subHeading": "Online stores",
+        "caption": "Athr Company has the best team in Internet marketing to manage advertising campaigns, thus ensuring professional management of your campaign",
+        "readMore": "Read More"
+      },
+      "webDev": {
+        "subHeading": "Web development",
+        "caption": "Athr Company has the best team in Internet marketing to manage advertising campaigns, thus ensuring professional management of your campaign",
+        "readMore": "Read More"
+      },
+      "socialMediaDesigns": {
+        "subHeading": "Social media",
+        "caption": "Athr Company has the best team in Internet marketing to manage advertising campaigns, thus ensuring professional management of your campaign",
+        "readMore": "Read More"
+      }
+    },
+    "features": {
+      "heading": "All in one",
+      "seOptmization": {
+        "subHeading": "Search Engine Optimization",
+        "caption": "As a web design company, we provide professional e-content writing service as one of the indirect marketing methods"
+      },
+      "manageAccounts": {
+        "subHeading": "Managing social media accounts",
+        "caption": "As a web design company, we provide professional e-content writing service as one of the indirect marketing methods"
+      },
+      "manageSponsors": {
+        "subHeading": "Advertising campaign management",
+        "caption": "As a web design company, we provide professional e-content writing service as one of the indirect marketing methods"
+      },
+      "designIdentities": {
+        "subHeading": "Visual identity design",
+        "caption": "As a web design company, we provide professional e-content writing service as one of the indirect marketing methods"
+      },
+      "graphicDesign": {
+        "subHeading": "Graphic design",
+        "caption": "As a web design company, we provide professional e-content writing service as one of the indirect marketing methods"
+      },
+      "writingContent": {
+        "subHeading": "Writing content and articles",
+        "caption": "As a web design company, we provide professional e-content writing service as one of the indirect marketing methods"
+      }
+    },
+    "howWeWork": {
+      "heading": "How we work",
+      "step1": {
+        "h1": "Study and analysis",
+        "p1": "● Study the current status of the trademark",
+        "p2": "● Study the content",
+        "p3": "● Analyis the website",
+        "p4": "● Analysis of competitors in the market"
+      },
+      "step2": {
+        "h1": "Building a strategy",
+        "p1": "● A strategy with specific timings",
+        "p2": "● Specific, measurable goals",
+        "p3": "● A clear and precise marketing plan",
+        "p4": "● Appropriate cost distribution"
+      },
+      "step3": {
+        "h1": "Implementation",
+        "p1": "● Distributing tasks to specialized teams",
+        "p2": "● Implementing the marketing plan",
+        "p3": "● Monitoring campaigns and their results",
+        "p4": "● Social media monitoring",
+        "p5": "● Improving advertising campaigns"
+      },
+      "step4": {
+        "h1": "Measure results",
+        "p1": "● Measuring the results of advertising campaigns",
+        "p2": "● Social media report",
+        "p3": "● Results of website visits",
+        "p4": "● Measuring results with the marketing plan"
+      }
+    },
+    "contact": {
+      "heading": "Contact",
+      "form": {
+        "formHeading": "Get your consultation",
+        "fullName": "Full name",
+        "email": "Email address",
+        "phoneNumber": "Phone number",
+        "detailes": "Details",
+        "sendButton": "Send"
+      },
+      "supportInfo": {
+        "address": {
+          "heading": "Address",
+          "address1": "Hafar Al-Batin - Al-Azizia neighborhood",
+          "address2": "Majmaah - Al-Marqab District"
+        },
+        "phoneNumber": {
+          "heading": "Phone Number",
+          "phoneNumber": "+966 506 354 147",
+          "workTimes": "9:00AM - 6:00PM"
+        },
+        "emailAddress": {
+          "heading": "Email",
+          "emailAddress": "Info@athr-sa.com",
+          "support": "24 x 7 support"
+        }
+      }
+    },
+    "footer": {
+      "heading": "All rights reserved © ATHR",
+      "commercialRegister": "Commercial register: 2511020210"
+    },
+    "OS": {
+      "heading": "Online Stores",
+      "describtion": "Athar Foundation provides comprehensive and professional electronic marketing services, whether for mobile applications or electronic accounts on Instagram, YouTube, Twitter, or Facebook.",
+      "plans": {
+        "pop": "Popular",
+        "heading": "Pricing",
+        "currency": "SAR",
+        "basicPlan": {
+          "planType": "Basic",
+          "features": {
+            "f1": "7 days long",
+            "f2": "10GB hosting service",
+            "f3": "Domain",
+            "f4": "Control panel"
+          }
+        },
+        "proPlan": {
+          "planType": "Pro",
+          "features": {
+            "f1": "14 days long",
+            "f2": "50GB hosting service",
+            "f3": "Offerring 4 emails",
+            "f4": "integrating a payment gateway",
+            "f5": "Connect with a shipping company",
+            "f6": "SSl security certificate",
+            "f7": "Design 3 banners suitable for the store",
+            "f8": "Prepare a complete visual identity"
+          }
+        },
+        "premiumPlan": {
+          "planType": "Premium",
+          "features": {
+            "f1": "25 days long",
+            "f2": "Add products with specifications",
+            "f3": "Unlimited number of emails",
+            "f4": "integrating any payment gateway",
+            "f5": "Link with Tabby and Tamara",
+            "f6": "Link with Aramex shipping companies",
+            "f7": "Control panel in Arabic",
+            "f8": "Design 6 banners suitable for the store",
+            "f9": "Create pages on social networking sites",
+            "f10": "Designe 6 posts for the occasion of the opening"
+          }
+        },
+        "platinumPlan": {
+          "planType": "Platinum",
+          "features": {
+            "f1": "Everything in Premium",
+            "f2": "Mobile application plus online store",
+            "f3": "An App on App store or Google play",
+            "f4": "integrating with Apple pay"
+          }
+        },
+        "buyButton": "Buy"
+      }
+    },
+    "WD": {
+      "heading": "Web development",
+      "describtion": "Athar Foundation provides comprehensive and professional electronic marketing services, whether for mobile applications or electronic accounts on Instagram, YouTube, Twitter, or Facebook.",
+      "plans": {
+        "pop": "Popular",
+        "heading": "Pricing",
+        "currency": "SAR",
+        "basicPlan": {
+          "planType": "Basic",
+          "features": {
+            "f1": "7 days long",
+            "f2": "Website consisting of 3 pages",
+            "f3": "5GB hosting service for 1 year",
+            "f4": "Domain",
+            "f5": "Single-language"
+          }
+        },
+        "proPlan": {
+          "planType": "Pro",
+          "features": {
+            "f1": "10 days long",
+            "f2": "Website consisting of 5 pages",
+            "f3": "15GB hosting service for 1 year",
+            "f4": "Domain",
+            "f5": "1GB of Emails",
+            "f6": "Design a logo and a banner",
+            "f7": "Google statistics Adjustment",
+            "f8": "The ability to contact via WhatsApp from the website or by phone"
+          }
+        },
+        "premiumPlan": {
+          "planType": "Premium",
+          "features": {
+            "f1": "15 days long",
+            "f2": "Website consisting of 7 pages",
+            "f3": "Unlimited hosting service for 1 year",
+            "f4": "Domain .com / net / org",
+            "f5": "Unlimited number of emails",
+            "f6": "SSl security certificate",
+            "f7": "Using React.js for development",
+            "f8": "Design a Logo and full visual identity",
+            "f9": "Design 4 features of the website",
+            "f10": "A control panel in Arabic to manage the website, blog, photos and videos",
+            "f11": "The ability to contact via WhatsApp from the website or by phone"
+          }
+        },
+        "buyButton": "Buy"
+      }
+    },
+    "SD": {
+      "heading": "Social media",
+      "describtion": "Athar Foundation provides comprehensive and professional electronic marketing services, whether for mobile applications or electronic accounts on Instagram, YouTube, Twitter, or Facebook.",
+      "plans": {
+        "pop": "Popular",
+        "heading": "Ads",
+        "currency": "SAR",
+        "basicPlan": {
+          "planType": "Basic",
+          "features": {
+            "f1": "10 designs in all social media sizes",
+            "f2": "Content writing",
+            "f3": "Captions for images",
+            "f4": "Adding hashtags and creating a profile",
+            "f5": "Creating social media accounts",
+            "f6": "Publishing on all platforms",
+            "f7": "Tracking ad results",
+            "f8": "Providing a monthly report of all that has been done"
+          }
+        },
+        "proPlan": {
+          "planType": "Pro",
+          "features": {
+            "f1": "15 designs in all social media sizes",
+            "f2": "Creating 15 reels videos",
+            "f3": "Motion video without commentary",
+            "f4": "Professional content writing",
+            "f5": "Captions for images",
+            "f6": "Adding hashtags and creating a profile",
+            "f7": "Creating social media accounts",
+            "f8": "Publishing on all platforms",
+            "f9": "Creating and tracking ad results",
+            "f10": "Providing a monthly report of all that has been done"
+          }
+        },
+        "premiumPlan": {
+          "planType": "Premium",
+          "features": {
+            "f1": "25 designs in all social media sizes",
+            "f2": "Creating 10 reels videos",
+            "f3": "Creating 10 realistic produced reels videos",
+            "f4": "Providing an employee responsible for publishing and accounts who is available to answer any inquiries or requirements",
+            "f5": "Professional content writing",
+            "f6": "Captions for images",
+            "f7": "Adding hashtags and creating a profile",
+            "f8": "Creating social media accounts",
+            "f9": "Creating and tracking ad results",
+            "f10": "Search engine optimization",
+            "f11": "Analyzing the company and competitors to identify the strengths and weaknesses of the company and competitors",
+            "f12": "Weekly meetings with the marketing and management team",
+            "f13": "Connecting the website to Google Console",
+            "f14": "Connecting the website to Google Analytics",
+            "f15": "Providing a monthly report of all that has been done"
+          }
+        },
+        "extraPlan": {
+          "planType": "Special",
+          "features": {
+            "f1": "A comprehensive marketing plan for one year with clear and tangible goals",
+            "f2": "We provide a publishing manager and accounts that are always available to answer any inquiries or requirements",
+            "f3": "Create 45 designs that fit all social media sizes",
+            "f4": "Create 20 realistic videos filmed on location in the size of reels for TikTok, Instagram, and Snapchat",
+            "f5": "Highlight for Instagram for all our information",
+            "f6": "Custom content for writing business content (writing captions and descriptions)",
+            "f7": "Market and competitor study every three months",
+            "f8": "Work on Google search engine optimization",
+            "f9": "Link the website to Google Console",
+            "f10": "Link the website to Google Analytics",
+            "f11": "Link the website to Google Merchant",
+            "f12": "Manage and add the prices of our services and evaluate each service in the application dashboard",
+            "f13": "Link tracking links for all social media channels via Google Tag Manager",
+            "f14": "Create notifications and discounts for all customers through the application",
+            "f15": "Identify and analyze the cost of each customer",
+            "f16": "Save all data, images, and plans on a Google Drive link specific to the business",
+            "f17": "Weekly meetings with the marketing and management team",
+            "f18": "Provide a monthly report of everything that has been implemented"
+          },
+          "buyButton": "Buy"
+        }
+      },
+      "sponsers": {
+        "heading": "Sponsers",
+        "snapchat": {
+          "heading": "Snapchat & TikTok",
+          "subHeadings": {
+            "1": "Views",
+            "2": "Swipes",
+            "3": "Duration",
+            "4": "Price"
+          },
+          "i1": {
+            "1": 25000,
+            "2": 50000,
+            "3": 100000,
+            "4": 500000,
+            "5": 1000000
+          },
+          "i2": {
+            "1": 200,
+            "2": 400,
+            "3": 800,
+            "4": 4000,
+            "5": 8000
+          },
+          "i3": {
+            "1": "5 days",
+            "2": "5-10 days",
+            "3": "5-10 days",
+            "4": "10 days - 1 month",
+            "5": "15 days - 1 month"
+          },
+          "i4": {
+            "1": 500,
+            "2": 1000,
+            "3": 2000,
+            "4": 10000,
+            "5": 20000
+          }
+        },
+        "google": {
+          "heading": "Google",
+          "subHeadings": {
+            "1": "Clicks",
+            "2": "Views",
+            "3": "Duration",
+            "4": "Price"
+          },
+          "i1": {
+            "1": 90,
+            "2": 180,
+            "3": 360,
+            "4": 720,
+            "5": 3600
+          },
+          "i2": {
+            "1": 200,
+            "2": 400,
+            "3": 800,
+            "4": 16000,
+            "5": 800000
+          },
+          "i3": {
+            "1": "5 days",
+            "2": "5-10 days",
+            "3": "5-10 days",
+            "4": "5 days - 15 days",
+            "5": "10 days - 1 month"
+          },
+          "i4": {
+            "1": 500,
+            "2": 1000,
+            "3": 2000,
+            "4": 10000,
+            "5": 20000
+          }
+        },
+        "instagram": {
+          "heading": "Instagram",
+          "subHeadings": {
+            "1": "Views",
+            "2": "Messages",
+            "3": "Duration",
+            "4": "Price"
+          },
+          "i1": {
+            "1": 10000,
+            "2": 20000,
+            "3": 40000,
+            "4": 80000,
+            "5": 100000
+          },
+          "i2": {
+            "1": "7-15",
+            "2": "15-25",
+            "3": "30-50",
+            "4": "100-150",
+            "5": "1200-1700"
+          },
+          "i3": {
+            "1": "5 days",
+            "2": "5 days",
+            "3": "5-7 days",
+            "4": "5 days - 10 day",
+            "5": "10 day - 1 month"
+          },
+          "i4": {
+            "1": 500,
+            "2": 1000,
+            "3": 2000,
+            "4": 4000,
+            "5": 40000
+          }
+        }
+      }
+    }
+  }  
+}
