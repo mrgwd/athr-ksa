@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl'
 import { ArrowDown2 } from 'iconsax-react'
 import Link from 'next/link'
 import DropMenu from './DropMenu'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Switch from './Switch'
 
 interface SideMenuProps {
@@ -18,8 +18,16 @@ export default function SideMenu({ isOpen, handleMenuDown }: SideMenuProps) {
   const handleToggleSubmenu = () => {
     setIsSubOpern((isSubOpen) => !isSubOpen)
   }
+
+  useEffect(() => {
+    document.body.classList.toggle('overflow-hidden')
+  }, [isOpen])
   return (
-    <div className="absolute left-0 top-0 z-30 h-screen w-screen overflow-hidden transition-all sm:hidden">
+    <div
+      className={`${
+        isOpen ? 'h-screen' : ''
+      } absolute left-0 top-0 z-30 w-screen overflow-hidden transition-all sm:hidden`}
+    >
       <div
         className={`rounded-b-3x absolute ${
           isOpen ? 'right-0' : 'right-full'

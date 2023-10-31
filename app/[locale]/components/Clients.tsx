@@ -12,6 +12,10 @@ import client8 from '../../../public/images/Clients/logo8.png'
 import client9 from '../../../public/images/Clients/logo9.png'
 import client10 from '../../../public/images/Clients/logo10.png'
 import client11 from '../../../public/images/Clients/logo11.png'
+import client12 from '../../../public/images/Clients/logo12.png'
+import client13 from '../../../public/images/Clients/logo13.jpg'
+import client14 from '../../../public/images/Clients/logo14.jpg'
+import client15 from '../../../public/images/Clients/logo15.jpg'
 export default function Clients() {
   const t = useTranslations('Index')
   return (
@@ -52,6 +56,18 @@ export default function Clients() {
         </div>
         <div>
           <Image src={client11} loading="lazy" alt="logo11" />
+        </div>
+        <div>
+          <Image src={client12} loading="lazy" alt="logo12" />
+        </div>
+        <div>
+          <Image src={client13} loading="lazy" alt="logo13" />
+        </div>
+        <div>
+          <Image src={client14} loading="lazy" alt="logo14" />
+        </div>
+        <div>
+          <Image src={client15} loading="lazy" alt="logo15" />
         </div>
       </div>
     </div>
