@@ -31,13 +31,7 @@ export default function Slideshow({ images }: Props) {
     <div>
       <div className="relative mx-2 mt-12 flex items-center justify-center lg:mx-20 xl:mx-28">
         <ArrowCircleRight
-          className={`absolute ${
-            location === '/OSservices'
-              ? 'text-dm-service'
-              : location === '/WDservices'
-              ? 'text-main-color'
-              : 'text-ma-service'
-          } right-0 z-20 h-20 cursor-pointer`}
+          className="absolute text-main-color right-0 z-20 h-20 cursor-pointer"
           variant="Bulk"
           onClick={goToPrevSlide}
         />
@@ -46,13 +40,7 @@ export default function Slideshow({ images }: Props) {
           imgUrl={images[currentIndex].imgUrl}
         />
         <ArrowCircleLeft
-          className={`absolute ${
-            location === '/OSservices'
-              ? 'text-dm-service'
-              : location === '/WDservices'
-              ? 'text-main-color'
-              : 'text-ma-service'
-          } left-0 z-20 h-20 cursor-pointer`}
+          className="absolute text-main-color left-0 z-20 h-20 cursor-pointer"
           variant="Bulk"
           onClick={goToNextSlide}
         />
@@ -61,15 +49,7 @@ export default function Slideshow({ images }: Props) {
         {images.map((_, index) => (
           <div
             key={index}
-            className={
-              location === '/OSservices' && index === currentIndex
-                ? 'bg-dm-service'
-                : location === '/WDservices' && index === currentIndex
-                ? 'bg-main-color'
-                : index === currentIndex
-                ? 'bg-ma-service'
-                : 'bg-gray-200'
-            }
+            className={index === currentIndex ? 'bg-main-color' : 'bg-gray-200'}
           ></div>
         ))}
       </div>

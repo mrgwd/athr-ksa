@@ -1,11 +1,5 @@
-// 'use client'
-import { useRef } from 'react'
 import { useTranslations } from 'next-intl'
 export default function HowWeWork() {
-  // const step1 = useRef<HTMLDivElement | null>(null)
-  // const step2 = useRef<HTMLDivElement | null>(null)
-  // const step3 = useRef<HTMLDivElement | null>(null)
-  // const step4 = useRef<HTMLDivElement | null>(null)
   const t = useTranslations('Index')
   return (
     <div className="container mx-auto my-24 px-4 md:mt-44">
@@ -14,10 +8,7 @@ export default function HowWeWork() {
       </h2>
       <div>
         <div className="hidden md:block">
-          <div
-            //ref={step1}
-            className="relative translate-y-20 opacit-0 transition duration-500 child:text-wd-service"
-          >
+          <div className="relative transition duration-500 child:text-wd-service">
             <div className="absolute right-1/2 top-0 mr-20">
               <h4 className=" font-semibold  lg:mb-2 lg:text-xl xl:text-2xl">
                 {t('howWeWork.step1.h1')}
@@ -34,8 +25,7 @@ export default function HowWeWork() {
             </div>
           </div>
           <div
-            //ref={step2}
-            className="relative top-48 translate-x-8 opacit-0 transition duration-500 child:text-wd-service xl:top-56"
+            className="relative top-48 transition duration-500 child:text-wd-service xl:top-56"
             dir="ltr"
           >
             <div className="absolute left-3/4 top-1/4 mt-16">
@@ -53,10 +43,7 @@ export default function HowWeWork() {
               </p>
             </div>
           </div>
-          <div
-            //ref={step3}
-            className="relative top-80 -translate-x-8 opacit-0 transition duration-500 child:text-wd-service xl:top-[26rem]"
-          >
+          <div className="relative top-80 transition duration-500 child:text-wd-service xl:top-[26rem]">
             <div className="absolute right-3/4 top-1/2 mt-16">
               <h4 className="font-semibold lg:mb-2 lg:text-xl xl:text-2xl">
                 {t('howWeWork.step3.h1')}
@@ -76,7 +63,7 @@ export default function HowWeWork() {
           </div>
           <div
             //ref={step4}
-            className="relative top-[48rem] translate-y-12 opacit-0 transition duration-500 child:text-wd-service xl:top-[60rem]"
+            className="relative top-[48rem] transition duration-500 child:text-wd-service xl:top-[60rem]"
             dir="ltr"
           >
             <div className="absolute bottom-0 left-1/2 ml-20 mt-16">

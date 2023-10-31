@@ -1,4 +1,5 @@
 import About from './components/About'
+import Clients from './components/Clients'
 import Experiences from './components/Experiences'
 import Features from './components/Features'
 import Home from './components/Home'
@@ -13,11 +14,12 @@ export default function App() {
   return (
     <>
       <Home />
-      <Experiences />
+      {/* <Experiences /> */}
       <About />
       <ServicesSection />
       <Features />
       <HowWeWork />
+      <Clients />
     </>
   )
 }

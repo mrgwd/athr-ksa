@@ -7,7 +7,8 @@
         "h1": "Our Work",
         "op1": "Online stores",
         "op2": "Web development",
-        "op3": "Social media"
+        "op3": "Social media",
+        "op4": "Programs and systems"
       },
       "contact": "Contact"
     },
@@ -45,28 +46,36 @@
     "features": {
       "heading": "All in one",
       "seOptmization": {
-        "subHeading": "Search Engine Optimization",
-        "caption": "As a web design company, we provide professional e-content writing service as one of the indirect marketing methods"
+        "subHeading": "SEO Optimization",
+        "caption": "Search engine optimization service, enhancing your site’s visibility and ranking in search engines"
       },
       "manageAccounts": {
-        "subHeading": "Managing social media accounts",
-        "caption": "As a web design company, we provide professional e-content writing service as one of the indirect marketing methods"
+        "subHeading": "Managing social media pages",
+        "caption": "Manage social media accounts thoughtfully and with professional designs and content"
       },
       "manageSponsors": {
         "subHeading": "Advertising campaign management",
-        "caption": "As a web design company, we provide professional e-content writing service as one of the indirect marketing methods"
+        "caption": "Achieve higher sales with the same budget, clear strategy, precisely targeted audience, relevant content, and accurate measurement of results"
       },
       "designIdentities": {
-        "subHeading": "Visual identity design",
-        "caption": "As a web design company, we provide professional e-content writing service as one of the indirect marketing methods"
+        "subHeading": "Visual identity",
+        "caption": "It is distinguished by a visual identity that the audience is familiar with, that will last over the years and leave an unforgettable impression on everyone"
       },
       "graphicDesign": {
         "subHeading": "Graphic design",
-        "caption": "As a web design company, we provide professional e-content writing service as one of the indirect marketing methods"
+        "caption": "Attract your client's eye with professional designs that summarize your ideas and accurately display your services"
       },
       "writingContent": {
-        "subHeading": "Writing content and articles",
-        "caption": "As a web design company, we provide professional e-content writing service as one of the indirect marketing methods"
+        "subHeading": "Developing websites and e-stores",
+        "caption": "Designing, coding, and deploying websites and e-stores using the latest technologies available to date"
+      },
+      "motionGraphic": {
+        "subHeading": "Motion graphic",
+        "caption": "Create reels using a motion graphic video in 30 seconds or a little more to connect you with more clients"
+      },
+      "systems": {
+        "subHeading": "Sales programs and systems",
+        "caption": "Integrated accounting systems that will enable you to track expenses and revenues. Analyzing sales performance and issuing invoices"
       }
     },
     "howWeWork": {
@@ -312,126 +321,165 @@
             "f14": "Create notifications and discounts for all customers through the application",
             "f15": "Identify and analyze the cost of each customer",
             "f16": "Save all data, images, and plans on a Google Drive link specific to the business",
-            "f17": "Weekly meetings with the marketing and management team",
+            "f17": "Wzzzzzeekly meetings with the marketing and management team",
             "f18": "Provide a monthly report of everything that has been implemented"
           },
           "buyButton": "Buy"
         }
       },
-      "sponsers": {
-        "heading": "Sponsers",
+      "sponsors": {
+        "heading": "Sponsors",
         "snapchat": {
           "heading": "Snapchat & TikTok",
           "subHeadings": {
-            "1": "Views",
-            "2": "Swipes",
-            "3": "Duration",
-            "4": "Price"
+            "s1": "Views",
+            "s2": "Swipes",
+            "s3": "Duration",
+            "s4": "Price"
           },
-          "i1": {
-            "1": 25000,
-            "2": 50000,
-            "3": 100000,
-            "4": 500000,
-            "5": 1000000
+          "i0u": {
+            "s0u": "25000",
+            "s1u": "50000",
+            "s2u": "100000",
+            "s3u": "500000",
+            "s4u": "1000000"
           },
-          "i2": {
-            "1": 200,
-            "2": 400,
-            "3": 800,
-            "4": 4000,
-            "5": 8000
+          "i1u": {
+            "s0u": "200",
+            "s1u": "400",
+            "s2u": "800",
+            "s3u": "4000",
+            "s4u": "8000"
           },
-          "i3": {
-            "1": "5 days",
-            "2": "5-10 days",
-            "3": "5-10 days",
-            "4": "10 days - 1 month",
-            "5": "15 days - 1 month"
+          "i2u": {
+            "s0u": "5 days",
+            "s1u": "5-10 days",
+            "s2u": "5-10 days",
+            "s3u": "10 days - 1 month",
+            "s4u": "15 days - 1 month"
           },
-          "i4": {
-            "1": 500,
-            "2": 1000,
-            "3": 2000,
-            "4": 10000,
-            "5": 20000
+          "i3u": {
+            "s0u": "500",
+            "s1u": "1000",
+            "s2u": "2000",
+            "s3u": "10000",
+            "s4u": "20000"
           }
         },
         "google": {
           "heading": "Google",
           "subHeadings": {
-            "1": "Clicks",
-            "2": "Views",
-            "3": "Duration",
-            "4": "Price"
+            "s1": "Clicks",
+            "s2": "Views",
+            "s3": "Duration",
+            "s4": "Price"
           },
-          "i1": {
-            "1": 90,
-            "2": 180,
-            "3": 360,
-            "4": 720,
-            "5": 3600
+          "i0u": {
+            "s0u": "90",
+            "s1u": "180",
+            "s2u": "360",
+            "s3u": "720",
+            "s4u": "3600"
           },
-          "i2": {
-            "1": 200,
-            "2": 400,
-            "3": 800,
-            "4": 16000,
-            "5": 800000
+          "i1u": {
+            "s0u": "200",
+            "s1u": "400",
+            "s2u": "800",
+            "s3u": "16000",
+            "s4u": "800000"
           },
-          "i3": {
-            "1": "5 days",
-            "2": "5-10 days",
-            "3": "5-10 days",
-            "4": "5 days - 15 days",
-            "5": "10 days - 1 month"
+          "i2u": {
+            "s0u": "5 days",
+            "s1u": "5-10 days",
+            "s2u": "5-10 days",
+            "s3u": "5 days - 15 days",
+            "s4u": "10 days - 1 month"
           },
-          "i4": {
-            "1": 500,
-            "2": 1000,
-            "3": 2000,
-            "4": 10000,
-            "5": 20000
+          "i3u": {
+            "s0u": "500",
+            "s1u": "1000",
+            "s2u": "2000",
+            "s3u": "10000",
+            "s4u": "20000"
           }
         },
         "instagram": {
           "heading": "Instagram",
           "subHeadings": {
-            "1": "Views",
-            "2": "Messages",
-            "3": "Duration",
-            "4": "Price"
+            "s1": "Views",
+            "s2": "Messages",
+            "s3": "Duration",
+            "s4": "Price"
           },
-          "i1": {
-            "1": 10000,
-            "2": 20000,
-            "3": 40000,
-            "4": 80000,
-            "5": 100000
+          "i0u": {
+            "s0u": "10000",
+            "s1u": "20000",
+            "s2u": "40000",
+            "s3u": "80000",
+            "s4u": "100000"
           },
-          "i2": {
-            "1": "7-15",
-            "2": "15-25",
-            "3": "30-50",
-            "4": "100-150",
-            "5": "1200-1700"
+          "i1u": {
+            "s0u": "7-15",
+            "s1u": "15-25",
+            "s2u": "30-50",
+            "s3u": "100-150",
+            "s4u": "1200-1700"
           },
-          "i3": {
-            "1": "5 days",
-            "2": "5 days",
-            "3": "5-7 days",
-            "4": "5 days - 10 day",
-            "5": "10 day - 1 month"
+          "i2u": {
+            "s0u": "5 days",
+            "s1u": "5 days",
+            "s2u": "5-7 days",
+            "s3u": "5 days - 10 day",
+            "s4u": "10 day - 1 month"
           },
-          "i4": {
-            "1": 500,
-            "2": 1000,
-            "3": 2000,
-            "4": 4000,
-            "5": 40000
+          "i3u": {
+            "s0u": "500",
+            "s1u": "1000",
+            "s2u": "2000",
+            "s3u": "4000",
+            "s4u": "40000"
           }
         }
       }
+    },
+    "PS": {
+      "heading": "Programs and systems",
+      "describtion": "Athr Corporation provides comprehensive software services professionally, whether accounting or sales programs and systems.",
+      "plans": {
+        "pop": "Popular",
+        "heading": "Ads",
+        "currency": "SAR",
+        "basicPlan": {
+          "planType": "Basic",
+          "features": {
+            "f1": "Managing the customer database",
+            "f2": "Issuing invoices",
+            "f3": "Sales performance analysis"
+          }
+        },
+        "proPlan": {
+          "planType": "Pro",
+          "features": {
+            "f1": "Recording financial transactions",
+            "f2": "Create accurate financial reports",
+            "f3": "General accounts management",
+            "f4": "Track assets, expenses and revenue"
+          }
+        },
+        "premiumPlan": {
+          "planType": "Customized",
+          "features": {
+            "f1": "Customize processes and reports according to business sector requirements",
+            "f2": "Inventory Management",
+            "f3": "Purchases",
+            "f4": "Sales ",
+            "f5": "Profits and losses",
+            "f6": "And more..."
+          },
+          "price": "Pay as you go"
+        },
+        "buyButton": "Buy"
+      }
     }
-  }  
+  }
 }

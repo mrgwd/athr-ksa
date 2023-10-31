@@ -20,7 +20,7 @@ export default function Features() {
       <h2 className="mb-12 text-center text-main-color sm:text-xl md:mb-20 lg:text-2xl">
         {t('features.heading')}
       </h2>
-      <div className="flex flex-wrap child:max-w-[170px] sm:child:max-w-[200px] justify-center lg:child:max-w-lg gap-x-8 gap-y-12">
+      <div className="grid grid-cols-2 justify-items-center gap-x-4 gap-y-8 md:grid-cols-3 lg:gap-y-12 xl:gap-y-16">
         <div>
           <GlobalSearch
             variant="Bulk"
@@ -30,7 +30,7 @@ export default function Features() {
             <h4 className="text-md my-2 font-semibold text-main-color md:text-xl xl:text-2xl">
               {t('features.seOptmization.subHeading')}
             </h4>
-            <p className="mx-auto text-xs font-normal text-wd-service md:text-base lg:max-w-xs">
+            <p className="mx-auto text-xs font-normal text-main-dark md:text-base lg:max-w-xs">
               {t('features.seOptmization.caption')}
             </p>
           </div>
@@ -44,7 +44,7 @@ export default function Features() {
             <h4 className="text-md my-2 font-semibold text-main-color md:text-xl xl:text-2xl">
               {t('features.manageAccounts.subHeading')}
             </h4>
-            <p className="mx-auto text-xs font-normal text-wd-service md:text-base lg:max-w-xs">
+            <p className="mx-auto text-xs font-normal text-main-dark md:text-base lg:max-w-xs">
               {t('features.manageAccounts.caption')}
             </p>
           </div>
@@ -58,7 +58,7 @@ export default function Features() {
             <h4 className="text-md my-2 font-semibold text-main-color md:text-xl xl:text-2xl">
               {t('features.motionGraphic.subHeading')}
             </h4>
-            <p className="mx-auto text-xs font-normal text-wd-service md:text-base lg:max-w-xs">
+            <p className="mx-auto text-xs font-normal text-main-dark md:text-base lg:max-w-xs">
               {t('features.motionGraphic.caption')}
             </p>
           </div>
@@ -72,7 +72,7 @@ export default function Features() {
             <h4 className="text-md my-2 font-semibold text-main-color md:text-xl xl:text-2xl">
               {t('features.manageSponsors.subHeading')}
             </h4>
-            <p className="mx-auto text-xs font-normal text-wd-service md:text-base lg:max-w-xs">
+            <p className="mx-auto text-xs font-normal text-main-dark md:text-base lg:max-w-xs">
               {t('features.manageSponsors.caption')}
             </p>
           </div>
@@ -86,7 +86,7 @@ export default function Features() {
             <h4 className="text-md my-2 font-semibold text-main-color md:text-xl xl:text-2xl">
               {t('features.designIdentities.subHeading')}
             </h4>
-            <p className="mx-auto text-xs font-normal text-wd-service md:text-base lg:max-w-xs">
+            <p className="mx-auto text-xs font-normal text-main-dark md:text-base lg:max-w-xs">
               {t('features.designIdentities.caption')}
             </p>
           </div>
@@ -100,7 +100,7 @@ export default function Features() {
             <h4 className="text-md my-2 font-semibold text-main-color md:text-xl xl:text-2xl">
               {t('features.graphicDesign.subHeading')}
             </h4>
-            <p className="mx-auto text-xs font-normal text-wd-service md:text-base lg:max-w-xs">
+            <p className="mx-auto text-xs font-normal text-main-dark md:text-base lg:max-w-xs">
               {t('features.graphicDesign.caption')}
             </p>
           </div>
@@ -114,7 +114,7 @@ export default function Features() {
             <h4 className="text-md my-2 font-semibold text-main-color md:text-xl xl:text-2xl">
               {t('features.writingContent.subHeading')}
             </h4>
-            <p className="mx-auto text-xs font-normal text-wd-service md:text-base lg:max-w-xs">
+            <p className="mx-auto text-xs font-normal text-main-dark md:text-base lg:max-w-xs">
               {t('features.writingContent.caption')}
             </p>
           </div>
@@ -128,7 +128,7 @@ export default function Features() {
             <h4 className="text-md my-2 font-semibold text-main-color md:text-xl xl:text-2xl">
               {t('features.systems.subHeading')}
             </h4>
-            <p className="mx-auto text-xs font-normal text-wd-service md:text-base lg:max-w-xs">
+            <p className="mx-auto text-xs font-normal text-main-dark md:text-base lg:max-w-xs">
               {t('features.systems.caption')}
             </p>
           </div>

@@ -5,7 +5,6 @@ interface ListItemProps {
 }
 export default function ListItem({ children }: ListItemProps) {
   const location = usePathname()
-  console.log(location)
   return (
     <li
       className={

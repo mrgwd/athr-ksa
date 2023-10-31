@@ -14,7 +14,7 @@ export default function ServicesSection() {
       </h2>
       <div className="grid grid-cols-1 justify-center gap-5 child:flex lg:child:px-4 lg:child:py-8 child:items-start child:gap-2 child:rounded-3xl child:bg-gradient-to-b child:px-6 child:py-8 child:transition-all child-hover:scale-105 sm:grid-cols-2 sm:gap-8 child:sm:block child:sm:rounded-[3rem] child:sm:px-4 child:sm:py-8 md:gap-12 lg:gap-8 lg:grid-cols-3 xl:child:px-12 xl:child:py-16 2xl:gap-16">
         <Link
-          href="/OSservices"
+          href="/online-stores"
           className="from-[#CFD2F0] to-[#F3F3FB] child:text-dm-service child:sm:text-center"
         >
           <ShoppingCart
@@ -35,7 +35,7 @@ export default function ServicesSection() {
           </span>
         </Link>
         <Link
-          href="/WDservices"
+          href="/web-development"
           className="from-[#CFF0EA] to-[#E9F8F5] child:text-wd-service child:sm:text-center"
         >
           <GlobalEdit
@@ -57,7 +57,7 @@ export default function ServicesSection() {
           </span>
         </Link>
         <Link
-          href="/MAservices"
+          href="/social-media"
           className="from-[#EAD3C7] to-[#F9F3EF] child:text-ma-service child:sm:text-center"
         >
           <svg

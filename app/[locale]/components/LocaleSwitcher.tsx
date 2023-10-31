@@ -20,14 +20,7 @@ export default function LocaleSwitcher() {
   }
 
   return (
-    <label
-      className={
-        '' /*clsx(
-        'relative text-gray-400',
-        isPending && 'transition-opacity [&:disabled]:opacity-30'
-      )*/
-      }
-    >
+    <label>
       <p className="sr-only">{t('label')}</p>
       <select
         className="inline-flex appearance-none bg-transparent py-3 pl-2 pr-6"

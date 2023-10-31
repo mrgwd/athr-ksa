@@ -4,7 +4,7 @@ import client2 from '../../../public/images/Clients/online-stores/client2.webp'
 import client3 from '../../../public/images/Clients/online-stores/client3.webp'
 import Slideshow from '../components/Slideshow'
 import Plan from '../components/Plan'
-export default function Page() {
+export default function OSservices() {
   const t = useTranslations('Index')
   const images = [
     { imgSrc: client1, imgUrl: 'https://shubra.online' },
@@ -322,7 +322,7 @@ export default function Page() {
       </div>
       <Slideshow images={images} />
       <div className="container mx-auto my-20 px-4">
-        <h2 className="mb-12 text-center text-dm-service sm:text-xl md:mb-24 md:mt-32 lg:text-2xl">
+        <h2 className="mb-12 text-center text-main-color sm:text-xl md:mb-24 md:mt-32 lg:text-2xl">
           {t('OS.plans.heading')}
         </h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">

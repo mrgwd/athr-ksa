@@ -19,7 +19,7 @@ export default function Contact() {
             {t('contact.heading')}
           </h2>
         </div>
-        <div>
+        <div className="relative">
           <div className="mb-24 w-full">
             <iframe
               className="-z-10 w-full max-sm:rounded-3xl md:h-[26rem]"
@@ -33,7 +33,7 @@ export default function Contact() {
             ></iframe>
             <div
               //ref={cfSection}
-              className="relative bottom-72 translate-x-12 opacit-0 transition duration-500 md:bottom-48"
+              className="absolute top-1/2 md:-top-1/4 w-full"
             >
               <Form />
             </div>

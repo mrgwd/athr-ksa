@@ -4,10 +4,10 @@ export default function About() {
   return (
     <div
       //ref={aSection}
-      className="container mx-auto my-24 px-4 transition duration-500 md:mt-32 md:px-12"
+      className="container mx-auto my-24 px-4 transition duration-500 md:mt-48 md:px-12"
       id="about"
     >
-      <h2 className="mb-12 text-center text-main-color sm:text-xl md:mb-20 lg:text-2xl">
+      <h2 className="mb-8 text-center text-main-color sm:text-xl lg:text-2xl">
         {t('about.heading')}
       </h2>
       <div className="flex flex-col-reverse items-center lg:flex-row lg:justify-center lg:gap-8">
@@ -513,11 +513,11 @@ export default function About() {
             </defs>
           </svg>
         </div>
-        <div className="max-w-2xl text-wd-service">
-          <h3 className="mb-4 font-bold md:text-xl 2xl:text-2xl">
+        <div className="max-w-2xl">
+          <h3 className="mb-4 font-bold md:text-xl text-wd-service 2xl:text-2xl">
             {t('about.p1')}
           </h3>
-          <p className="lg:max-w-xlg text-justify text-xs sm:text-base 2xl:text-lg">
+          <p className="lg:max-w-xlg text-justify text-main-dark text-xs sm:text-base 2xl:text-lg">
             {t('about.p2')}
           </p>
         </div>

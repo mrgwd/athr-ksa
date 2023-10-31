@@ -1,8 +1,9 @@
 import { Verify } from 'iconsax-react'
 import { useTranslations } from 'next-intl'
 import { useLocale } from 'next-intl'
+type t = (s: string) => void
 interface PlanProps {
-  price: number
+  price: number | string
   plan: string
   isPop: boolean
   features: string[]
@@ -11,25 +12,17 @@ export default function Plan({ price, isPop, plan, features }: PlanProps) {
   const t = useTranslations('Index')
   const locale = useLocale()
   return (
-    <div
-      className={`relative flex flex-col items-start justify-between gap-4 text-white ${
-        plan[0] === 'O'
-          ? 'bg-dm-service sm:border-dm-service sm:text-dm-service'
-          : plan[0] === 'W'
-          ? 'bg-wd-service sm:border-wd-service sm:text-wd-service'
-          : 'bg-ma-service sm:border-ma-service sm:text-ma-service'
-      } rounded-3xl p-4 sm:items-center sm:rounded-3xl sm:border-2 sm:border-solid sm:bg-white sm:text-center md:p-6 lg:gap-6 xl:gap-8 xl:p-8`}
-    >
+    <div className="relative flex flex-col items-start justify-between gap-4 text-white bg-wd-service sm:border-wd-service sm:text-wd-service rounded-3xl p-4 sm:items-center sm:rounded-3xl sm:border-2 sm:border-solid sm:bg-white sm:text-center md:p-6 lg:gap-6 xl:gap-8 xl:p-8">
       <div>
         <h2 className="text-lg font-medium lg:text-xl">
           <span className="text-3xl sm:hidden">
             {price}
-            {t('OS.plans.currency')}{' '}
+            {typeof price === 'number' && t('OS.plans.currency')}{' '}
           </span>
           {t(`${plan}.planType`)}
         </h2>
         <p className="hidden text-4xl font-semibold sm:block lg:text-4xl">
-          {price} {t('OS.plans.currency')}
+          {price} {typeof price === 'number' && t('OS.plans.currency')}
         </p>
       </div>
       <div className="text-start">
@@ -43,13 +36,7 @@ export default function Plan({ price, isPop, plan, features }: PlanProps) {
         ))}
       </div>
       <button
-        className={`rounded-full bg-white py-2 ${
-          plan[0] === 'O'
-            ? 'text-dm-service sm:bg-dm-service sm:hover:bg-[#5162f5]'
-            : plan[0] === 'W'
-            ? 'sm:hover:bg text-wd-service sm:bg-wd-service'
-            : 'sm:hover:bg text-ma-service sm:bg-ma-service'
-        } self-stretch transition-all sm:text-white`}
+        className={`rounded-full bg-white py-2 sm:hover:bg text-wd-service sm:bg-wd-service self-stretch transition-all sm:text-white`}
       >
         {t('OS.plans.buyButton')}
       </button>
