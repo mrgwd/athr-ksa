@@ -38,7 +38,7 @@ const config: Config = {
     },
   },
   plugins: [
-    function ({ addVariant }) {
+    function ({ addVariant }: { addVariant: Function }) {
       addVariant('child', '& > *')
       addVariant('child-hover', '& > *:hover')
       addVariant('not-last', '&:not(:last-child)')

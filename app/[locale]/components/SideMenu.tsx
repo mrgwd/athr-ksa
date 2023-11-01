@@ -25,8 +25,8 @@ export default function SideMenu({ isOpen, handleMenuDown }: SideMenuProps) {
   return (
     <div
       className={`${
-        isOpen ? 'h-screen' : ''
-      } absolute left-0 top-0 z-30 w-screen overflow-hidden transition-all sm:hidden`}
+        isOpen ? 'w-screen' : 'w-0'
+      } absolute h-screen left-0 top-0 z-30 overflow-hidden transition-all duration-300 sm:hidden`}
     >
       <div
         className={`rounded-b-3x absolute ${
@@ -62,13 +62,8 @@ export default function SideMenu({ isOpen, handleMenuDown }: SideMenuProps) {
               className={`h-0${
                 isSubOpen ? 'h-auto' : ' overflow-hidden'
               }  transition-all duration-300`}
-              //ref={subMenu}
             >
-              <DropMenu
-                handleMenuDown={handleMenuDown}
-                //menu={menu.current}
-                //changeMenuBtnStyle={changeMenuBtnStyle}
-              />
+              <DropMenu handleMenuDown={handleMenuDown} />
             </li>
             <li
               className="my-12 hover:text-main-color"

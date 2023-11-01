@@ -19,7 +19,7 @@ import client15 from '../../../public/images/Clients/logo15.jpg'
 export default function Clients() {
   const t = useTranslations('Index')
   return (
-    <div className="container mx-auto my-24 px-4 transition duration-500 md:mt-36">
+    <div className="container mx-auto mb-24 my-32 px-4 transition duration-500 md:mt-48">
       <h2 className="mb-12 text-center text-main-color sm:text-xl md:mb-20 lg:text-2xl">
         {t('clients.heading')}
       </h2>
