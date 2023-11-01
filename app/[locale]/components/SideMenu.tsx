@@ -20,7 +20,7 @@ export default function SideMenu({ isOpen, handleMenuDown }: SideMenuProps) {
   }
 
   useEffect(() => {
-    document.body.classList.toggle('overflow-hidden')
+    if (isOpen) document.body.classList.toggle('overflow-hidden')
   }, [isOpen])
   return (
     <div

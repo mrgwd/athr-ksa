@@ -1,7 +1,6 @@
 'use client'
 
-//import clsx from 'clsx';
-import { useLocale, useTranslations } from 'next-intl'
+import { useLocale } from 'next-intl'
 import { usePathname, useRouter } from 'next-intl/client'
 import { useTransition } from 'react'
 
