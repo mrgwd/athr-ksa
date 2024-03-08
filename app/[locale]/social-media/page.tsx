@@ -1,21 +1,22 @@
+'use client'
 import { useTranslations } from 'next-intl'
-import Plan from '../components/Plan'
-import Slideshow from '../components/Slideshow'
+import Plan from '@/components/Plan'
+import Slideshow from '@/components/Slideshow'
 
-import client1 from '../../../public/images/Clients/social-media-designs/client1.webp'
-import client2 from '../../../public/images/Clients/social-media-designs/client2.webp'
-import client3 from '../../../public/images/Clients/social-media-designs/client3.webp'
-import client4 from '../../../public/images/Clients/social-media-designs/client4.webp'
-import InfoCard from '../components/InfoCard'
+import client1 from '@/public/images/Clients/social-media-designs/client1.webp'
+import client2 from '@/public/images/Clients/social-media-designs/client2.webp'
+import client3 from '@/public/images/Clients/social-media-designs/client3.webp'
+import client4 from '@/public/images/Clients/social-media-designs/client4.webp'
+import InfoCard from '@/components/InfoCard'
 
-export default function MAservice() {
+export default function Page() {
   const images = [
     { imgSrc: client1, imgUrl: '/' },
     { imgSrc: client2, imgUrl: '/' },
     { imgSrc: client3, imgUrl: '/' },
     { imgSrc: client4, imgUrl: '/' },
   ]
-  const t = useTranslations('Index')
+  const t = useTranslations()
   return (
     <div>
       <div className="relative bg-gradient-to-t from-[#207465] to-[#60D9D0] pb-8 pt-24 text-white sm:pt-44">
@@ -349,7 +350,7 @@ export default function MAservice() {
       </div>
       <Slideshow images={images} />
       <div className="container mx-auto my-20 px-4">
-        <h2 className="mb-12 text-center text-wd-service sm:text-xl md:mb-24 md:mt-32 lg:text-2xl">
+        <h2 className="mb-12 text-center text-main-color sm:text-xl md:mb-24 md:mt-32 lg:text-2xl">
           {t('OS.plans.heading')}
         </h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -426,7 +427,7 @@ export default function MAservice() {
         </div>
       </div>
       <div className="container mx-auto my-20 px-4">
-        <h2 className="mb-12 text-center text-wd-service sm:text-xl md:mb-24 md:mt-32 lg:text-2xl">
+        <h2 className="mb-12 text-center text-main-color sm:text-xl md:mb-24 md:mt-32 lg:text-2xl">
           {t('SD.plans.heading')}
         </h2>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">

@@ -1,11 +1,16 @@
-import { useTranslations } from 'next-intl'
-import client1 from '../../../public/images/Clients/online-stores/client1.webp'
-import client2 from '../../../public/images/Clients/online-stores/client2.webp'
-import client3 from '../../../public/images/Clients/online-stores/client3.webp'
-import Slideshow from '../components/Slideshow'
-import Plan from '../components/Plan'
-export default function OSservices() {
-  const t = useTranslations('Index')
+import client1 from '@/public/images/Clients/online-stores/client1.webp'
+import client2 from '@/public/images/Clients/online-stores/client2.webp'
+import client3 from '@/public/images/Clients/online-stores/client3.webp'
+import Slideshow from '@/components/Slideshow'
+import Plan from '@/components/Plan'
+import { getTranslations } from '@/i18n/getTranslations'
+
+interface PageProps {
+  params: { locale: string }
+}
+export default async function Page({ params: { locale } }: PageProps) {
+  const t = await getTranslations({ locale })
+
   const images = [
     { imgSrc: client1, imgUrl: 'https://shubra.online' },
     { imgSrc: client2, imgUrl: 'https://rahatystore.com' },

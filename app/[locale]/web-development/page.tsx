@@ -1,18 +1,19 @@
+'use client'
 import { useTranslations } from 'next-intl'
-import client1 from '../../../public/images/Clients/web-development/client1.webp'
-import client2 from '../../../public/images/Clients/web-development/client2.webp'
-import client3 from '../../../public/images/Clients/web-development/client3.webp'
-import client4 from '../../../public/images/Clients/web-development/client4.webp'
-import Plan from '../components/Plan'
-import Slideshow from '../components/Slideshow'
-export default function WDservices() {
+import client1 from '@/public/images/Clients/web-development/client1.webp'
+import client2 from '@/public/images/Clients/web-development/client2.webp'
+import client3 from '@/public/images/Clients/web-development/client3.webp'
+import client4 from '@/public/images/Clients/web-development/client4.webp'
+import Plan from '@/components/Plan'
+import Slideshow from '@/components/Slideshow'
+export default function Page() {
   const images = [
     { imgSrc: client1, imgUrl: 'https://www.alwissamlaw.com' },
     { imgSrc: client2, imgUrl: 'https://www.qimahriyadh.com' },
     { imgSrc: client3, imgUrl: 'http://www.shoofeldonia.com' },
     { imgSrc: client4, imgUrl: 'https://landingemlak.malamestate.com' },
   ]
-  const t = useTranslations('Index')
+  const t = useTranslations()
   return (
     <div>
       <div className="relative bg-gradient-to-t from-[#207465] to-[#60D9D0] pb-8 pt-24 text-white sm:pt-44">
