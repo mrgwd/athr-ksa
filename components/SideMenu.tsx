@@ -1,10 +1,10 @@
 'use client'
 import { useTranslations } from 'next-intl'
 import { ArrowDown2 } from 'iconsax-react'
-import Link from 'next/link'
 import DropMenu from './DropMenu'
 import { useEffect, useState } from 'react'
 import Switch from './Switch'
+import { Link } from '@/i18n/navigation'
 
 interface SideMenuProps {
   isOpen: boolean
@@ -20,32 +20,28 @@ export default function SideMenu({ isOpen, handleMenuDown }: SideMenuProps) {
   }
 
   useEffect(() => {
-    if (isOpen) document.body.classList.toggle('overflow-hidden')
+    const bodyClassList = document.body.classList
+    if (isOpen) bodyClassList.add('overflow-hidden')
+    else bodyClassList.remove('overflow-hidden')
   }, [isOpen])
   return (
     <div
       className={`${
         isOpen ? 'w-screen' : 'w-0'
-      } absolute h-screen left-0 top-0 z-30 overflow-hidden transition-all duration-300 sm:hidden`}
+      } absolute h-screen mt-28 left-0 top-0 z-30 overflow-hidden transition-all duration-300 sm:hidden`}
     >
       <div
-        className={`rounded-b-3x absolute ${
+        className={`rounded-b-3x  ${
           isOpen ? 'right-0' : 'right-full'
         }  top-0 h-full w-full shadow-xl transition-all duration-300`}
       >
-        <div className="mt-32 flex h-full flex-col gap-8 bg-white p-10 sm:gap-4">
+        <div className="flex h-full flex-col gap-8 bg-white p-10 sm:gap-4">
           <ul>
             <li
               className="mb-12 hover:text-main-color"
               onClick={handleMenuDown}
             >
               <Link href="/">{t('nav.home')}</Link>
-            </li>
-            <li
-              className="mb-12 hover:text-main-color"
-              onClick={handleMenuDown}
-            >
-              <Link href="/#About">{t('nav.whoAreWe')}</Link>
             </li>
             <li
               className="group cursor-pointer hover:text-main-color"
@@ -67,6 +63,12 @@ export default function SideMenu({ isOpen, handleMenuDown }: SideMenuProps) {
             </li>
             <li
               className="my-12 hover:text-main-color"
+              onClick={handleMenuDown}
+            >
+              <Link href="/blog">{t('nav.blog')}</Link>
+            </li>
+            <li
+              className="mb-12 hover:text-main-color"
               onClick={handleMenuDown}
             >
               <a href="#contact">{t('nav.contact')}</a>

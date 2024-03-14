@@ -9,10 +9,11 @@ export const pathnames = {
   // single external path can be provided.
   '/': '/',
   '/blog': '/blog',
-  '/online-stores': '/online-stores',
-  '/web-development': '/web-development',
-  '/social-media': '/social-media',
-  '/programs-and-systems': '/programs-and-systems',
+  '/blog/1': '/blog/1',
+  '/services/online-stores': '/services/online-stores',
+  '/services/web-development': '/services/web-development',
+  '/services/social-media': '/services/social-media',
+  '/services/programs-and-systems': '/services/programs-and-systems',
   // If locales use different paths, you can
   // specify each external path per locale.
   // '/online-stores': {
@@ -25,7 +26,7 @@ export const { Link, redirect, usePathname, useRouter, getPathname } =
 export type Route =
   | '/'
   | '/blog'
-  | '/online-stores'
-  | '/web-development'
-  | '/social-media'
-  | '/programs-and-systems'
+  | '/services/online-stores'
+  | '/services/web-development'
+  | '/services/social-media'
+  | '/services/programs-and-systems'

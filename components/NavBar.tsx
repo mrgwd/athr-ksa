@@ -16,8 +16,13 @@ import { Link } from '@/i18n/navigation'
 
 export default function NavBar() {
   const t = useTranslations()
-  const location = usePathname()
-  const navCheck = location === '/en/' || location === '/ar/'
+  const loc = usePathname()
+  const location = usePathname().split('services/')[1]
+  const navCheck =
+    location === 'online-stores/' ||
+    location === 'web-development/' ||
+    location === 'programs-and-systems/' ||
+    location === 'social-media/'
   const [isOpen, setIsOpen] = useState(false)
   const handleToggleMenu = () => {
     setIsOpen((isOpen) => !isOpen)
@@ -28,18 +33,19 @@ export default function NavBar() {
   const locale = useLocale()
   return (
     <>
-      <nav className="container absolute left-1/2 top-0 z-40 mx-auto flex -translate-x-1/2 items-center justify-between px-8 pb-5 pt-8">
+      <nav
+        className={`container ${
+          navCheck && 'absolute -translate-x-1/2'
+        }  left-1/2 top-0 z-40 mx-auto flex items-center justify-between px-8 pb-5 pt-8`}
+      >
         <div
           className={`flex items-center sm:gap-12 md:gap-20 
-        ${navCheck ? '' : 'text-white'}`}
+        ${navCheck ? 'text-white' : ''}`}
         >
           <Logo />
           <ul className="hidden child:font-medium child:transition-all sm:flex sm:gap-6 md:gap-10">
             <ListItem>
               <Link href="/">{t('nav.home')}</Link>
-            </ListItem>
-            <ListItem>
-              <a href={`/${locale}/#about`}>{t('nav.whoAreWe')}</a>
             </ListItem>
             <ListItem>
               <p className="group cursor-pointer">
@@ -67,9 +73,7 @@ export default function NavBar() {
           //ref={menuBtn}
           onClick={handleToggleMenu}
           className={`relative h-5 w-8 cursor-pointer transition child:absolute child:left-0 child:block child:h-[0.2rem] child:w-8 child:rounded-full ${
-            location === '/ar/' || location === '/en/'
-              ? 'child:bg-main-color'
-              : 'child:bg-white'
+            navCheck ? 'child:bg-white' : 'child:bg-main-color'
           }  child:duration-300 sm:hidden lg:child:bg-white`}
         >
           <span
@@ -82,7 +86,15 @@ export default function NavBar() {
             className={isOpen ? '-rotate-45 left-1/2 top-1/2' : 'bottom-0'}
           ></span>
         </div>
-        <div className="hidden font-semibold text-main-color sm:block lg:text-white">
+        <div
+          className={`font-semibold hidden sm:block ${
+            navCheck
+              ? 'text-main-color lg:text-white'
+              : loc === '/ar/' || loc === '/en/'
+              ? 'lg:text-white text-main-color'
+              : 'text-main-color'
+          } `}
+        >
           {/* <button lang={locale === 'en' ? 'ar' : 'en'} onClick={useLocale()}>
             {locale === 'en' ? 'En' : 'Ar'}
           </button> */}

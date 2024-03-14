@@ -1,4 +1,3 @@
-import { GlobalSearch } from 'iconsax-react'
 import { useTranslations } from 'next-intl'
 
 interface FeatureProps {

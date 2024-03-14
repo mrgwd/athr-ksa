@@ -62,7 +62,6 @@ export default async function RootLayout({
           > */}
           <NavBar />
           {children}
-          <Contact />
           <Footer />
           <FloatingContactButton />
           {/* </Suspense> */}

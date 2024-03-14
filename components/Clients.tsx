@@ -25,7 +25,7 @@ export default function Clients() {
   useAnimation(ESection, 500, 'opacity-0', 'translate-y-20')
   return (
     <Section name="clients">
-      <div className="rid flex grid-cols-3 flex-wrap justify-center child:child:w-auto gap-2 child:inline-block child:child:h-16 child:rounded-md child:bg-gray-100 child:child:object-cover child:p-4 child:child:opacity-70 child:grayscale child:transition-all child:delay-100 child-hover:bg-gray-50 child-hover:grayscale-0 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8">
+      <div className="rid flex grid-cols-3 flex-wrap justify-center child:child:w-auto gap-2 child:inline-block child:child:h-12 md:child:child:h-16 child:rounded-md child:bg-gray-100 child:child:object-cover child:p-2 md:child:p-4 child:child:opacity-70 child:grayscale child:transition-all child:delay-100 child-hover:bg-gray-50 child-hover:grayscale-0 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8">
         <div>
           <Image src={client7} loading="lazy" alt="logo7" />
         </div>

@@ -115,7 +115,7 @@
     }
   },
   "clients": {
-    "heading": "Trusted by more than 30 clients"
+    "heading": "Trusted by 30+ clients"
   },
   "contact": {
     "heading": "Contact",
@@ -489,26 +489,39 @@
     }
   },
   "blog": {
-    "heading": "Articles and news",
+    "heading": "Blog",
+    "readTime": "min read",
+    "subHeading": "Stay up to date with the latest news and articles in the world of marketing and web development.",
     "articles": {
-      "heading": "Articles",
-      "article1": {
+      "1": {
         "category": "Marketing",
         "date": "Jan 13, 2022",
         "title": "The importance of social media in marketing",
-        "paragraph": "Social media has become an essential part of marketing, and it is the most effective way to reach your target audience. It is a great way to increase brand awareness, and it is also a great way to increase sales. Social media is a great way to connect with your customers and build relationships with them. It is also a great way to get feedback from your customers and improve your products and services. Social media is a great way to build your brand and increase your online presence. It is also a great way to increase traffic to your website and improve your search engine ranking. Social media is a great way to increase your online presence and build your brand. It is also a great way to increase your sales and improve your bottom line."
+        "body": "Social media has become an essential part of marketing, and it is the most effective way to reach your target audience. It is a great way to increase brand awareness, and it is also a great way to increase sales. Social media is a great way to connect with your customers and build relationships with them. It is also a great way to get feedback from your customers and improve your products and services. Social media is a great way to build your brand and increase your online presence. It is also a great way to increase traffic to your website and improve your search engine ranking. Social media is a great way to increase your online presence and build your brand. It is also a great way to increase your sales and improve your bottom line."
       },
-      "article2": {
-        "category": "Marketing",
+      "2": {
+        "category": "Tech",
         "date": "Dec 20, 2021",
-        "title": "The importance of SEO in marketing",
-        "paragraph": "SEO is an essential part of marketing, and it is the most effective way to increase your online presence. It is a great way to increase your website's visibility and improve your search engine ranking. SEO is a great way to increase traffic to your website and improve your search engine ranking. It is also a great way to increase your online presence and build your brand. SEO is a great way to increase your sales and improve your bottom line. It is also a great way to increase your online presence and build your brand. SEO is a great way to increase your online presence and build your brand. It is also a great way to increase your sales and improve your bottom line."
+        "title": "The Evolution of Technology",
+        "body": "Technology has significantly evolved over the past few decades. From the advent of personal computers to the rise of the internet, technology has transformed our lives in countless ways. Today, we rely on technology for almost everything we do. We use it to communicate, learn, work, and entertain ourselves. The rapid advancement of technology has also led to the development of new industries and job opportunities. For instance, the tech industry has become one of the most lucrative sectors, with companies like Apple, Google, and Microsoft leading the way. Furthermore, technology has also revolutionized other sectors such as healthcare, education, and transportation. For example, the use of technology in medicine has led to the development of new treatment methods and improved patient care. In education, technology has enhanced learning through the use of digital tools and resources. In transportation, technology has led to the development of electric cars and self-driving vehicles. As technology continues to evolve, we can expect it to have an even greater impact on our lives in the future."
       },
-      "article3": {
+      "3": {
         "category": "Marketing",
         "date": "Nov 15, 2021",
         "title": "The importance of web development in marketing",
-        "paragraph": "Web development is an essential part of marketing, and it is the most effective way to increase your online presence. It is a great way to increase your website's visibility and improve your search engine ranking. Web development is a great way to increase traffic to your website and improve your search engine ranking. It is also a great way to increase your online presence and build your brand. Web development is a great way to increase your sales and improve your bottom line. It is also a great way to increase your online presence and build your brand. Web development is a great way to increase your online presence and build your brand. It is also a great way to increase your sales and improve your bottom line."
+        "body": "Web development is an essential part of marketing, and it is the most effective way to increase your online presence. It is a great way to increase your website's visibility and improve your search engine ranking. Web development is a great way to increase traffic to your website and improve your search engine ranking. It is also a great way to increase your online presence and build your brand. Web development is a great way to increase your sales and improve your bottom line. It is also a great way to increase your online presence and build your brand. Web development is a great way to increase your online presence and build your brand. It is also a great way to increase your sales and improve your bottom line."
+      }
+    },
+    "explore": {
+      "heading": "Explore the blog",
+      "filters": {
+        "0": "All",
+        "1": "Marketing",
+        "2": "Tech",
+        "3": "Design",
+        "4": "Development",
+        "5": "Web",
+        "6": "Mobile"
       }
     }
   }

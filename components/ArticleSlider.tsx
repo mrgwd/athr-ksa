@@ -36,7 +36,7 @@ export default function ArticleSlider({ articles }: ArticleSliderProps) {
   }
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, 4000)
+    const interval = setInterval(nextSlide, 40000)
     return () => clearInterval(interval)
   }, [])
 
@@ -48,14 +48,14 @@ export default function ArticleSlider({ articles }: ArticleSliderProps) {
           variant="Bulk"
           onClick={prevSlide}
         />
-        <div className="flex gap-8 justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 child:transition-all cursor-pointer child-hover:scale-105 gap-8 justify-center child:max-w-md">
           {articles.map((article, index) => (
-            <>
+            <React.Fragment key={index}>
               {(index === current ||
                 (width > 768 && index === current + 1)) && (
                 <ArticleCard articleID={article.name} img={article.img} />
               )}
-            </>
+            </React.Fragment>
           ))}
         </div>
         <ArrowCircleLeft
@@ -68,13 +68,13 @@ export default function ArticleSlider({ articles }: ArticleSliderProps) {
         {Array.from(
           { length: Math.floor(articles.length / step) },
           (_, i) => i + 1,
-        ).map((num) => (
+        ).map((i) => (
           <div
-            onClick={() => goToSlide(num)}
-            key={num}
-            className={`mt-4 transition duration-500 ${
-              (step === 2 && num * 2 - 2 === current) ||
-              (step !== 2 && num - 1 === current)
+            onClick={() => goToSlide(i)}
+            key={i}
+            className={`mt-12 transition duration-500 ${
+              (step === 2 && i * 2 - 2 === current) ||
+              (step !== 2 && i - 1 === current)
                 ? 'bg-main-color'
                 : 'bg-gray-200'
             }`}

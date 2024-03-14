@@ -5,7 +5,7 @@ import homeImage from '@/public/images/home/home.png'
 export default function Home() {
   const t = useTranslations()
   return (
-    <div className="container mx-auto mt-32 items-center justify-between px-4 sm:mt-56 md:mt-40 md:max-lg:flex lg:mt-56 xl:mt-64">
+    <div className="container mx-auto mt-16 items-center justify-between px-4 sm:mt-20 md:max-lg:flex lg:mt-32 xl:mt-36">
       <div className="relative sm:hidden">
         <Image
           src={homeImage}
@@ -131,7 +131,6 @@ export default function Home() {
           href="#contact"
         >
           {t('home.mainButton')}
-          {/* {useLocale() === 'en' ? 'تواصل معنا' : 'Contact Us'} */}
         </a>
       </div>
       <div className="relative hidden md:max-lg:inline-block">

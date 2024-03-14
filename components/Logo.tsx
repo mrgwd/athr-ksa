@@ -5,11 +5,17 @@ import logo from '../public/images/logo/ATHR.png'
 import whiteLogo from '../public/images/logo/ATHR-w.png'
 import { Link } from '@/i18n/navigation'
 export default function Logo() {
-  const location = usePathname()
+  const location = usePathname().split('services/')[1]
+  const navCheck =
+    location === 'online-stores/' ||
+    location === 'web-development/' ||
+    location === 'programs-and-systems/' ||
+    location === 'social-media/'
+
   return (
     <Link href="/">
       <Image
-        src={location === '/ar/' || location === '/en/' ? logo : whiteLogo}
+        src={navCheck ? whiteLogo : logo}
         priority={true}
         alt="ATHR Logo"
         className="w-16"
