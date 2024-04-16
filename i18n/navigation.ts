@@ -14,6 +14,7 @@ export const pathnames = {
   '/services/web-development': '/services/web-development',
   '/services/social-media': '/services/social-media',
   '/services/programs-and-systems': '/services/programs-and-systems',
+  '/services/seo': '/services/seo',
   // If locales use different paths, you can
   // specify each external path per locale.
   // '/online-stores': {
@@ -30,3 +31,4 @@ export type Route =
   | '/services/web-development'
   | '/services/social-media'
   | '/services/programs-and-systems'
+  | '/services/seo'

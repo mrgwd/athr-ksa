@@ -10,7 +10,8 @@ export default function Logo() {
     location === 'online-stores/' ||
     location === 'web-development/' ||
     location === 'programs-and-systems/' ||
-    location === 'social-media/'
+    location === 'social-media/' ||
+    location === 'seo/'
 
   return (
     <Link href="/">

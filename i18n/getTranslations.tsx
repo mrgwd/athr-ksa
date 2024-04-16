@@ -23,7 +23,6 @@ export const getTranslations = async (config: TranslatorOptions) => {
       messages: messagesModule.default,
       namespace,
     })
-
     return translator.rich
   }
 }

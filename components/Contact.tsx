@@ -16,7 +16,7 @@ export default function Contact() {
     'opacity-0',
     'translate-y-12',
     'sm:translate-y-0',
-    'sm:translate-x-12',
+    locale === 'ar' ? 'sm:translate-x-12' : 'sm:-translate-x-12',
   )
 
   //const messages = useMessages()
@@ -32,7 +32,7 @@ export default function Contact() {
         <div className="mb-24 w-full">
           <iframe
             className="-z-10 w-full max-sm:rounded-3xl md:h-[26rem]"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.192893316475!2d45.959464399999995!3d28.443601100000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fd7415c6b440787%3A0x5a0e324f384fab60!2z2LTYsdmD2Kkg2KfYq9ixINmE2KrZgtmG2YrYqSDZhti42YUg2KfZhNmF2LnZhNmI2YXYp9iq!5e0!3m2!1sen!2sus!4v1701103176681!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12192.941144289647!2d46.68943095845016!3d24.69310800719901!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03003aef5d85%3A0xe12f5ae77e83d77c!2z2LTYsdmD2Kkg2KPYq9ixINmE2YTYqtiz2YjZitmCINin2YTYsdmC2YXZiiDZiNiq2YLZhtmK2Kkg2YbYuNmFINin2YTZhdi52YTZiNmF2KfYqg!5e0!3m2!1sen!2sde!4v1712065580350!5m2!1sen!2sde"
             title="ATHRLocatin"
             width="800"
             height="600"
@@ -42,7 +42,7 @@ export default function Contact() {
           ></iframe>
           <div
             ref={cfSection}
-            className="relative bottom-72 sm:translate-x-12 opacity-0 transition duration-500 md:bottom-48"
+            className="relative bottom-72 w-0 sm:translate-x-12 opacity-0 transition duration-500 md:bottom-48"
           >
             <Form />
           </div>

@@ -2,7 +2,6 @@
 import { usePathname } from 'next/navigation'
 import {
   // LanguageSwitcher,
-  useLocale,
   useTranslations,
 } from 'next-intl'
 import { ArrowDown2 } from 'iconsax-react'
@@ -17,12 +16,8 @@ import { Link } from '@/i18n/navigation'
 export default function NavBar() {
   const t = useTranslations()
   const loc = usePathname()
-  const location = usePathname().split('services/')[1]
-  const navCheck =
-    location === 'online-stores/' ||
-    location === 'web-development/' ||
-    location === 'programs-and-systems/' ||
-    location === 'social-media/'
+  const location = usePathname().includes('/services/')
+  const navCheck = location ? true : false
   const [isOpen, setIsOpen] = useState(false)
   const handleToggleMenu = () => {
     setIsOpen((isOpen) => !isOpen)
@@ -30,7 +25,6 @@ export default function NavBar() {
   const handleMenuDown = () => {
     setIsOpen(false)
   }
-  const locale = useLocale()
   return (
     <>
       <nav
@@ -48,7 +42,7 @@ export default function NavBar() {
               <Link href="/">{t('nav.home')}</Link>
             </ListItem>
             <ListItem>
-              <p className="group cursor-pointer">
+              <p className="group service-btn cursor-pointer">
                 {t('nav.profile.h1')}
                 <ArrowDown2
                   variant="Bold"
@@ -56,7 +50,7 @@ export default function NavBar() {
                 />
               </p>
               <div
-                className={`drop-menu-container relative w-0 h-0 overflow-hidden transition duration-200 hover:overflow-visible`}
+                className={`drop-menu-container group-hover:w-[18.3rem] px-2 rounded-2xl group-hover:h-96 absolute w-0 h-0 overflow-hidden transition-all delay-100 duration-300`}
               >
                 <DropMenu handleMenuDown={handleMenuDown} />
               </div>
@@ -89,15 +83,12 @@ export default function NavBar() {
         <div
           className={`font-semibold hidden sm:block ${
             navCheck
-              ? 'text-main-color lg:text-white'
+              ? 'text-white'
               : loc === '/ar/' || loc === '/en/'
               ? 'lg:text-white text-main-color'
               : 'text-main-color'
           } `}
         >
-          {/* <button lang={locale === 'en' ? 'ar' : 'en'} onClick={useLocale()}>
-            {locale === 'en' ? 'En' : 'Ar'}
-          </button> */}
           <Switch />
         </div>
       </nav>

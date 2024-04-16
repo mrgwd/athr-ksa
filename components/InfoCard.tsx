@@ -1,40 +1,49 @@
+'use client'
+import { Verify } from 'iconsax-react'
 import { useTranslations } from 'next-intl'
+import Image from 'next/image'
 interface InfoCardProps {
-  plan: string
-  features: string[]
+  name: string
+  variant?: 'list' | 'default'
 }
-export default function InfoCard({ plan, features }: InfoCardProps) {
-  const t = useTranslations()
+export default function InfoCard({ name, variant = 'default' }: InfoCardProps) {
+  const t = useTranslations(`${name}`)
   return (
-    <div className="relative flex flex-col justify-between gap-4 rounded-3xl bg-wd-service/10 p-4 text-center text-wd-service sm:items-center sm:rounded-3xl md:p-6 lg:gap-6 xl:gap-8 xl:p-8">
-      <div>
-        <h2 className="text-start text-lg font-medium sm:text-center lg:text-xl">
-          <span className="text-3xl sm:hidden">
-            {t(`SD.sponsors.${plan}.heading`)}
-          </span>{' '}
-          {t(`SD.sponsors.heading`)}
-        </h2>
-        <p className="hidden text-4xl font-semibold sm:block lg:text-4xl">
-          {t(`SD.sponsors.${plan}.heading`)}
-        </p>
-      </div>
-      <div className="text-start">
-        <div className="info-card flex w-full items-start gap-6 text-center">
-          {features.map((f: string, index: number) => (
-            <>
-              <div key={Math.random()}>
-                <h3>{t(`SD.sponsors.${plan}.subHeadings.s${index + 1}`)}</h3>
-                <div className="flex flex-col gap-1">
-                  <p>{t(`SD.sponsors.google.i0u.s0u`)}</p>
-                  <p>{t(`SD.sponsors.${plan}.i${index}u.s0u`)}</p>
-                  <p>{t(`SD.sponsors.${plan}.i${index}u.s1u`)}</p>
-                  <p>{t(`SD.sponsors.${plan}.i${index}u.s2u`)}</p>
-                  <p>{t(`SD.sponsors.${plan}.i${index}u.s3u`)}</p>
-                  <p>{t(`SD.sponsors.${plan}.i${index}u.s4u`)}</p>
-                </div>
-              </div>
-            </>
-          ))}
+    <div className="flex flex-col-reverse items-center lg:flex-row lg:justify-center lg:gap-14">
+      <Image
+        src={`/images/images/${name.split('.')[0]}.webp`}
+        alt="About"
+        className="object-contain mt-12 lg:mt-0 w-[20rem] lg:w-[22rem] xl:w-[26rem]"
+        width={384}
+        height={384}
+      />
+
+      <div className="max-w-xl xl:max-w-2xl">
+        <h3 className="mb-4 font-bold md:text-xl text-wd-service 2xl:text-2xl">
+          {t('subHeading')}
+        </h3>
+
+        <div>
+          {variant === 'list' ? (
+            <ul className="list-disc list-inside">
+              {[...Array(Number(t('count')))].map((item, index) => (
+                <li
+                  key={index}
+                  className="text-main-dark mb-2 flex items-start gap-2 2xl:text-lg list-none"
+                >
+                  <Verify
+                    className="min-w-6 mt-0.5 text-wd-service"
+                    variant="Bulk"
+                  />
+                  <p>{t(`list.${index}`)}</p>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="lg:max-w-xlg text-justify text-main-dark 2xl:text-lg">
+              {t('p2')}
+            </p>
+          )}
         </div>
       </div>
     </div>

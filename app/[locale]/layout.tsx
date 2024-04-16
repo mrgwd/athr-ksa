@@ -3,14 +3,34 @@ import { Readex_Pro } from 'next/font/google'
 import './globals.css'
 
 import NavBar from '@/components/NavBar'
-import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import FloatingContactButton from '@/components/FloatingButtons'
 
 export const metadata: Metadata = {
   title: 'ATHR - أثر',
+  keywords: [
+    'مؤسسة اثر للتسويق الرقمي',
+    'تصميم مواقع',
+    'تحسين محركات البحث',
+    'تصميم واجهات',
+    'تصميم تطبيقات',
+    'برمجة مواقع',
+    'برمجة متاجر',
+    'برمجة تطبيقات',
+    'برمجة خاصة',
+    'تسويق الكتروني',
+    'حملات اعلانية',
+    'تهيئة لمحركات البحث',
+    'محتوى تسويقي',
+    'محتوى اعلانى',
+    'محتوى حصري',
+    'موشن جرافيك',
+    'هويات تجارية',
+    'برامج محاسبية',
+    'انظمة محاسبية',
+  ],
   description:
-    'Athr is a digital agency for web development, marketing and social media services',
+    'نوفر لك أفضل استراتيجيات وحلول التجارة الإلكترونية من أفضل شركة تسويق إلكتروني والتي تساعدك على إدارة نشاطك التجاري بدقة وتحقيق أهدافك والخطة الموضوعة لضمان زيادة المبيعات واكتساب عملاء جدد لنمو تجارتك.',
 }
 const readex_pro = Readex_Pro({ subsets: ['latin'] })
 

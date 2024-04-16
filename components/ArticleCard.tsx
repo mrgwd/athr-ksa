@@ -1,15 +1,13 @@
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 import { useLocale, useTranslations } from 'next-intl'
 import Link from 'next/link'
 import getReadTime from '@/utils/getReadTime'
 interface ArticeCardProps {
-  img: StaticImageData
   articleID: string
   variant?: 'default' | 'small'
   removeShadow?: boolean
 }
 export default function ArticleCard({
-  img,
   articleID,
   variant = 'default',
   removeShadow = false,
@@ -28,11 +26,16 @@ export default function ArticleCard({
     <Link
       href={`/${locale}/blog/${articleID}`}
       className={` ${variantBasedClasses} ${
-        !removeShadow && 'bg-white shadow-lg rounded-3xl'
+        !removeShadow && 'bg-white shadow-lg rounded-xl'
       } transition duration-300  group`}
     >
       <Image
-        src={img}
+        src={`/images/blog/${articleID}.jpg`}
+        // width={variant === 'default' ? 400 : 100}
+        // height={variant === 'default' ? 300 : 100}
+        width={800}
+        height={600}
+        objectFit="cover"
         className={`${
           variant === 'default'
             ? `aspect-video ${removeShadow && 'rounded-xl'}`

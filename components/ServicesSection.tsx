@@ -1,3 +1,4 @@
+'use client'
 import { GlobalEdit, ShoppingCart } from 'iconsax-react'
 import Section from './Section'
 import ServiceCard from './ServiceCard'

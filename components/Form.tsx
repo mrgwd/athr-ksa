@@ -8,7 +8,11 @@ export default function Form() {
     <form
       dir={locale === 'en' ? 'ltr' : 'rtl'}
       onSubmit={handleSubmit}
-      className="absolute top-1/2 flex w-[28rem] flex-col gap-3 rounded-[3rem] bg-white p-8 py-12 shadow-3xl  max-sm:w-full sm:px-12 sm:max-md:left-1/2 sm:max-md:-translate-x-1/2 md:top-1/2 md:mr-8 md:-translate-y-1/2 lg:mr-12 xl:mr-16 2xl:mr-32"
+      className={`absolute top-1/2 flex w-[28rem] flex-col gap-3 rounded-[3rem] bg-white p-8 py-12 shadow-3xl max-sm:w-full sm:px-12 sm:max-md:left-1/2 sm:max-md:-translate-x-1/2 md:top-1/2 ${
+        locale === 'ar'
+          ? 'md:-translate-x-8 lg:-translate-x-12 xl:-translate-x-16 2xl:-translate-x-32'
+          : 'md:translate-x-12'
+      } md:-translate-y-1/2`}
     >
       {state.succeeded ? (
         <div className="flex items-center gap-4">
@@ -49,8 +53,10 @@ export default function Form() {
               required
             />
             <label
-              htmlFor="details"
-              className="absolute right-5 top-3 z-10 -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:right-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-blue-600/0"
+              htmlFor="name"
+              className={`absolute ${
+                locale === 'ar' ? 'right-5' : 'left-5'
+              } top-3 z-10 -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:right-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-blue-600/0`}
             >
               {t('contact.form.fullName')}
             </label>
@@ -66,8 +72,10 @@ export default function Form() {
               required
             />
             <label
-              htmlFor="details"
-              className="absolute right-5 top-3 z-10 -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:right-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-blue-600/0"
+              htmlFor="email"
+              className={`absolute ${
+                locale === 'ar' ? 'right-5' : 'left-5'
+              } top-3 z-10 -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:right-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-blue-600/0`}
             >
               {t('contact.form.email')}
             </label>
@@ -87,8 +95,10 @@ export default function Form() {
               required
             />
             <label
-              htmlFor="details"
-              className="absolute right-5 top-3 z-10 -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:right-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-blue-600/0"
+              htmlFor="tel-number"
+              className={`absolute ${
+                locale === 'ar' ? 'right-5' : 'left-5'
+              } top-3 z-10 -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:right-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-blue-600/0`}
             >
               {t('contact.form.phoneNumber')}
             </label>
@@ -110,7 +120,9 @@ export default function Form() {
             ></textarea>
             <label
               htmlFor="details"
-              className="absolute right-5 top-3 z-10 -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:right-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-blue-600/0"
+              className={`absolute ${
+                locale === 'ar' ? 'right-5' : 'left-5'
+              } top-3 z-10 -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:right-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-blue-600/0`}
             >
               {t('contact.form.detailes')}
             </label>

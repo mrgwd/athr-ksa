@@ -4,26 +4,31 @@ import { useTranslations, useLocale } from 'next-intl'
 // import { useLocale } from 'next-intl'
 type t = (s: string) => void
 interface PlanProps {
-  price: number | string
+  price?: number | string
   plan: string
-  isPop: boolean
+  isPop?: boolean
   features: string[]
 }
-export default function Plan({ price, isPop, plan, features }: PlanProps) {
+export default function Plan({ isPop = false, plan, features }: PlanProps) {
   const t = useTranslations()
   const locale = useLocale()
   return (
-    <div className="relative flex flex-col items-start justify-between gap-4 text-white bg-wd-service sm:border-wd-service sm:text-wd-service rounded-3xl p-4 sm:items-center sm:rounded-3xl sm:border-2 sm:border-solid sm:bg-white sm:text-center md:p-6 lg:gap-6 xl:gap-8 xl:p-8">
+    <div className="relative flex flex-col cursor-default items-start justify-between gap-4 text-white bg-wd-service sm:border-wd-service sm:text-wd-service rounded-3xl p-4 sm:items-center sm:rounded-3xl sm:border-2 sm:border-solid sm:bg-white sm:text-center md:p-6 lg:gap-6 xl:gap-8 xl:p-8">
       <div>
         <h2 className="text-lg font-medium lg:text-xl">
           <span className="text-3xl sm:hidden">
-            {price}
-            {typeof price === 'number' && t('OS.plans.currency')}{' '}
+            {t(`${plan}.planType`)}
+            {/* {typeof price === 'number'
+              ? price
+              : t('PS.plans.premiumPlan.price')}
+            {typeof price === 'number' && t('OS.plans.currency')}*/}{' '}
           </span>
-          {t(`${plan}.planType`)}
+          {t(`${plan}.planName`)}
         </h2>
         <p className="hidden text-4xl font-semibold sm:block lg:text-4xl">
-          {price} {typeof price === 'number' && t('OS.plans.currency')}
+          {t(`${plan}.planType`)}
+          {/* {typeof price === 'number' ? price : }{' '}
+          {typeof price === 'number' && t('OS.plans.currency')} */}
         </p>
       </div>
       <div className="text-start">
@@ -38,7 +43,7 @@ export default function Plan({ price, isPop, plan, features }: PlanProps) {
       </div>
       <a
         href="#contact"
-        className={`rounded-full bg-white py-2 sm:hover:bg text-wd-service sm:bg-wd-service self-stretch transition-all sm:text-white`}
+        className={`rounded-full text-center bg-white py-2 sm:hover:bg text-wd-service sm:bg-wd-service self-stretch transition-all sm:text-white`}
       >
         {t('OS.plans.buyButton')}
       </a>

@@ -7,7 +7,8 @@
       "op1": "Online stores",
       "op2": "Web development",
       "op3": "Social media",
-      "op4": "Programs and systems"
+      "op4": "Programs and systems",
+      "op5": "SEO Optimization"
     },
     "blog": "Blog",
     "contact": "Contact"
@@ -22,7 +23,7 @@
   },
   "about": {
     "heading": "Who are we?",
-    "p1": "A leading institution in the software and e-marketing industry in the Middle East",
+    "subHeading": "A leading institution in the software and e-marketing industry in the Middle East",
     "p2": "We aims to help our distinguished partners from the entities, institutions and companies improve their visibility and lead them to leadership through innovative solutions using many tools and choosing the best tools to obtain the best results. Our goals are to contribute to building emerging projects and transforming ideas and dreams into tangible products. We improve your visibility on the Internet and social networking sites and make it easier to reach you. We help plan your campaigns and choose the appropriate platforms and the most appropriate tools. We develop your work methodology and be your creative partner and help you in progress and achievement."
   },
   "services": {
@@ -117,6 +118,9 @@
   "clients": {
     "heading": "Trusted by 30+ clients"
   },
+  "blogSection": {
+    "heading": "Latest news and articles"
+  },
   "contact": {
     "heading": "Contact",
     "form": {
@@ -130,8 +134,8 @@
     "supportInfo": {
       "address": {
         "heading": "Address",
-        "address1": "Hafar Al-Batin - Al-Azizia neighborhood",
-        "address2": "Majmaah - Al-Marqab District"
+        "address1": "Al-Olaya District - Riyadh",
+        "address2": "Prince Sultan bin Abdulaziz Road"
       },
       "phoneNumber": {
         "heading": "Phone Number",
@@ -149,14 +153,36 @@
     "heading": "All rights reserved © ATHR",
     "commercialRegister": "Commercial register: 2511020210"
   },
+  "newsletter": {
+    "heading": "Subscribe to our newsletter",
+    "email": "Email address",
+    "subscribeButton": "Subscribe"
+  },
+  "gotop": "Go to top",
   "OS": {
     "heading": "Online Stores",
-    "describtion": "Athar Foundation provides comprehensive and professional electronic marketing services, whether for mobile applications or electronic accounts on Instagram, YouTube, Twitter, or Facebook.",
+    "description": "Athar Foundation provides comprehensive and professional electronic marketing services, whether for mobile applications or electronic accounts on Instagram, YouTube, Twitter, or Facebook.",
+    "features": {
+      "count": "5",
+      "heading": "Features of this service",
+      "subHeading": "The advantages of online stores are many, including:",
+      "list": [
+        "Ease of access for consumers, and the ability to shop from anywhere and at any time",
+        "Various and secure payment options, making the purchasing process easier and more convenient",
+        "Product and service prices tend to be more competitive",
+        "It is experiencing tremendous growth and is expected to exceed $5 trillion in sales by 2025",
+        "Saves time and effort for consumers, and reduces purchasing costs"
+      ]
+    },
+    "slider": {
+      "heading": "Why choose us?"
+    },
     "plans": {
       "pop": "Popular",
       "heading": "Pricing",
       "currency": "SAR",
       "basicPlan": {
+        "planName": "Athr's plan",
         "planType": "Basic",
         "features": {
           "f1": "7 days long",
@@ -166,6 +192,7 @@
         }
       },
       "proPlan": {
+        "planName": "Athr's plan",
         "planType": "Pro",
         "features": {
           "f1": "14 days long",
@@ -179,6 +206,7 @@
         }
       },
       "premiumPlan": {
+        "planName": "Athr's plan",
         "planType": "Premium",
         "features": {
           "f1": "25 days long",
@@ -203,16 +231,62 @@
         }
       },
       "buyButton": "Buy"
+    },
+    "FAQs": {
+      "heading": "Frequently Asked Questions (FAQs)",
+      "faqs": {
+        "count": "5",
+        "1": {
+          "q": "How can I get the services?",
+          "a": "You can get the services by clicking on the buy button and filling in the required data."
+        },
+        "2": {
+          "q": "Can I change the package after purchase?",
+          "a": "Yes, you can change the package after purchase by contacting us."
+        },
+        "3": {
+          "q": "Can I get a refund?",
+          "a": "Yes, you can get a refund by contacting us."
+        },
+        "4": {
+          "q": "Can I get a discount?",
+          "a": "Yes, you can get a discount by contacting us."
+        },
+        "5": {
+          "q": "Can I get customized services?",
+          "a": "Yes, you can get customized services by contacting us."
+        }
+      },
+      "support": {
+        "q": "Didn't find the question you're looking for?",
+        "a": "Ask us now!"
+      }
     }
   },
   "WD": {
     "heading": "Web development",
-    "describtion": "Athar Foundation provides comprehensive and professional electronic marketing services, whether for mobile applications or electronic accounts on Instagram, YouTube, Twitter, or Facebook.",
+    "description": "Athar Foundation provides comprehensive and professional electronic marketing services, whether for mobile applications or electronic accounts on Instagram, YouTube, Twitter, or Facebook.",
+    "features": {
+      "count": "5",
+      "heading": "Features of this service",
+      "subHeading": "The advantages of web development are many, including:",
+      "list": [
+        "Increased accessibility and reach to a global audience",
+        "Cost-effective marketing and promotion",
+        "Provides a platform for two-way communication with customers",
+        "Enables automation and integration of business processes",
+        "Improves brand visibility and credibility"
+      ]
+    },
+    "slider": {
+      "heading": "Why choose us?"
+    },
     "plans": {
       "pop": "Popular",
       "heading": "Pricing",
       "currency": "SAR",
       "basicPlan": {
+        "planName": "Athr's Plan",
         "planType": "Basic",
         "features": {
           "f1": "7 days long",
@@ -223,6 +297,7 @@
         }
       },
       "proPlan": {
+        "planName": "Athr's Plan",
         "planType": "Pro",
         "features": {
           "f1": "10 days long",
@@ -236,6 +311,7 @@
         }
       },
       "premiumPlan": {
+        "planName": "Athr's Plan",
         "planType": "Premium",
         "features": {
           "f1": "15 days long",
@@ -252,16 +328,62 @@
         }
       },
       "buyButton": "Buy"
+    },
+    "FAQs": {
+      "heading": "Frequently Asked Questions (FAQs)",
+      "faqs": {
+        "count": "5",
+        "1": {
+          "q": "How can I get the services?",
+          "a": "You can get the services by clicking on the buy button and filling in the required data."
+        },
+        "2": {
+          "q": "Can I change the package after purchase?",
+          "a": "Yes, you can change the package after purchase by contacting us."
+        },
+        "3": {
+          "q": "Can I get a refund?",
+          "a": "Yes, you can get a refund by contacting us."
+        },
+        "4": {
+          "q": "Can I get a discount?",
+          "a": "Yes, you can get a discount by contacting us."
+        },
+        "5": {
+          "q": "Can I get customized services?",
+          "a": "Yes, you can get customized services by contacting us."
+        }
+      },
+      "support": {
+        "q": "Didn't find the question you're looking for?",
+        "a": "Ask us now!"
+      }
     }
   },
   "SD": {
     "heading": "Social media",
-    "describtion": "Athar Foundation provides comprehensive and professional electronic marketing services, whether for mobile applications or electronic accounts on Instagram, YouTube, Twitter, or Facebook.",
+    "description": "Athar Foundation provides comprehensive and professional electronic marketing services, whether for mobile applications or electronic accounts on Instagram, YouTube, Twitter, or Facebook.",
+    "features": {
+      "count": "5",
+      "heading": "Features of this service",
+      "subHeading": "The most important features of social media management service",
+      "list": [
+        "Increase awareness of your brand by creating creative and attractive content and publishing it on various social media platforms",
+        "We have the tools and technologies needed to achieve the best results through social media page management",
+        "You will have peace of mind; because we will do everything related to marketing instead of you",
+        "Enhance brand awareness and improve its reputation",
+        "Increase traffic to your website or store"
+      ]
+    },
+    "slider": {
+      "heading": "Why choose us?"
+    },
     "plans": {
       "pop": "Popular",
       "heading": "Ads",
       "currency": "SAR",
       "basicPlan": {
+        "planName": "Athr's plan",
         "planType": "Basic",
         "features": {
           "f1": "10 designs in all social media sizes",
@@ -275,6 +397,7 @@
         }
       },
       "proPlan": {
+        "planName": "Athr's plan",
         "planType": "Pro",
         "features": {
           "f1": "15 designs in all social media sizes",
@@ -290,6 +413,7 @@
         }
       },
       "premiumPlan": {
+        "planName": "Athr's plan",
         "planType": "Premium",
         "features": {
           "f1": "25 designs in all social media sizes",
@@ -310,6 +434,7 @@
         }
       },
       "extraPlan": {
+        "planName": "Athr's plan",
         "planType": "Special",
         "features": {
           "f1": "A comprehensive marketing plan for one year with clear and tangible goals",
@@ -447,16 +572,62 @@
           "s4u": "40000"
         }
       }
+    },
+    "FAQs": {
+      "heading": "Frequently Asked Questions",
+      "faqs": {
+        "count": "5",
+        "1": {
+          "q": "How can I be sure that you will provide a good service?",
+          "a": "We have a team of creative experts who are dedicated to their work. We are committed to providing the best service with the highest quality. Our customers' satisfaction is our first goal."
+        },
+        "2": {
+          "q": "Can I change the package after purchase?",
+          "a": "Yes, you can change the package after purchase by contacting us."
+        },
+        "3": {
+          "q": "Can I get a refund?",
+          "a": "Yes, you can get a refund by contacting us."
+        },
+        "4": {
+          "q": "Can I get a discount?",
+          "a": "Yes, you can get a discount by contacting us."
+        },
+        "5": {
+          "q": "Can I get customized services?",
+          "a": "Yes, you can get customized services by contacting us."
+        }
+      },
+      "support": {
+        "q": "Didn't find the question you're looking for?",
+        "a": "Ask us now!"
+      }
     }
   },
   "PS": {
     "heading": "Programs and systems",
-    "describtion": "Athr Corporation provides comprehensive software services professionally, whether accounting or sales programs and systems.",
+    "description": "Professional accounting programs and systems, catch errors before they grow .. Transform complex routine accounting operations into easy and smooth processes, enable you to track your expenses, revenues, and manage your invoices with ease",
+    "features": {
+      "count": "5",
+      "heading": "Features of this service",
+      "subHeading": "The most important features of accounting software are:",
+      "list": [
+        "Instead of relying on costly and error-prone manual work, accounting software can organize and process financial data automatically and quickly",
+        "Accounting software enables you to record financial transactions and create accurate financial reports",
+        "Sales software allows you to manage your customer database, issue invoices, and analyze sales performance",
+        "Custom software, whatever your need, involves customizing processes and reports according to your business sector requirements and managing inventory, purchases, and sales",
+        "With just one click, you can issue reports and data, financial information, saving a lot of time and effort"
+      ]
+    },
+    "slider": {
+      "heading": "Why choose us?"
+    },
     "plans": {
       "pop": "Popular",
       "heading": "Ads",
       "currency": "SAR",
       "basicPlan": {
+        "planName": "Athr's plan",
         "planType": "Basic",
         "features": {
           "f1": "Managing the customer database",
@@ -465,6 +636,7 @@
         }
       },
       "proPlan": {
+        "planName": "Athr's plan",
         "planType": "Pro",
         "features": {
           "f1": "Recording financial transactions",
@@ -474,6 +646,7 @@
         }
       },
       "premiumPlan": {
+        "planName": "Athr's plan",
         "planType": "Customized",
         "features": {
           "f1": "Customize processes and reports according to business sector requirements",
@@ -486,6 +659,153 @@
         "price": "Pay as you go"
       },
       "buyButton": "Buy"
+    },
+    "FAQs": {
+      "heading": "Frequently Asked Questions",
+      "faqs": {
+        "count": "5",
+        "1": {
+          "q": "Do you provide technical support for accounting software and systems?",
+          "a": "Yes, we provide technical support to all our customers. Please contact us if you encounter any problems using the software."
+        },
+        "2": {
+          "q": "What companies use Athr's software and systems?",
+          "a": "Our software is used by a diverse range of companies, including small and medium-sized businesses, large corporations, and non-profit organizations."
+        },
+        "3": {
+          "q": "What guarantees does Athr offer on its accounting software and systems?",
+          "a": "We offer a one-year warranty on all our software. We also guarantee that all our software is safe and reliable."
+        },
+        "4": {
+          "q": "Can I get a discount?",
+          "a": "Yes, you can get a discount by contacting us."
+        },
+        "5": {
+          "q": "Can I get customized services?",
+          "a": "Yes, you can get customized services by contacting us."
+        }
+      },
+      "support": {
+        "q": "Didn't find the question you're looking for?",
+        "a": "Ask us now!"
+      }
+    }
+  },
+  "SEO": {
+    "heading": "SEO Optimization",
+    "description": "Athar Foundation provides comprehensive and professional electronic marketing services, whether for mobile applications or electronic accounts on Instagram, YouTube, Twitter, or Facebook",
+    "features": {
+      "count": "5",
+      "heading": "Features of this service",
+      "subHeading": "The most important features of SEO optimization service",
+      "list": [
+        "Athr will ensure your website's presence on the first pages of Google",
+        "We create a comprehensive personal web file for your site, which helps improve its ranking and appearance in search engine results",
+        "Analyze your site's speed and identify problems that may negatively affect the user experience and search ranking",
+        "Improve and optimize your site's Robots.txt file, which helps search engines index the content better",
+        "Analyze your site's structure and fix any technical or structural problems that may affect the ability of search engines to visit and index your site correctly"
+      ]
+    },
+    "slider": {
+      "heading": "Why choose us?"
+    },
+    "plans": {
+      "pop": "Popular",
+      "currency": "SAR",
+      "basicPlan": {
+        "planName": "Athr's plan",
+        "planType": "Basic",
+        "features": {
+          "f1": "Website Audit & Analysis",
+          "f2": "Competitor Analysis (2)",
+          "f3": "Keyword Research & Analysis",
+          "f4": "On-Page Optimization (20 Pages)",
+          "f5": "Internal Linking Structure Improvement",
+          "f6": "404 Error Pages Fixing",
+          "f7": "Mobile Friendly Website",
+          "f8": "Google My Business Profile Creation",
+          "f9": "Monthly Content Plan",
+          "f10": "Social Media Integration",
+          "f11": "Google Search Console & Analytics Management",
+          "f12": "Monthly Report"
+        }
+      },
+      "proPlan": {
+        "planName": "Athr's plan",
+        "planType": "Pro",
+        "features": {
+          "f1": "Website Audit & Analysis",
+          "f2": "Competitor Analysis (5)",
+          "f3": "Keyword Research & Analysis",
+          "f4": "On-Page Optimization (50 Pages)",
+          "f5": "Internal Linking Structure Improvement",
+          "f6": "404 Error Pages Fixing",
+          "f7": "Mobile Friendly Website",
+          "f8": "Google My Business Profile Creation",
+          "f9": "Content Strategy & Calendar (Quarterly)",
+          "f10": "Backlink Building (Forum Links)",
+          "f11": "Off-Page Optimization",
+          "f12": "Social Media Integration",
+          "f13": "Google Search Console & Analytics Management",
+          "f14": "Performance Tracking (50 Pages)",
+          "f15": "Headings Optimization (50 Pages)",
+          "f16": "Image Optimization",
+          "f17": "Content Writing (8 Articles/Month)",
+          "f18": "Monthly Report",
+          "f19": "Technical SEO Audit & Fix"
+        }
+      },
+      "premiumPlan": {
+        "planName": "Athr's plan",
+        "planType": "Premium",
+        "features": {
+          "f1": "Website Audit & Analysis",
+          "f2": "Competitor Analysis (5)",
+          "f3": "In-Depth Keyword Research & Analysis",
+          "f4": "On-Page Optimization (50 Pages)",
+          "f5": "Internal Linking Structure Improvement",
+          "f6": "404 Error Pages Fixing",
+          "f7": "Mobile Friendly Website",
+          "f8": "Google My Business Profile Creation",
+          "f9": "Content Strategy & Calendar (Monthly)",
+          "f10": "High Quality Backlink Building",
+          "f11": "Off-Page Optimization",
+          "f12": "Social Media Integration",
+          "f13": "Google Search Console & Analytics Management",
+          "f14": "Performance Tracking (20 Pages)",
+          "f15": "Headings Optimization (20 Pages)",
+          "f16": "Image Optimization",
+          "f17": "Content Writing (12 Articles/Month)",
+          "f18": "Website Speed Optimization (20 Pages)",
+          "f19": "Content Duplication and Thin Content Fixing",
+          "f20": "Google Core Web Vitals Improvement",
+          "f21": "Monthly Report"
+        },
+        "price": "بناءًا على إحتياجك"
+      },
+      "buyButton": "شراء"
+    },
+    "FAQs": {
+      "heading": "أسئلة شائعة",
+      "faqs": {
+        "count": "3",
+        "1": {
+          "q": "كم يستغرق الوقت لرؤية نتائج تحسين محركات البحث؟",
+          "a": "يعتمد ذلك على عدة عوامل، بما في ذلك حجم وتنافسية السوق الخاص بك، والحالة الحالية لموقعك  وجودة العمل الذي تم إنجازه. وبشكل عام تستغرق عملية تحسين محركات البحث بعض الوقت لتحقيق نتائج مستدامة. قد يستغرق عدة أشهر لرؤية تحسينات ملحوظة في ترتيب موقعك وحركة المرور."
+        },
+        "2": {
+          "q": "هل ستضمن لي خدمة تحسين محركات البحث الحصول  على المركز الأول في Google؟",
+          "a": "تحديد ترتيب معين له في غاية الصعوبة، هناك عدد كبير من العوامل الخارجية التي تؤثر على ذلك كالتغييرات في خوارزميات محركات البحث، والعمل الذي ينجزه المنافسون."
+        },
+        "3": {
+          "q": "هل يمكنني الحصول على خدمات مخصصة؟",
+          "a": "نعم، يمكنك الحصول على خدمات مخصصة وذلك بالتواصل معنا."
+        }
+      },
+      "support": {
+        "q": "لم تجد السؤال الذي تبحث عنه؟",
+        "a": "إسألنا الآن!"
+      }
     }
   },
   "blog": {
@@ -510,6 +830,12 @@
         "date": "Nov 15, 2021",
         "title": "The importance of web development in marketing",
         "body": "Web development is an essential part of marketing, and it is the most effective way to increase your online presence. It is a great way to increase your website's visibility and improve your search engine ranking. Web development is a great way to increase traffic to your website and improve your search engine ranking. It is also a great way to increase your online presence and build your brand. Web development is a great way to increase your sales and improve your bottom line. It is also a great way to increase your online presence and build your brand. Web development is a great way to increase your online presence and build your brand. It is also a great way to increase your sales and improve your bottom line."
+      },
+      "4": {
+        "category": "Tech",
+        "date": "Oct 7, 2023",
+        "title": "The Future of Artificial Intelligence",
+        "body": "Artificial intelligence (AI) is a rapidly evolving field that has the potential to revolutionize the way we live and work. AI is already being used in a wide range of applications, from virtual assistants like Siri and Alexa to self-driving cars and advanced medical diagnostics. In the future, AI is expected to have an even greater impact on our lives. For example, AI is expected to play a key role in the development of new technologies such as quantum computing, which has the potential to solve complex problems that are currently beyond the capabilities of traditional computers. AI is also expected to have a significant impact on the job market, with some experts predicting that it could lead to the automation of many jobs. However, AI also has the potential to create new job opportunities in fields such as data science, machine learning, and robotics. As AI continues to evolve, it is likely to have a profound impact on our lives, and it will be interesting to see how it develops in the future."
       }
     },
     "explore": {
@@ -523,6 +849,28 @@
         "5": "Web",
         "6": "Mobile"
       }
+    }
+  },
+  "FAQsSection": {
+    "heading": "Frequently Asked Questions",
+    "faqs": {
+      "count": "3",
+      "1": {
+        "q": "How can I get the services?",
+        "a": "You can get the services by contacting us and choosing the appropriate package for you"
+      },
+      "2": {
+        "q": "Can I change the package after purchase?",
+        "a": "Yes, you can change the package after purchase by contacting us"
+      },
+      "3": {
+        "q": "Can I get a refund?",
+        "a": "Yes, you can get a refund by contacting us and explaining the reason for the refund"
+      }
+    },
+    "support": {
+      "q": "Do you have any other questions?",
+      "a": "Ask us now!"
     }
   }
 }

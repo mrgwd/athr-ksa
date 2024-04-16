@@ -1,5 +1,5 @@
-// ArticleSlider.tsx
-import React, { useEffect, useState } from 'react'
+'use client'
+import React, { useEffect, useRef, useState } from 'react'
 import ArticleCard from './ArticleCard'
 import { StaticImageData } from 'next/image'
 import { ArrowCircleLeft, ArrowCircleRight } from 'iconsax-react'
@@ -15,13 +15,29 @@ interface ArticleSliderProps {
 type step = 1 | 2
 
 export default function ArticleSlider({ articles }: ArticleSliderProps) {
-  const width = window.innerWidth
-  const step: step = width > 768 ? 2 : 1
-  const [current, setCurrent] = useState(0)
+  const [current, setCurrent] = useState<number>(0)
+  const [step, setStep] = useState<number>(2)
+  const stepRef = useRef<number>(step)
+
+  useEffect(() => {
+    const handleResize = () =>
+      window.innerWidth < 768 ? setStep(1) : setStep(2)
+
+    handleResize()
+
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
+  useEffect(() => {
+    stepRef.current = step
+  }, [step])
 
   const nextSlide = () => {
     setCurrent((previous) =>
-      previous >= articles.length - step ? 0 : previous + step,
+      previous >= articles.length - stepRef.current
+        ? 0
+        : previous + stepRef.current,
     )
   }
 
@@ -32,11 +48,14 @@ export default function ArticleSlider({ articles }: ArticleSliderProps) {
   }
 
   const goToSlide = (index: number) => {
-    setCurrent(step === 1 ? index - 1 : index * 2 - 2)
+    // setCurrent(index * 2 - 2)
+    if (step === 1) setCurrent(index - 1)
+    else setCurrent(index * 2 - 2)
+    // setCurrent(step === 1 ? index - 1 : index * 2 - 2)
   }
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, 40000)
+    const interval = setInterval(nextSlide, 4000)
     return () => clearInterval(interval)
   }, [])
 
@@ -44,22 +63,23 @@ export default function ArticleSlider({ articles }: ArticleSliderProps) {
     <div className="relative ">
       <div className="flex gap-8 items-center justify-center">
         <ArrowCircleRight
-          className="absolutte hidden sm:block top-1/2 text-main-color right-5 z-20 h-20 cursor-pointer"
+          className="absolutte hidden hover:scale-125 transition-all sm:block top-1/2 text-main-color right-5 z-20  cursor-pointer"
           variant="Bulk"
           onClick={prevSlide}
         />
-        <div className="grid grid-cols-1 md:grid-cols-2 child:transition-all cursor-pointer child-hover:scale-105 gap-8 justify-center child:max-w-md">
+        <div className="grid grid-cols-1 md:grid-cols-2 child:transition-all cursor-pointer gap-8 justify-center child:max-w-md">
           {articles.map((article, index) => (
             <React.Fragment key={index}>
-              {(index === current ||
-                (width > 768 && index === current + 1)) && (
-                <ArticleCard articleID={article.name} img={article.img} />
-              )}
+              {step === 2
+                ? (index === current || index === current + 1) && (
+                    <ArticleCard articleID={article.name} />
+                  )
+                : index === current && <ArticleCard articleID={article.name} />}
             </React.Fragment>
           ))}
         </div>
         <ArrowCircleLeft
-          className="absolutte hidden sm:block top-1/2 text-main-color left-5 z-20 h-20 cursor-pointer"
+          className="absolutte hidden hover:scale-125 transition duration-300 sm:block top-1/2 text-main-color left-5 z-20  cursor-pointer"
           variant="Bulk"
           onClick={nextSlide}
         />
@@ -73,10 +93,7 @@ export default function ArticleSlider({ articles }: ArticleSliderProps) {
             onClick={() => goToSlide(i)}
             key={i}
             className={`mt-12 transition duration-500 ${
-              (step === 2 && i * 2 - 2 === current) ||
-              (step !== 2 && i - 1 === current)
-                ? 'bg-main-color'
-                : 'bg-gray-200'
+              current === i * step - step ? 'bg-main-color' : 'bg-gray-200'
             }`}
           ></div>
         ))}

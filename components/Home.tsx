@@ -1,9 +1,20 @@
+'use client'
 import Image from 'next/image'
 import { useTranslations, useLocale, useMessages } from 'next-intl'
-import homeImage from '@/public/images/home/home.png'
+import homeImage from '@/public/images/images/home.webp'
+import ScrollIndicator from './ScrollIndicator'
 
 export default function Home() {
   const t = useTranslations()
+  // const getReviews = async () => {
+  //   const res = await fetch(
+  //     'https://mybusiness.googleapis.com/v4/accounts/4271700451986008974/locations/16048634710185028705/reviews',
+  //   )
+  //   const data = await res.json()
+  //   return data
+  // }
+  // console.log('-> getReviews', getReviews())
+
   return (
     <div className="container mx-auto mt-16 items-center justify-between px-4 sm:mt-20 md:max-lg:flex lg:mt-32 xl:mt-36">
       <div className="relative sm:hidden">
@@ -117,22 +128,41 @@ export default function Home() {
           </defs>
         </svg>
       </div>
+
       <div className="mt-16 child:max-md:text-center sm:mt-36 md:max-lg:inline-block lg:max-xl:mt-20">
         <h1 className="mb-4 text-main-dark sm:text-xl sm:font-light md:text-2xl 2xl:text-3xl">
           {t('home.heading')}
           <span className="text-main-med"> {t('home.athr')}</span>
         </h1>
-        <p className="text-2xl font-semibold text-main-med sm:text-3xl sm:!leading-normal 2xl:text-4xl">
+        <p className="text-2xl font-semibold text-main-med sm:text-3xl sm:!leading-normal 2xl:text-4xl home-paragraph">
           {t('home.paragraph1')} <br /> {t('home.paragraph2')} <br />{' '}
           {t('home.paragraph3')}
         </p>
+        <svg
+          width="290"
+          height="31"
+          viewBox="0 0 290 31"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            id="line"
+            d="M3 27.5557C32.1667 16.889 129.9 -2.64434 287.5 4.55566"
+            stroke="#49E9D1"
+            stroke-width="5"
+            stroke-linecap="round"
+          />
+        </svg>
+
         <a
           className="text-md mt-10 block w-max rounded-full bg-gradient-to-r from-main-color to-main-blue-gradient px-6 py-2 text-white transition duration-300 hover:from-white hover:to-white hover:text-main-color hover:outline hover:outline-2 hover:outline-main-color max-md:mx-auto sm:px-10 sm:py-3 sm:text-lg"
           href="#contact"
         >
           {t('home.mainButton')}
         </a>
+        <ScrollIndicator variant="simple" />
       </div>
+
       <div className="relative hidden md:max-lg:inline-block">
         <Image
           src={homeImage}

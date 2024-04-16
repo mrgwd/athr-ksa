@@ -3,15 +3,15 @@ import Section from './Section'
 import img1 from '@/public/images/blog/1.jpg'
 const articles = [
   {
-    name: '1',
-    img: img1,
-  },
-  {
-    name: '2',
+    name: '4',
     img: img1,
   },
   {
     name: '3',
+    img: img1,
+  },
+  {
+    name: '2',
     img: img1,
   },
   {
