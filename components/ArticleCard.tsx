@@ -26,7 +26,7 @@ export default function ArticleCard({
     <Link
       href={`/${locale}/blog/${articleID}`}
       className={` ${variantBasedClasses} ${
-        !removeShadow && 'bg-white shadow-lg rounded-xl'
+        !removeShadow && ' border border-slate-200 rounded-xl'
       } transition duration-300  group`}
     >
       <Image

@@ -8,15 +8,15 @@ interface FeatureProps {
 export default function Feature({ feature, children }: FeatureProps) {
   const t = useTranslations()
   return (
-    <div>
+    <div className="max-sm:rounded-xl max-sm:border border-slate-100 max-sm:p-4 max-sm:bg-slate-50 max-sm:flex max-sm:text-start text-center gap-2 justify-start">
       <div className="*:mx-auto *:size-12 text-wd-service *:md:size-20">
         {children}
       </div>
-      <div className="text-center">
-        <h4 className="text-md my-2 font-semibold text-main-color md:text-xl xl:text-2xl">
+      <div>
+        <h4 className="text-md sm:my-2 font-semibold text-main-color md:text-xl xl:text-2xl">
           {t(`features.${feature}.subHeading`)}
         </h4>
-        <p className="mx-auto text-xs font-normal text-main-dark sm:text-sm md:text-base lg:max-w-xs">
+        <p className="mx-auto font-normal text-main-dark sm:text-sm md:text-base lg:max-w-xs">
           {t(`features.${feature}.caption`)}
         </p>
       </div>

@@ -30,7 +30,7 @@ export default function NavBar() {
       <nav
         className={`container ${
           navCheck && 'absolute -translate-x-1/2'
-        }  left-1/2 top-0 z-40 mx-auto flex items-center justify-between px-8 pb-5 pt-8`}
+        }  left-1/2 top-0 z-40 max-sm:px-8 mx-auto flex items-center justify-between px-4 pb-5 pt-8`}
       >
         <div
           className={`flex items-center sm:gap-12 md:gap-20 

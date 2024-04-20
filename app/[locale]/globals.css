@@ -74,7 +74,7 @@ html {
 #line {
   stroke-dashoffset: 287;
   stroke-dasharray: 287;
-  animation: drawing 1s ease-in-out forwards 1s;
+  animation: drawing 1s ease-in-out forwards 2s;
 }
 #line2 {
   transition: all 0.15s;
@@ -82,5 +82,27 @@ html {
 @keyframes drawing {
   to {
     stroke-dashoffset: 0;
+  }
+}
+
+.cir {
+  transition: all 0.5s;
+}
+
+#tabletSVG {
+  opacity: 0;
+  transform: translateX(50px);
+  animation: fade 0.5s ease-in-out forwards 2s;
+}
+#phoneSVG {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: fade 0.5s ease-in-out forwards 2s;
+}
+
+@keyframes fade {
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

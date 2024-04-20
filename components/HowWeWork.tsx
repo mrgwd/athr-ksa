@@ -15,8 +15,8 @@ export default function HowWeWork() {
   const step8 = useRef<HTMLDivElement | null>(null)
   const t = useTranslations()
   useAnimation(step1, 600, 'opacity-0', 'translate-y-20')
-  useAnimation(step2, 600, 'opacity-0', 'translate-x-8')
-  useAnimation(step3, 600, 'opacity-0', '-translate-x-8')
+  useAnimation(step2, 700, 'opacity-0', 'translate-x-8')
+  useAnimation(step3, 500, 'opacity-0', '-translate-x-8')
   useAnimation(step4, 800, 'opacity-0', 'translate-y-12')
 
   useAnimation(step5, 600, 'opacity-0', 'translate-x-4')
@@ -48,22 +48,24 @@ export default function HowWeWork() {
   }, [])
   useEffect(() => {
     const activate = () => {
+      console.log(window.scrollY)
       if (!step1.current || !step2.current || !step3.current || !step4.current)
         return
       if (window.scrollY > step1.current.offsetTop - 600) {
         setIsActive1(true)
       }
-      if (window.scrollY > step2.current.offsetTop - 1000) {
+      if (window.scrollY > step2.current.offsetTop - 700) {
         setIsActive2(true)
-      }
-      if (window.scrollY > step3.current.offsetTop - 600) {
+      } else setIsActive2(false)
+      if (window.scrollY > step3.current.offsetTop - 500) {
         setIsActive3(true)
-      }
-      if (window.scrollY > step4.current.offsetTop - 600) {
+      } else setIsActive3(false)
+      if (window.scrollY > step4.current.offsetTop - 800) {
         setIsActive4(true)
-      }
+      } else setIsActive4(false)
     }
     window.addEventListener('scroll', activate)
+    return () => window.removeEventListener('scroll', activate)
   })
   return (
     <Section name="howWeWork">
@@ -76,7 +78,7 @@ export default function HowWeWork() {
             <h4 className=" font-semibold  lg:mb-2 lg:text-xl xl:text-2xl">
               {t('howWeWork.step1.h1')}
             </h4>
-            <p className="text-xs lg:text-[0.78rem] xl:text-base">
+            <p className="text-xs lg:text-[0.78rem] xl:text-base text-main-dark">
               {t('howWeWork.step1.p1')}
               <br />
               {t('howWeWork.step1.p2')}
@@ -89,14 +91,14 @@ export default function HowWeWork() {
         </div>
         <div
           ref={step2}
-          className="relative top-48 translate-x-8 opacity-0 transition duration-500 child:text-wd-service xl:top-56"
+          className="relative top-48 translate-x-8 opacity-0 transition duration-500 text-wd-service xl:top-56"
           dir="ltr"
         >
           <div className="absolute left-3/4 top-1/4 mt-16">
             <h4 className="font-semibold lg:mb-2 lg:text-xl xl:text-2xl">
               {t('howWeWork.step2.h1')}
             </h4>
-            <p className="text-xs lg:text-[0.78rem] xl:text-base">
+            <p className="text-xs lg:text-[0.78rem] xl:text-base text-main-dark">
               {t('howWeWork.step2.p1')}
               <br />
               {t('howWeWork.step2.p2')}
@@ -109,13 +111,13 @@ export default function HowWeWork() {
         </div>
         <div
           ref={step3}
-          className="relative top-80 -translate-x-8 opacity-0 transition duration-500 child:text-wd-service xl:top-[26rem]"
+          className="relative top-80 -translate-x-8 opacity-0 transition duration-500 text-wd-service xl:top-[26rem]"
         >
           <div className="absolute right-3/4 top-1/2 mt-16">
             <h4 className="font-semibold lg:mb-2 lg:text-xl xl:text-2xl">
               {t('howWeWork.step3.h1')}
             </h4>
-            <p className="text-xs lg:text-[0.78rem] xl:text-base">
+            <p className="text-xs lg:text-[0.78rem] xl:text-base text-main-dark">
               {t('howWeWork.step3.p1')}
               <br />
               {t('howWeWork.step3.p2')}
@@ -130,14 +132,14 @@ export default function HowWeWork() {
         </div>
         <div
           ref={step4}
-          className="relative top-[48rem] translate-y-12 opacity-0 transition duration-500 child:text-wd-service xl:top-[60rem]"
+          className="relative top-[48rem] translate-y-12 opacity-0 transition duration-500 text-wd-service xl:top-[60rem]"
           dir="ltr"
         >
           <div className="absolute bottom-0 left-1/2 ml-20 mt-16">
             <h4 className="font-semibold lg:mb-2 lg:text-xl xl:text-2xl">
               {t('howWeWork.step4.h1')}
             </h4>
-            <p className="text-xs lg:text-[0.78rem] xl:text-base">
+            <p className="text-xs lg:text-[0.78rem] xl:text-base text-main-dark">
               {t('howWeWork.step4.p1')}
               <br />
               {t('howWeWork.step4.p2')}
@@ -157,6 +159,7 @@ export default function HowWeWork() {
           xmlns="http://www.w3.org/2000/svg"
         >
           <circle
+            className="cir"
             cx="258.5"
             cy="32.5"
             r="32.5"
@@ -172,6 +175,7 @@ export default function HowWeWork() {
             fill="white"
           />
           <circle
+            className="cir"
             cx="258.5"
             cy="826.5"
             r="32.5"
@@ -187,6 +191,7 @@ export default function HowWeWork() {
             fill="white"
           />
           <circle
+            className="cir"
             cx="486.5"
             cy="326.5"
             r="32.5"
@@ -207,6 +212,7 @@ export default function HowWeWork() {
             fill="white"
           />
           <circle
+            className="cir"
             cx="32.5"
             cy="547.5"
             r="32.5"
@@ -250,6 +256,7 @@ export default function HowWeWork() {
               strokeWidth="5"
             />
             <circle
+              className="cir"
               cx="32.5"
               cy="32.5"
               r="32.5"
@@ -265,6 +272,7 @@ export default function HowWeWork() {
               fill="white"
             />
             <circle
+              className="cir"
               cx="32.5"
               cy="836.5"
               r="32.5"
@@ -280,6 +288,7 @@ export default function HowWeWork() {
               fill="white"
             />
             <circle
+              className="cir"
               cx="32.5"
               cy="288.5"
               r="32.5"
@@ -300,6 +309,7 @@ export default function HowWeWork() {
               fill="white"
             />
             <circle
+              className="cir"
               cx="32.5"
               cy="562.5"
               r="32.5"

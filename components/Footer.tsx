@@ -11,10 +11,10 @@ export default function Footer() {
       <footer className="w-full bg-gradient-to-l from-main-color to-main-blue-gradient pb-10 pt-12 text-center text-white">
         <p>
           {t('footer.heading')} {year}
-          <br />
+          {/* <br />
           <span className="text-sm text-white/50">
             {t('footer.commercialRegister')}
-          </span>
+          </span> */}
         </p>
         <ul className="mt-4 flex items-center justify-center gap-4">
           <li>

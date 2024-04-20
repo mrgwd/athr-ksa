@@ -42,7 +42,7 @@ export default function Contact() {
           ></iframe>
           <div
             ref={cfSection}
-            className="relative bottom-72 w-0 sm:translate-x-12 opacity-0 transition duration-500 md:bottom-48"
+            className="relative bottom-72 transition duration-500 md:bottom-48"
           >
             <Form />
           </div>

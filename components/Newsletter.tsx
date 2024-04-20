@@ -13,7 +13,7 @@ export default function Newsletter() {
             type="email"
             name="newsletterEmail"
             id="newsletterEmail"
-            className="peer block appearance-none rounded-full border border-gray-200 bg-gray-50 px-12 md:px-16 py-3 text-sm text-gray-900 focus:border-main-color focus:outline-none focus:ring-0"
+            className="peer block appearance-none rounded-full border border-gray-200 bg-gray-50 px-4 min-w-60 md:px-6 md:w-72 py-3 text-sm text-gray-900 focus:border-main-color focus:outline-none focus:ring-0"
             placeholder=" "
             required
           />

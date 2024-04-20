@@ -7,6 +7,7 @@ import {
   PenTool2,
   EmptyWalletAdd,
   GlobalEdit,
+  Mobile,
 } from 'iconsax-react'
 import Section from './Section'
 import Feature from './Feature'
@@ -14,7 +15,7 @@ import Feature from './Feature'
 export default function Features() {
   return (
     <Section name="features">
-      <div className="grid grid-cols-2 justify-items-center gap-x-4 gap-y-8 md:grid-cols-3 lg:gap-y-12 xl:gap-y-16">
+      <div className="grid grid-cols-1 justify-items-center gap-x-4 gap-y-4 sm:grid-cols-3 lg:gap-y-12 xl:gap-y-16">
         <Feature feature="seOptmization">
           <GlobalSearch variant="Bulk" />
         </Feature>
@@ -45,6 +46,10 @@ export default function Features() {
 
         <Feature feature="systems">
           <KeyboardOpen variant="Bulk" />
+        </Feature>
+
+        <Feature feature="mobile">
+          <Mobile variant="Bulk" />
         </Feature>
       </div>
     </Section>

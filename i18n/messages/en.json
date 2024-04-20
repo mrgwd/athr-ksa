@@ -77,6 +77,10 @@
     "systems": {
       "subHeading": "Sales programs and systems",
       "caption": "Integrated accounting systems that will enable you to track expenses and revenues. Analyzing sales performance and issuing invoices"
+    },
+    "mobile": {
+      "subHeading": "Mobile applications",
+      "caption": "Developing mobile applications that will help you reach your clients easily and quickly"
     }
   },
   "blogSction": {

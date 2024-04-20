@@ -36,7 +36,7 @@ export default function ScrollIndicator({ variant }: ScrollIndicatorProps) {
   return variant === 'simple' ? (
     <div
       className={`opacity-0 ${
-        isAtTop && ' lg:flex opacity-100'
+        isAtTop && ' lg:flex sm:opacity-100'
       } w-10 h-14 bg-gray-200 transition-all duration-300 rounded-full justify-center py-2 mx-auto mt-6 translate-y-36`}
     >
       <span className="mouse-wheel rounded-full bg-gray-400 size-1.5 py-1.5"></span>
