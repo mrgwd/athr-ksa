@@ -58,9 +58,6 @@ export default function Contact() {
             <Location variant="Bulk" className="text-main-color" />
           </div>
           <div className="inline-block">
-            <h5 className="text-lg font-semibold text-wd-service">
-              {t('contact.supportInfo.address.heading')}
-            </h5>
             <p className="text-main-color">
               {t('contact.supportInfo.address.address1')}
               <span className="block text-wd-service">
@@ -74,9 +71,6 @@ export default function Contact() {
             <CallCalling variant="Bulk" className="text-main-color" />
           </div>
           <div className="inline-block">
-            <h5 className="text-lg font-semibold text-wd-service">
-              {t('contact.supportInfo.phoneNumber.heading')}
-            </h5>
             <p className="text-main-color" dir="ltr">
               {t('contact.supportInfo.phoneNumber.phoneNumber')}
               <span className="block text-wd-service">
@@ -90,9 +84,6 @@ export default function Contact() {
             <I24Support variant="Bulk" className="text-main-color" />
           </div>
           <div className="inline-block">
-            <h5 className="text-lg font-semibold text-wd-service">
-              {t('contact.supportInfo.emailAddress.heading')}
-            </h5>
             <p className="text-main-color">
               {t('contact.supportInfo.emailAddress.emailAddress')}
               <span className="block text-wd-service">

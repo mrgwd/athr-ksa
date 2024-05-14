@@ -24,11 +24,4 @@ export const pathnames = {
 } satisfies Pathnames<typeof locales>
 export const { Link, redirect, usePathname, useRouter, getPathname } =
   createLocalizedPathnamesNavigation({ locales, localePrefix, pathnames })
-export type Route =
-  | '/'
-  | '/blog'
-  | '/services/online-stores'
-  | '/services/web-development'
-  | '/services/social-media'
-  | '/services/programs-and-systems'
-  | '/services/seo'
+export type Route = any

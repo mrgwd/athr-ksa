@@ -6,7 +6,6 @@ import {
 } from 'next-intl'
 import { ArrowDown2 } from 'iconsax-react'
 import Logo from './Logo'
-import ListItem from './ListItem'
 import DropMenu from './DropMenu'
 import { useState } from 'react'
 import SideMenu from './SideMenu'
@@ -15,9 +14,9 @@ import { Link } from '@/i18n/navigation'
 
 export default function NavBar() {
   const t = useTranslations()
-  const loc = usePathname()
-  const location = usePathname().includes('/services/')
-  const navCheck = location ? true : false
+  const locale = usePathname()
+  const location = usePathname()
+  const navCheck = location.includes('/services/') ? true : false
   const [isOpen, setIsOpen] = useState(false)
   const handleToggleMenu = () => {
     setIsOpen((isOpen) => !isOpen)
@@ -30,19 +29,25 @@ export default function NavBar() {
       <nav
         className={`container ${
           navCheck && 'absolute -translate-x-1/2'
-        }  left-1/2 top-0 z-40 max-sm:px-8 mx-auto flex items-center justify-between px-4 pb-5 pt-8`}
+        }  left-1/2 top-0 z-40 mx-auto flex items-center justify-between px-4 lg:px-8 pb-5 pt-8`}
       >
         <div
           className={`flex items-center sm:gap-12 md:gap-20 
         ${navCheck ? 'text-white' : ''}`}
         >
           <Logo />
-          <ul className="hidden child:font-medium child:transition-all sm:flex sm:gap-6 md:gap-10">
-            <ListItem>
+          <ul
+            className={`hidden child:font-medium child:child:transition-all sm:flex sm:gap-6 md:gap-10 ${
+              navCheck
+                ? 'child-hover:child:text-wd-service'
+                : 'child-hover:child:text-main-color'
+            }`}
+          >
+            <li>
               <Link href="/">{t('nav.home')}</Link>
-            </ListItem>
-            <ListItem>
-              <p className="group service-btn cursor-pointer">
+            </li>
+            <li className="group">
+              <p className="service-btn cursor-pointer">
                 {t('nav.profile.h1')}
                 <ArrowDown2
                   variant="Bold"
@@ -54,13 +59,24 @@ export default function NavBar() {
               >
                 <DropMenu handleMenuDown={handleMenuDown} />
               </div>
-            </ListItem>
-            <ListItem>
+            </li>
+            <li>
               <Link href="/blog">{t('nav.blog')}</Link>
-            </ListItem>
-            <ListItem>
-              <a href="#contact">{t('nav.contact')}</a>
-            </ListItem>
+            </li>
+            {/* <li>
+              <a
+                href={`${location.includes('blog') ? '/#contact' : '#contact'}`}
+              >
+                {t('nav.learnAtAthr')}
+              </a>
+            </li> */}
+            <li>
+              <a
+                href={`${location.includes('blog') ? '/#contact' : '#contact'}`}
+              >
+                {t('nav.contact')}
+              </a>
+            </li>
           </ul>
         </div>
         <div
@@ -81,12 +97,8 @@ export default function NavBar() {
           ></span>
         </div>
         <div
-          className={`font-semibold hidden sm:block ${
-            navCheck
-              ? 'text-white'
-              : loc === '/ar/' || loc === '/en/'
-              ? 'lg:text-white text-main-color'
-              : 'text-main-color'
+          className={`font-semibold hidden sm:block child-hover:underline ${
+            navCheck ? 'text-white' : 'text-main-color'
           } `}
         >
           <Switch />

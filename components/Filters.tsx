@@ -1,16 +1,55 @@
+'use client'
 import { useTranslations } from 'next-intl'
-
+import arTranslations from '@/i18n/messages/ar.json'
+import { useEffect, useState } from 'react'
+import { Article } from '@/types/articlesTypes'
 interface FiltersProps {
-  filters: number[]
-  handleAddFilter: (filter: number) => void
-  handleRemoveFilter: (filter: number) => void
+  articles: Article[]
+  setSortedArticles: (articles: Article[]) => void
+  // filters: number[]
+  // handleAddFilter: (filter: number) => void
+  // handleRemoveFilter: (filter: number) => void
 }
-export default function Filters({
-  filters,
-  handleAddFilter,
-  handleRemoveFilter,
-}: FiltersProps) {
+
+// interface category {
+//   id: number
+//   name: string
+//   created_at: string
+//   updated_at: string
+// }
+export default function Filters({ articles, setSortedArticles }: FiltersProps) {
   const t = useTranslations('blog.explore.filters')
+  const [filters, setFilters] = useState<number[]>([0])
+  useEffect(() => {
+    const filteredArticles = filters.map((filter) =>
+      articles.filter(
+        (article) => t(`${filter}`) === article.category.name?.toLowerCase(),
+      ),
+    )
+    setSortedArticles(
+      filters.length === 1 && filters[0] === 0
+        ? articles
+        : filteredArticles.flat(),
+    )
+  }, [filters, t])
+  const handleAddFilter = (index: number) => {
+    if (index === 0) {
+      setFilters([0])
+    } else {
+      const newFilters = filters.filter((f) => f !== 0)
+      newFilters.push(index)
+      setFilters(newFilters)
+    }
+  }
+  const handleRemoveFilter = (index: number) => {
+    const newFilters = filters.filter((f) => f !== index)
+    if (newFilters.length === 0) {
+      newFilters.push(0)
+    }
+    setFilters(newFilters)
+  }
+  console.log(filters)
+
   return (
     <div className="flex flex-wrap gap-3 mb-8">
       {Array.from({ length: 7 }).map((_, i) => (
@@ -29,6 +68,7 @@ export default function Filters({
         >
           {t(`${i}`)}
         </button>
+        // <div key={i}></div>
       ))}
     </div>
   )

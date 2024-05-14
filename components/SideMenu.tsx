@@ -28,14 +28,14 @@ export default function SideMenu({ isOpen, handleMenuDown }: SideMenuProps) {
     <div
       className={`${
         isOpen ? 'w-screen' : 'w-0'
-      } absolute h-screen mt-28 left-0 top-0 z-30 overflow-hidden transition-all duration-300 sm:hidden`}
+      } absolute h-screen mt-28 left-0 top-0 z-30 overflow-x-hidden transition-all duration-300 sm:hidden`}
     >
       <div
         className={`rounded-b-3x  ${
           isOpen ? 'right-0' : 'right-full'
         }  top-0 h-full w-full shadow-xl transition-all duration-300`}
       >
-        <div className="flex h-full flex-col gap-8 bg-white p-10 sm:gap-4">
+        <div className="flex h-[calc(100vh-115px)] overflow-y-scroll flex-col gap-8 bg-slate-50 p-10 sm:gap-4">
           <ul>
             <li
               className="mb-12 hover:text-main-color"
@@ -78,7 +78,7 @@ export default function SideMenu({ isOpen, handleMenuDown }: SideMenuProps) {
           <div>
             <Switch />
           </div>
-          <p className="absolute bottom-16 left-1/2 -translate-x-1/2 whitespace-nowrap">
+          <p className="text-center whitespace-nowrap">
             {t('footer.heading')} {year}
           </p>
         </div>

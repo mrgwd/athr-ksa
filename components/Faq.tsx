@@ -14,7 +14,7 @@ export default function Faq({
 }: FaqProps) {
   return (
     <div
-      className="p-4 px-6 sm:p-8 sm:px-12 cursor-pointer bg-gray-100/70 transition-all text-main-color rounded-xl hover:bg-main-color/10"
+      className="p-4 px-6 sm:p-8 sm:px-12 cursor-pointer bg-slate-100 transition-all text-main-color rounded-xl hover:bg-main-color/10"
       onClick={handleOpen}
     >
       <div className="flex justify-between gap-2">

@@ -1,48 +1,82 @@
 'use client'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { useState, useEffect } from 'react'
 import ArticleCard from './ArticleCard'
 import Featured from './Featured'
 import Filters from './Filters'
-const articles = ['1', '4', '3', '2', '3', '1', '2', '1', '3', '4', '3', '4']
-
-export default function Articles() {
+import { Article } from '@/types/articlesTypes'
+const articlesData = [
+  {
+    id: 'tech-1',
+    title: 'The Best Tech Gadgets of 2021',
+    category: 'tech',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Nulla facilisi. Donec pellentesque semper elit, quis aliquam nunc accumsan sit amet.',
+    // image: '/images/tech-1.jpg',
+  },
+  {
+    id: 'tech-2',
+    title: 'The Future of Tech: AI and Machine Learning',
+    category: 'tech',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Nulla facilisi. Donec pellentesque semper elit, quis aliquam nunc accumsan sit amet.',
+    // image: '/images/tech-2.jpg',
+  },
+  {
+    id: 'tech-3',
+    title: 'The Best Tech Gadgets of 2021',
+    category: 'tech',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Nulla facilisi. Donec pellentesque semper elit, quis aliquam nunc accumsan sit amet.',
+    // image: '/images/tech-3.jpg',
+  },
+  {
+    id: 'tech-4',
+    title: 'The Future of Tech: AI and Machine Learning',
+    category: 'tech',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Nulla facilisi. Donec pellentesque semper elit, quis aliquam nunc accumsan sit amet.',
+    // image: '/images/tech-4.jpg',
+  },
+  {
+    id: 'design-1',
+    title: 'The Best Design Trends of 2021',
+    category: 'design',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Nulla facilisi. Donec pellentesque semper elit, quis aliquam nunc accumsan sit amet.',
+    // image: '/images/design-1.jpg',
+  },
+  {
+    id: 'design-2',
+    title: 'The Future of Design: UX and UI Trends',
+    category: 'design',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Nulla facilisi. Donec pellentesque semper elit, quis aliquam nunc accumsan sit amet.',
+    // image: '/images/design-2.jpg',
+  },
+]
+interface ArticlesProps {
+  arabicArticles: Article[]
+  englishArticles: Article[]
+}
+export default function Articles({
+  arabicArticles,
+  englishArticles,
+}: ArticlesProps) {
   const t = useTranslations('blog')
-  const [filters, setFilters] = useState<number[]>([0])
+  const lcoale = useLocale()
+  const articles = lcoale === 'ar' ? arabicArticles : englishArticles
+
   const [sortedArticles, setSortedArticles] = useState(articles)
-  console.log(sortedArticles)
   useEffect(() => {
-    const filteredArticles = filters.map((filter) =>
-      articles.filter(
-        (article) =>
-          t(`explore.filters.${filter}`) === t(`articles.${article}.category`),
-      ),
-    )
-    setSortedArticles(
-      filters.length === 1 && filters[0] === 0
-        ? articles
-        : filteredArticles.flat(),
-    )
-  }, [filters, t])
-  const handleAddFilter = (index: number) => {
-    if (index === 0) {
-      setFilters([0])
-    } else {
-      const newFilters = filters.filter((f) => f !== 0)
-      newFilters.push(index)
-      setFilters(newFilters)
-    }
-  }
-  const handleRemoveFilter = (index: number) => {
-    const newFilters = filters.filter((f) => f !== index)
-    if (newFilters.length === 0) {
-      newFilters.push(0)
-    }
-    setFilters(newFilters)
-  }
-  console.log(filters)
+    document.title = `${t('description')} - ${t('heading')}`
+  }, [])
+
+  // console.log('-> Data', arabicArticles)
+  // console.log('-> Articles', articles)
+  // console.log('->  Sorted Articles', sortedArticles)
   return (
-    <div className="container mx-auto my-16 px-4 transition duration-500 md:mt-20">
+    <div className="container mx-auto my-16 px-4 md:px-8 transition duration-500 md:mt-20">
       <div className="my-8">
         <h2 className="text-main-color font-medium text-3xl lg:text-5xl">
           {t('heading')}
@@ -55,21 +89,21 @@ export default function Articles() {
         <h2 className="text-main-color font-medium text-3xl lg:text-5xl">
           {t('explore.heading')}
         </h2>
-        <Filters
-          filters={filters}
-          handleAddFilter={handleAddFilter}
-          handleRemoveFilter={handleRemoveFilter}
-        />
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-10 gap-x-6">
-          {sortedArticles.map((article, index) => (
-            <ArticleCard
-              key={index}
-              articleID={article}
-              variant="default"
-              removeShadow={true}
-            />
-          ))}
-        </div>
+        <Filters articles={articles} setSortedArticles={setSortedArticles} />
+        {sortedArticles.length ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-10 gap-x-6">
+            {sortedArticles.map((article, index) => (
+              <ArticleCard
+                key={index}
+                article={article}
+                variant="default"
+                removeShadow={true}
+              />
+            ))}
+          </div>
+        ) : (
+          <p className="text-slate-500 text-center">{t('noArticles')}</p>
+        )}
       </div>
     </div>
   )

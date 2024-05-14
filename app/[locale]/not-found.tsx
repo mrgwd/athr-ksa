@@ -1,7 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import logo from '@/public/images/logo/ATHR.png'
-import { useEffect } from 'react'
 import Image from 'next/image'
 // export const metadata: Metadata = {
 //   title: 'ATHR | Not Found',

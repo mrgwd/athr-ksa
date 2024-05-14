@@ -31,10 +31,22 @@ export const metadata: Metadata = {
   ],
   description:
     'نوفر لك أفضل استراتيجيات وحلول التجارة الإلكترونية من أفضل شركة تسويق إلكتروني والتي تساعدك على إدارة نشاطك التجاري بدقة وتحقيق أهدافك والخطة الموضوعة لضمان زيادة المبيعات واكتساب عملاء جدد لنمو تجارتك.',
+  metadataBase: new URL('https://athr-ksa.com/images/images/'),
+  openGraph: {
+    images: '/opengraph-image.jpg',
+  },
+  alternates: {
+    canonical: 'https://athr-ksa.com',
+    languages: {
+      en: 'https://athr-ksa.com/en',
+      'ar-SA': 'https://athr-ksa.com/ar',
+    },
+  },
 }
 const readex_pro = Readex_Pro({ subsets: ['latin'] })
 
 import Providers from './providers'
+import Head from 'next/head'
 
 const LOCALES = ['en', 'ar']
 
@@ -69,22 +81,26 @@ export default async function RootLayout({
   params,
 }: RootLayoutProps) {
   const messages = await getMessages(params.locale)
+  const LOCALES = ['en', 'ar', 'x-default']
+
   return (
     <html lang={params.locale} dir={params.locale === 'ar' ? 'rtl' : 'ltr'}>
-      <body className={readex_pro.className}>
+      {/* <head>
+        {LOCALES.map((locale) => (
+          <link
+            key={locale}
+            rel="alternate"
+            hrefLang={locale === 'ar' ? 'ar-SA' : locale}
+            href={`/${locale === 'x-default' ? 'ar' : locale}`}
+          />
+        ))}
+      </head> */}
+      <body className={`${readex_pro.className} bg-slate-50`}>
         <Providers messages={messages} locale={params.locale}>
-          {/* <Suspense
-          fallback={
-            <div className="w-screen h-screen flex items-center justify-center">
-              <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-main-color"></div>
-            </div>
-          }
-          > */}
           <NavBar />
           {children}
           <Footer />
           <FloatingContactButton />
-          {/* </Suspense> */}
         </Providers>
       </body>
     </html>

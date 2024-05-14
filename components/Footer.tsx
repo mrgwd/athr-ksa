@@ -2,21 +2,42 @@
 import { useTranslations } from 'next-intl'
 import { Instagram, Facebook, Snapchat } from 'iconsax-react'
 import ScrollIndicator from './ScrollIndicator'
+import { Link } from '@/i18n/navigation'
 export default function Footer() {
   const t = useTranslations()
   const year: number = new Date().getFullYear()
   return (
     <>
       <ScrollIndicator variant="detailed" />
-      <footer className="w-full bg-gradient-to-l from-main-color to-main-blue-gradient pb-10 pt-12 text-center text-white">
+      <footer className="w-full flex flex-col gap-2 bg-gradient-to-l from-main-color to-main-blue-gradient py-10 text-center text-white">
         <p>
           {t('footer.heading')} {year}
-          {/* <br />
-          <span className="text-sm text-white/50">
-            {t('footer.commercialRegister')}
-          </span> */}
+          <br />
         </p>
-        <ul className="mt-4 flex items-center justify-center gap-4">
+        <ul className="text-sm flex-wrap justify-center flex gap-2 child-hover:text-white text-white/50">
+          <li>
+            <Link href="/services/online-stores">{t('nav.profile.op1')}</Link>
+          </li>
+          •
+          <li>
+            <Link href="/services/web-development">{t('nav.profile.op2')}</Link>
+          </li>
+          •
+          <li>
+            <Link href="/services/social-media">{t('nav.profile.op3')}</Link>
+          </li>
+          •
+          <li>
+            <Link href="/services/programs-and-systems">
+              {t('nav.profile.op4')}
+            </Link>
+          </li>
+          •
+          <li>
+            <Link href="/services/seo">{t('nav.profile.op5')}</Link>
+          </li>
+        </ul>
+        <ul className="flex items-center justify-center gap-4">
           <li>
             <a target="_blanc" href="https://www.pinterest.com/athrcompany">
               <svg

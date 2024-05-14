@@ -9,7 +9,7 @@ interface InfoCardProps {
 export default function InfoCard({ name, variant = 'default' }: InfoCardProps) {
   const t = useTranslations(`${name}`)
   return (
-    <div className="flex flex-col-reverse items-center lg:flex-row lg:justify-center lg:gap-14">
+    <div className="flex flex-col-reverse items-center lg:flex-row lg:justify-center lg:gap-20">
       <Image
         src={`/images/images/${name.split('.')[0]}.webp`}
         alt="About"

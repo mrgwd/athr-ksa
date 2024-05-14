@@ -13,8 +13,9 @@ export default function ServiceCard({
   const t = useTranslations()
   const locale = useLocale()
   return (
-    <div className="rounded-2xl bg-slate-50 overflow-hidden border border-slate-100 relative">
-      <div className="p-8 sm:p-12 bg-main-color/25 absolute top-full left-0 -translate-y-2/3 blur-3xl rounded-full"></div>
+    <div className="rounded-2xl service-card cursor-default bg-slate-50 overflow-hidden border border-slate-200 relative">
+      <div className="p-8 sm:p-12 bg-main-color/30 absolute top-full left-0 -translate-y-2/3 transition-all duration-500 blur-3xl blurry rounded-full "></div>
+      <div className="p-8 sm:p-12 bg-white absolute top-0 right-0 z-20 -translate-y-2/3 transition-all duration-500 blur-3xl rounded-full blurry"></div>
       <div className="size-16 min-w-16 relative *:text-main-med *:size-8 *:absolute *:top-1/2 *:left-1/2 *:-translate-y-1/2 *:-translate-x-1/2 rounded-full bg-main-color/10 block sm:inline-block ">
         {children}
       </div>
@@ -33,7 +34,9 @@ export default function ServiceCard({
         {t(`services.${name}.readMore`)}
         <span
           className={`inline-block transition-all ${
-            locale === 'en' ? 'ml-2  group-hover:ml-4' : 'mr-2 group-hover:mr-4'
+            locale === 'en'
+              ? 'ml-2  group-hover:ml-4 -scale-x-0'
+              : 'mr-2 group-hover:mr-4'
           }`}
         >
           &#129140;

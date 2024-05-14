@@ -1,8 +1,7 @@
-import Featured from '@/components/Featured'
-import Filters from '@/components/Filters'
-import ArticleCard from '@/components/ArticleCard'
 import { Metadata } from 'next'
 import Articles from '@/components/Articles'
+import { Article } from '@/types/articlesTypes'
+import { title } from 'process'
 export const metadata: Metadata = {
   title: 'المدونة - أثر',
   keywords: [
@@ -30,6 +29,45 @@ export const metadata: Metadata = {
   description:
     'في مدونة أثر، نشاركك أحدث الأفكار والمقالات حول التسويق الرقمي، تصميم وبرمجة المواقع، تصميم التطبيقات، والكثير من المواضيع الأخرى المتعلقة بالتكنولوجيا والتسويق الرقمي.',
 }
-export default function Page() {
-  return <Articles />
+export default async function Page() {
+  const getUserIp = async () => {
+    const res = await fetch('https://api.ipify.org?format=json')
+    const data = await res.json()
+    return data.ip
+  }
+  const userIp = await getUserIp()
+
+  const getArabicArticles = async () => {
+    const formData = new FormData()
+    formData.append('ip_address', userIp)
+    const res = await fetch('https://new.athr-ksa.com/api/all-artical-arabic', {
+      method: 'POST',
+      body: formData,
+    })
+    const data = await res.json()
+    return data.data
+  }
+  const getEnglishArticles = async () => {
+    const formData = new FormData()
+    formData.append('ip_address', userIp)
+    const res = await fetch(
+      'https://new.athr-ksa.com/api/all-artical-english',
+      {
+        method: 'POST',
+        body: formData,
+      },
+    )
+    const data = await res.json()
+    return data.data
+  }
+
+  const arabicArticles = await getArabicArticles()
+  const englishArticles = await getEnglishArticles()
+
+  return (
+    <Articles
+      arabicArticles={arabicArticles}
+      englishArticles={englishArticles}
+    />
+  )
 }

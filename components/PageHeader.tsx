@@ -1,6 +1,7 @@
 'use client'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import ScrollIndicator from './ScrollIndicator'
+import { useEffect } from 'react'
 
 interface PageHeaderProps {
   name: string
@@ -18,9 +19,13 @@ interface PageHeaderProps {
 // }: PageHeaderProps) {
 export default function PageHeader({ name, children }: PageHeaderProps) {
   const t = useTranslations(name)
+  const locale = useLocale()
+  useEffect(() => {
+    if (locale === 'en') document.title = 'Athr | ' + t('heading')
+  }, [])
   return (
     <>
-      <div className="relative bg-gradient-to-t from-[#207465] to-[#60D9D0] py-16 text-white sm:pt-32 rounded-2xl border-4 border-white">
+      <div className="relative bg-gradient-to-t from-[#207465] to-[#60D9D0] py-16 text-white sm:pt-32 rounded-2xl border-[6px] border-white">
         <div className="flex justify-center">{children}</div>
         <div className="absolute bottom-0 mx-auto mb-12 w-full">
           <h2 className="mb-5 text-center text-2xl font-semibold md:mb-10 lg:text-4xl">

@@ -78,7 +78,7 @@ export default function HowWeWork() {
             <h4 className=" font-semibold  lg:mb-2 lg:text-xl xl:text-2xl">
               {t('howWeWork.step1.h1')}
             </h4>
-            <p className="text-xs lg:text-[0.78rem] xl:text-base text-main-dark">
+            <p className="text-xs md:text-sm lg:text-base xl:text-base text-main-dark">
               {t('howWeWork.step1.p1')}
               <br />
               {t('howWeWork.step1.p2')}
@@ -98,7 +98,7 @@ export default function HowWeWork() {
             <h4 className="font-semibold lg:mb-2 lg:text-xl xl:text-2xl">
               {t('howWeWork.step2.h1')}
             </h4>
-            <p className="text-xs lg:text-[0.78rem] xl:text-base text-main-dark">
+            <p className="text-xs md:text-sm lg:text-base xl:text-base text-main-dark">
               {t('howWeWork.step2.p1')}
               <br />
               {t('howWeWork.step2.p2')}
@@ -117,7 +117,7 @@ export default function HowWeWork() {
             <h4 className="font-semibold lg:mb-2 lg:text-xl xl:text-2xl">
               {t('howWeWork.step3.h1')}
             </h4>
-            <p className="text-xs lg:text-[0.78rem] xl:text-base text-main-dark">
+            <p className="text-xs md:text-sm lg:text-base xl:text-base text-main-dark">
               {t('howWeWork.step3.p1')}
               <br />
               {t('howWeWork.step3.p2')}
@@ -139,7 +139,7 @@ export default function HowWeWork() {
             <h4 className="font-semibold lg:mb-2 lg:text-xl xl:text-2xl">
               {t('howWeWork.step4.h1')}
             </h4>
-            <p className="text-xs lg:text-[0.78rem] xl:text-base text-main-dark">
+            <p className="text-xs md:text-sm lg:text-base xl:text-base text-main-dark">
               {t('howWeWork.step4.p1')}
               <br />
               {t('howWeWork.step4.p2')}
@@ -334,7 +334,7 @@ export default function HowWeWork() {
             <h5 className="font-semibold sm:text-lg lg:mb-2 lg:text-xl xl:text-2xl">
               {t('howWeWork.step1.h1')}
             </h5>
-            <p className="text-sm lg:text-[0.78rem] xl:text-base">
+            <p className="text-sm md:text-sm lg:text-base xl:text-base">
               {t('howWeWork.step1.p1')}
               <br />
               {t('howWeWork.step1.p2')}
@@ -351,7 +351,7 @@ export default function HowWeWork() {
             <h5 className="font-semibold sm:text-lg lg:mb-2 lg:text-xl xl:text-2xl">
               {t('howWeWork.step2.h1')}
             </h5>
-            <p className="text-sm lg:text-[0.78rem] xl:text-base">
+            <p className="text-sm md:text-sm lg:text-base xl:text-base">
               {t('howWeWork.step2.p1')}
               <br />
               {t('howWeWork.step2.p2')}
@@ -368,7 +368,7 @@ export default function HowWeWork() {
             <h5 className="font-semibold sm:text-lg lg:mb-2 lg:text-xl xl:text-2xl">
               {t('howWeWork.step3.h1')}
             </h5>
-            <p className="text-sm lg:text-[0.78rem] xl:text-base">
+            <p className="text-sm md:text-sm lg:text-base xl:text-base">
               {t('howWeWork.step3.p1')}
               <br />
               {t('howWeWork.step3.p2')}
@@ -387,7 +387,7 @@ export default function HowWeWork() {
             <h5 className="font-semibold sm:text-lg lg:mb-2 lg:text-xl xl:text-2xl">
               {t('howWeWork.step4.h1')}
             </h5>
-            <p className="text-sm lg:text-[0.78rem] xl:text-base">
+            <p className="text-sm md:text-sm lg:text-base xl:text-base">
               {t('howWeWork.step4.p1')}
               <br />
               {t('howWeWork.step4.p2')}

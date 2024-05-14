@@ -35,18 +35,18 @@ export default function ScrollIndicator({ variant }: ScrollIndicatorProps) {
   })
   return variant === 'simple' ? (
     <div
-      className={`opacity-0 ${
+      className={`opacity-0 absolute left-1/2 -translate-x-1/2 ${
         isAtTop && ' lg:flex sm:opacity-100'
-      } w-10 h-14 bg-gray-200 transition-all duration-300 rounded-full justify-center py-2 mx-auto mt-6 translate-y-36`}
+      } w-10 h-14 bg-slate-200 transition-all duration-300 rounded-full justify-center py-2 mx-auto mt-6 translate-y-36`}
     >
-      <span className="mouse-wheel rounded-full bg-gray-400 size-1.5 py-1.5"></span>
+      <span className="mouse-wheel rounded-full bg-slate-400 size-1.5 py-1.5"></span>
     </div>
   ) : (
     <button
       onClick={goToTop}
       className={`rounded-full overflow-hidden group py-2.5 ${
         locale === 'ar' ? 'hover:pl-12' : 'hover:pr-12'
-      } px-6 my-12 bg-gray-100 text-gray-500 transition-all mt-24 block mx-auto hover:bg-main-color/10 hover:text-main-color`}
+      } px-6 my-12 bg-slate-200/75 text-gray-500 transition-all mt-24 block mx-auto hover:bg-main-color/10 hover:text-main-color`}
     >
       {''} {t('gotop')}
       {/* before:content-['🡱'] before:inline-block hover:before:-translate-y-2 hover:before:opacity-0 before:transition-all */}

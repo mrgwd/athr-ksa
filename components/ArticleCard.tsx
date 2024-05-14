@@ -2,71 +2,86 @@ import Image from 'next/image'
 import { useLocale, useTranslations } from 'next-intl'
 import Link from 'next/link'
 import getReadTime from '@/utils/getReadTime'
+import { Article } from '@/types/articlesTypes'
 interface ArticeCardProps {
-  articleID: string
+  article: Article
   variant?: 'default' | 'small'
   removeShadow?: boolean
 }
 export default function ArticleCard({
-  articleID,
+  article,
   variant = 'default',
   removeShadow = false,
 }: ArticeCardProps) {
   const t = useTranslations('blog')
-  const title: string = t(`articles.${articleID}.title`)
-  const body: string = t(`articles.${articleID}.body`).toString()
+  const title: string = article.title
+  console.log('-> Title', title)
+  const body: string = article.body
   const readTime: number = getReadTime(body.split(' ').length)
   const locale: string = useLocale()
+  // console.log('-> Id', article.id)
   const variantBasedClasses: string = `${
     variant === 'default'
       ? 'overflow-hidden'
       : `flex gap-6 items-center ${!removeShadow && 'p-4'}`
   }`
+  console.log('URL Name ->', article?.category?.url_name)
   return (
-    <Link
-      href={`/${locale}/blog/${articleID}`}
+    <div
+      // href={`/${locale}/blog/${article.category.category_id}/articles/${article.id}`}
       className={` ${variantBasedClasses} ${
         !removeShadow && ' border border-slate-200 rounded-xl'
       } transition duration-300  group`}
     >
-      <Image
-        src={`/images/blog/${articleID}.jpg`}
-        // width={variant === 'default' ? 400 : 100}
-        // height={variant === 'default' ? 300 : 100}
-        width={800}
-        height={600}
-        objectFit="cover"
-        className={`${
-          variant === 'default'
-            ? `aspect-video ${removeShadow && 'rounded-xl'}`
-            : 'size-24 rounded-xl'
-        } object-cover`}
-        alt="A blue bird"
-        loading="lazy"
-      />
+      <Link
+        href={`/${locale}/blog/${article.category.url_name}/articles/${article.id}`}
+      >
+        <Image
+          src={`https://new.athr-ksa.com/${article.imge}`}
+          // width={variant === 'default' ? 400 : 100}
+          // height={variant === 'default' ? 300 : 100}
+          width={800}
+          height={600}
+          objectFit="cover"
+          className={`${
+            variant === 'default'
+              ? `aspect-video ${removeShadow && 'rounded-xl'}`
+              : 'size-24 rounded-xl'
+          } object-cover`}
+          alt="A blue bird"
+          loading="lazy"
+        />
+      </Link>
       <div
         className={`${
           variant === 'default' ? `py-4 ${!removeShadow && '!p-8'}` : ''
         }`}
       >
-        <p className="text-gray-400 text-md mb-1">
-          <span className="text-main-color">
-            {t(`articles.${articleID}.category`)}
-          </span>{' '}
-          • {t(`articles.${articleID}.date`)}
-        </p>
-        <h4
-          className={`font-semibold text-pretty group-hover:underline ${
-            variant === 'default' ? 'text-lg' : 'text-md'
-          }`}
+        <div className="text-gray-400 text-md mb-1">
+          <Link
+            href={`/${locale}/blog/${article.category.url_name}/articles`}
+            className="text-main-color hover:underline"
+          >
+            {article.category.name}
+          </Link>{' '}
+          • {article.date}
+        </div>
+        <Link
+          href={`/${locale}/blog/${article.category.url_name}/articles/${article.id}`}
         >
-          {title}
-          {title.length > 65 && '...'}
-        </h4>
+          <h4
+            className={`font-semibold text-pretty group-hover:underline ${
+              variant === 'default' ? 'text-lg' : 'text-md'
+            }`}
+          >
+            {title}
+            {title.length > 65 && '...'}
+          </h4>
+        </Link>
         <p className="text-gray-400 text-md mb-1">
           {readTime} {t(`readTime`)}
         </p>
       </div>
-    </Link>
+    </div>
   )
 }

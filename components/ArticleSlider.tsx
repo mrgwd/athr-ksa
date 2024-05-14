@@ -3,18 +3,21 @@ import React, { useEffect, useRef, useState } from 'react'
 import ArticleCard from './ArticleCard'
 import { StaticImageData } from 'next/image'
 import { ArrowCircleLeft, ArrowCircleRight } from 'iconsax-react'
-
-interface Article {
-  name: string
-  img: StaticImageData
-}
+import { useLocale } from 'next-intl'
+import { Article } from '@/types/articlesTypes'
 
 interface ArticleSliderProps {
-  articles: Article[]
+  arabicArticles: Article[]
+  englishArticles: Article[]
 }
+
 type step = 1 | 2
 
-export default function ArticleSlider({ articles }: ArticleSliderProps) {
+export default function ArticleSlider({
+  arabicArticles,
+  englishArticles,
+}: ArticleSliderProps) {
+  const articles = useLocale() === 'ar' ? arabicArticles : englishArticles
   const [current, setCurrent] = useState<number>(0)
   const [step, setStep] = useState<number>(2)
   const stepRef = useRef<number>(step)
@@ -72,9 +75,9 @@ export default function ArticleSlider({ articles }: ArticleSliderProps) {
             <React.Fragment key={index}>
               {step === 2
                 ? (index === current || index === current + 1) && (
-                    <ArticleCard articleID={article.name} />
+                    <ArticleCard article={article} />
                   )
-                : index === current && <ArticleCard articleID={article.name} />}
+                : index === current && <ArticleCard article={article} />}
             </React.Fragment>
           ))}
         </div>

@@ -8,20 +8,21 @@ import Home from '@/components/Home'
 import HowWeWork from '@/components/HowWeWork'
 import Newsletter from '@/components/Newsletter'
 import ServicesSection from '@/components/ServicesSection'
-
 export default async function Page() {
   return (
-    <main>
-      <Home />
-      <About />
-      <ServicesSection />
-      <Features />
-      <BlogSection />
-      <HowWeWork />
-      <Clients />
-      <Contact />
-      <FAQsSection name="FAQsSection" />
-      <Newsletter />
-    </main>
+    <>
+      <main>
+        <Home />
+        <About />
+        <ServicesSection />
+        <Features />
+        <BlogSection />
+        <HowWeWork />
+        <Clients />
+        <FAQsSection name="FAQsSection" />
+        <Contact />
+        <Newsletter />
+      </main>
+    </>
   )
 }

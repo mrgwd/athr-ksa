@@ -40,9 +40,9 @@ export default function Form() {
         </div>
       ) : (
         <>
-          <h6 className="mb-4 text-center font-semibold text-main-color sm:text-xl">
+          <h3 className="mb-4 text-center font-semibold text-main-color sm:text-xl">
             {t('contact.form.formHeading')}
-          </h6>
+          </h3>
           <div className="group relative z-0 w-full">
             <input
               type="text"

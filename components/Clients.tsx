@@ -27,7 +27,7 @@ export default function Clients() {
       <div className="overflow-hidden">
         <div
           ref={slider}
-          className="flex-nowrap slider scroll-smooth items-end sm:justify-center no-scrollbar child:min-w-max sm:flex-wrap flex grid-cols-3 child:child:w-auto gap-2 child:inline-block child:child:h-16 md:child:child:h-16 child:rounded-md child:bg-gray-100 child:child:object-cover child:p-2 md:child:p-4 child:child:opacity-70 child:grayscale child:transition-all child:delay-100 child-hover:bg-gray-50 child-hover:grayscale-0"
+          className="flex-nowrap slider scroll-smooth items-end sm:justify-center no-scrollbar child:min-w-max sm:flex-wrap flex grid-cols-3 child:child:w-auto gap-2 child:inline-block child:child:h-16 md:child:child:h-16 child:rounded-md child:bg-slate-100 child:child:object-cover child:p-2 md:child:p-4 child:child:opacity-70 child:grayscale child:transition-all child:delay-100 child-hover:bg-slate-50 child:border child:border-slate-200 child-hover:grayscale-0"
         >
           {logos.map((logo, index) => (
             <div key={index}>

@@ -5,16 +5,21 @@
 html {
   scroll-behavior: smooth;
 }
-.service-btn:hover + .drop-menu-container {
-  /* overflow: visible; */
-  /* height: min-content; */
-  /* width: min-content; */
-}
+/* .service-btn:hover + .drop-menu-container {
+  overflow: visible;
+  height: min-content;
+  width: min-content;
+} */
 /* .drop-menu-container {
   height: 0;
   width: 0;
   transition: all 0.5s;
 } */
+
+.service-card:hover .blurry {
+  /* //scale the element by 20% */
+  transform: translate(-50px, 50px);
+}
 .info-card h3 {
   font-weight: 700;
   margin-bottom: 1rem;
@@ -92,12 +97,12 @@ html {
 #tabletSVG {
   opacity: 0;
   transform: translateX(50px);
-  animation: fade 0.5s ease-in-out forwards 2s;
+  animation: fade 1s ease-in-out forwards 2s;
 }
 #phoneSVG {
   opacity: 0;
   transform: translateX(-50px);
-  animation: fade 0.5s ease-in-out forwards 2s;
+  animation: fade 1s ease-in-out forwards 2s;
 }
 
 @keyframes fade {
@@ -105,4 +110,7 @@ html {
     opacity: 1;
     transform: translateX(0);
   }
+}
+.learnings-container {
+  box-shadow: inset 0px 0px 0px 1px #cbd5e1;
 }

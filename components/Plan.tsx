@@ -13,7 +13,7 @@ export default function Plan({ isPop = false, plan, features }: PlanProps) {
   const t = useTranslations()
   const locale = useLocale()
   return (
-    <div className="relative flex flex-col cursor-default items-start justify-between gap-4 text-white bg-wd-service sm:border-wd-service sm:text-wd-service rounded-3xl p-4 sm:items-center sm:rounded-3xl sm:border-2 sm:border-solid sm:bg-white sm:text-center md:p-6 lg:gap-6 xl:gap-8 xl:p-8">
+    <div className="relative flex flex-col cursor-default items-start justify-between gap-4 text-white bg-wd-service sm:border-slate-300 sm:text-wd-service rounded-3xl p-4 sm:items-center sm:rounded-3xl sm:border sm:border-solid sm:bg-slate-50 sm:text-center md:p-6 lg:gap-6 xl:gap-8 xl:p-8">
       <div>
         <h2 className="text-lg font-medium lg:text-xl">
           <span className="text-3xl sm:hidden">

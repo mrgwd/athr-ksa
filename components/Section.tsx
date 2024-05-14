@@ -20,7 +20,7 @@ export default function Section({
   const t = useTranslations()
   return (
     <div
-      className="container mx-auto my-28 opacity-0 translate-y-20 px-4 transition duration-500 md:mt-56"
+      className="container mx-auto my-28 opacity-0 translate-y-20 px-4 lg:px-8 transition duration-500 md:mt-56"
       id={id}
       ref={ref}
     >
