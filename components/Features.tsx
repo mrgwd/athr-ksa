@@ -16,39 +16,39 @@ export default function Features() {
   return (
     <Section name="features">
       <div className="grid grid-cols-1 justify-items-center gap-x-4 gap-y-4 sm:grid-cols-3 lg:gap-y-12 xl:gap-y-16">
-        <Feature feature="seOptmization">
+        <Feature feature="features.seOptmization">
           <GlobalSearch variant="Bulk" />
         </Feature>
 
-        <Feature feature="manageAccounts">
+        <Feature feature="features.manageAccounts">
           <Profile2User variant="Bulk" />
         </Feature>
 
-        <Feature feature="motionGraphic">
+        <Feature feature="features.motionGraphic">
           <VideoPlay variant="Bulk" />
         </Feature>
 
-        <Feature feature="manageSponsors">
+        <Feature feature="features.manageSponsors">
           <EmptyWalletAdd variant="Bulk" />
         </Feature>
 
-        <Feature feature="designIdentities">
+        <Feature feature="features.designIdentities">
           <FolderOpen variant="Bulk" />
         </Feature>
 
-        <Feature feature="graphicDesign">
+        <Feature feature="features.graphicDesign">
           <PenTool2 variant="Bulk" />
         </Feature>
 
-        <Feature feature="writingContent">
+        <Feature feature="features.writingContent">
           <GlobalEdit variant="Bulk" />
         </Feature>
 
-        <Feature feature="systems">
+        <Feature feature="features.systems">
           <KeyboardOpen variant="Bulk" />
         </Feature>
 
-        <Feature feature="mobile">
+        <Feature feature="features.mobile">
           <Mobile variant="Bulk" />
         </Feature>
       </div>
