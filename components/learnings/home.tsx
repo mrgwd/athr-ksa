@@ -1,10 +1,15 @@
+'use client'
+import './main.css'
+import { useTranslations } from 'next-intl'
+
 export default function Home() {
+  const t = useTranslations('learnings')
   return (
     <main className="container mx-auto p-4 md:px-8">
-      <div className="relative bg-slate-100 rounded-3xl p-8 text-center  overflow-hidden learnings-container py-44">
+      <div className="relative bg-slate-100 rounded-3xl p-8 text-center  overflow-hidden learnings-container py-28 md:py-44">
         <div className="flex justify-center flex-col items-center">
-          <h1 className="pretty text-2xl md:text-4xl xl:text-5xl text-main-color font-semibold">
-            طور مهاراتك، سواء كنت مبتدئًا أو خبيرًا.
+          <h1 className="pretty text-2xl sm:text-3xl md:text-4xl xl:text-5xl text-main-color font-semibold">
+            {t('title1')} <br /> {t('title2')}
           </h1>
           <p></p>
           <a
@@ -14,8 +19,7 @@ export default function Home() {
             إبدأ الآن
           </a>
         </div>
-
-        <svg
+        {/* <svg
           className="doodles absolute -left-10"
           width="193"
           height="192"
@@ -29,9 +33,8 @@ export default function Home() {
             stroke="#CBD5E1"
             stroke-width="0.679167"
           />
-        </svg>
-
-        <svg
+        </svg> */}
+        {/* <svg
           className="doodles absolute top-0 left-0 -translate-x-7 -translate-y-7"
           width="159"
           height="149"
@@ -44,9 +47,18 @@ export default function Home() {
             fill="#F8FAFC"
             stroke="#CBD5E1"
           />
-        </svg>
+        </svg> */}
+        <p className="doodle astrisk rotate-[60deg] -left-4 md:-left-10 md:text-[32rem] text-[16rem] -top-28 md:-top-52">
+          *
+        </p>
+        <p className="doodle ambersand scale-110 left-8 md:left-20 md:text-[18rem] -bottom-8 md:-bottom-14 text-9xl">
+          &
+        </p>
+        <p className="doodle absolute right-8 md:right-16 md:text-[20rem] text-[10rem] -bottom-20 md:-bottom-40">
+          &#60;<span className="slash -translate-x-8 inline-block">&#47;</span>
+        </p>
 
-        <svg
+        {/* <svg
           className="doodles absolute"
           width="273"
           height="240"
@@ -63,10 +75,9 @@ export default function Home() {
               stroke-width="0.736842"
             />
           </g>
-        </svg>
-
+        </svg> */}
         <div className="doodles absolute top-0 -translate-y-1/2 *:rounded-full *:p-4 flex gap-4 *:md:p-10 *:bg-slate-50 *:border *:border-slate-300 *:inline-block">
-          <span></span>
+          <span className="dot"></span>
           <span></span>
           <span></span>
         </div>
