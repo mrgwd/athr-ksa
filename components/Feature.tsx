@@ -14,10 +14,10 @@ export default function Feature({ feature, children }: FeatureProps) {
       </div>
       <div>
         <h4 className="text-md sm:my-2 font-semibold text-main-color md:text-xl xl:text-2xl">
-          {t(`features.${feature}.subHeading`)}
+          {t(`${feature}.subHeading`)}
         </h4>
         <p className="mx-auto font-normal text-main-dark sm:text-sm md:text-base lg:max-w-xs">
-          {t(`features.${feature}.caption`)}
+          {t(`${feature}.description`)}
         </p>
       </div>
     </div>
