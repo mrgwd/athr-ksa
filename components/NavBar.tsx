@@ -81,13 +81,21 @@ export default function NavBar() {
           }  child:duration-300 sm:hidden lg:child:bg-white`}
         >
           <span
-            className={`${isOpen ? 'rotate-45 left-1/2 top-1/2' : 'top-0'}`}
+            className={`${
+              isOpen ? 'rotate-45 left-1/2 -translate-y-1/2 top-1/2' : 'top-0'
+            }`}
           ></span>
           <span
-            className={`${isOpen ? 'opacity-0' : ''} top-1/2 -translate-y-1/2`}
+            className={`${
+              isOpen ? 'opacity-0' : 'opacity-100'
+            } top-1/2 -translate-y-1/2`}
           ></span>
           <span
-            className={isOpen ? '-rotate-45 left-1/2 top-1/2' : 'bottom-0'}
+            className={
+              isOpen
+                ? '-rotate-45 left-1/2 translate-y-1/2 bottom-1/2'
+                : 'bottom-0'
+            }
           ></span>
         </div>
         <div
