@@ -74,9 +74,9 @@ export default async function Article({ params }: { params: Props }) {
   let linkedBody = article.body
   const getLinks = async () => {
     const res = await fetch(
-      `https://new.athr-ksa.com/api/all-links-${
+      `https://new.athr-ksa.com/api/all-${
         lang === 'ar' ? 'arabic' : 'english'
-      }`,
+      }-links`,
       {
         method: 'GET',
         headers: {
