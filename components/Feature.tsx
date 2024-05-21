@@ -8,7 +8,7 @@ interface FeatureProps {
 export default function Feature({ feature, children }: FeatureProps) {
   const t = useTranslations()
   return (
-    <div className="max-sm:rounded-xl max-sm:border border-slate-100 max-sm:p-4 max-sm:bg-slate-50 max-sm:flex max-sm:text-start text-center gap-2 justify-start">
+    <div className="max-sm:rounded-xl max-sm:border border-slate-200 max-sm:p-4 max-sm:bg-slate-50 max-sm:flex max-sm:text-start text-center gap-2 justify-start">
       <div className="*:mx-auto *:size-12 text-wd-service *:md:size-20">
         {children}
       </div>
