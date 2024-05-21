@@ -5,7 +5,7 @@ import Section from '../Section'
 export default function WhyUs() {
   return (
     <Section name="learnings.whyUs">
-      <div className="grid grid-cols-1 md:gap-x-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         <Feature feature="learnings.whyUs.1">
           <Rank variant="Bulk" />
         </Feature>
