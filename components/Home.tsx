@@ -43,7 +43,7 @@ export default function Home() {
         </svg>
 
         <a
-          className="text-md sm:mt-4 block w-max rounded-full bg-gradient-to-r from-main-color to-main-blue-gradient px-8 py-3 text-white transition duration-300 hover:from-white hover:to-white hover:text-main-color hover:outline hover:outline-2 hover:outline-main-color max-md:mx-auto sm:px-10 sm:py-3 sm:text-lg"
+          className="text-md block w-max rounded-full bg-gradient-to-l from-main-color to-main-color/75 px-8 py-3 text-white transition duration-300 hover:from-white hover:to-white hover:text-main-color hover:outline hover:outline-2 hover:outline-main-color max-md:mx-auto sm:px-10 sm:py-3 sm:text-lg"
           href="#contact"
         >
           {t('home.mainButton')}
