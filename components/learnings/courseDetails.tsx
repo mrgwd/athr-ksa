@@ -1,19 +1,18 @@
-'use client'
-import { useTranslations } from 'next-intl'
 interface CourseDetailsProps {
   children: React.ReactNode
-  data: {
-    name: string
-    number: number
-  }
+  name: string
+  number: number
 }
-export default function CourseDetails({ children, data }: CourseDetailsProps) {
-  const t = useTranslations('learnings.courses')
+export default function CourseDetails({
+  children,
+  name,
+  number,
+}: CourseDetailsProps) {
   return (
     <div className="flex gap-1 text-main-dark max-sm:text-sm">
       <div className="text-main-color">{children}</div>
       <p className="text-nowrap">
-        {t(`1.details.${data.name}`)} {data.number}
+        {number} {name}
       </p>
     </div>
   )
