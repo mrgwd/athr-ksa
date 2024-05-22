@@ -15,8 +15,8 @@
     "contact": "Contact"
   },
   "home": {
-    "heading": "Athr Company for software and e-marketing",
-    "athr": "ATHR",
+    "heading": "In every project, we leave a ",
+    "athr": "mark!",
     "paragraph1": "Double your sales, increase your profits and make your brand a Leader!",
     "mainButton": "Contact"
   },
@@ -858,6 +858,7 @@
   "learnings": {
     "title1": "Grow up your skills,",
     "title2": "and learn with us!",
+    "button": "Start learning",
     "statistics": {
       "courses": {
         "number": "3",
@@ -898,34 +899,79 @@
     "courses": {
       "heading": "Our Courses",
       "1": {
-        "title": "Digital Marketing",
-        "description": "Learn the basics of digital marketing, including SEO, social media marketing, email marketing, and more.",
-        "details": {
-          "duration": "Duration: 20 hours",
-          "lessons": "Lessons: 10",
-          "quizzes": "Quizzes: 5",
-          "assignments": "Assignments: 2"
-        }
+        "title": "Principles of User Interface Design",
+        "description": "Learn the basics of user interface design, including color, typography, layout, and more.",
+        "duration": "7",
+        "lessons": "21",
+        "quizzes": "5",
+        "assignments": "8",
+        "level": "Entry"
       },
       "2": {
         "title": "Web Development",
-        "description": "Learn the fundamentals of web development, including HTML, CSS, JavaScript, and more.",
-        "details": {
-          "duration": "Duration: 30 hours",
-          "lessons": "Lessons: 15",
-          "quizzes": "Quizzes: 7",
-          "assignments": "Assignments: 3"
-        }
+        "description": "Learn the basics of web development, including HTML, CSS, JavaScript, and more.",
+        "duration": "30",
+        "lessons": "15",
+        "quizzes": "7",
+        "assignments": "3",
+        "level": "Intermediate"
       },
       "3": {
         "title": "Graphic Design",
-        "description": "Learn the principles of graphic design, including color theory, typography, layout, and more.",
-        "details": {
-          "duration": "Duration: 25 hours",
-          "lessons": "Lessons: 12",
-          "quizzes": "Quizzes: 6",
-          "assignments": "Assignments: 3"
+        "description": "Learn the basics of graphic design, including logo design, banners, advertisements, and more.",
+        "duration": "25",
+        "lessons": "12",
+        "quizzes": "6",
+        "assignments": "8",
+        "level": "Advanced"
+      },
+      "details": {
+        "duration": "hour",
+        "lessons": "lessons",
+        "quizzes": "quizzes",
+        "assignments": "assignments"
+      },
+      "detailsButton": "Course Details",
+      "applyButton": "Enroll Now!"
+    },
+    "reviews": {
+      "heading": "Students review (Personas)",
+      "0": {
+        "name": "Ahmed",
+        "course": "User Interface Design",
+        "review": "Great courses, I learned a lot and enjoyed the interactive learning experience."
+      },
+      "1": {
+        "name": "Osama",
+        "course": "Web Development",
+        "review": "The courses were very informative and engaging, I would highly recommend them to anyone looking to learn web development."
+      },
+      "2": {
+        "name": "Mohammed",
+        "course": "Graphic Design",
+        "review": "I really enjoyed the graphic design course, it was very hands-on and practical, and I learned a lot of new skills."
+      }
+    },
+    "FAQs": {
+      "heading": "Frequently Asked Questions",
+      "faqs": {
+        "count": "3",
+        "1": {
+          "q": "How can I subscribe to a course?",
+          "a": "You can subscribe to a course by clicking on the registration button and filling in the required information."
+        },
+        "2": {
+          "q": "Can I change the course after subscribing?",
+          "a": "Yes, you can change the course after subscribing by contacting us."
+        },
+        "3": {
+          "q": "Can I get a refund?",
+          "a": "Yes, you can get a refund by contacting us and explaining the reason for the refund."
         }
+      },
+      "support": {
+        "q": "Didn't find the question you're looking for?",
+        "a": "Ask us now!"
       }
     }
   },
