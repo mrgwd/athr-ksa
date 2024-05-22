@@ -5,18 +5,18 @@ import { useTranslations } from 'next-intl'
 export default function Home() {
   const t = useTranslations('learnings')
   return (
-    <main className="container mx-auto p-4 md:px-8">
-      <div className="relative bg-slate-100 rounded-3xl p-8 text-center  overflow-hidden learnings-container py-28 md:py-44">
-        <div className="flex justify-center flex-col items-center">
+    <main className="container mx-auto p-4 md:px-8" dir="rtl">
+      <div className="relative bg-gradient-to-tr from-[#E6EDF2] to-[#F7F9FB] rounded-3xl p-8 text-center overflow-hidden learnings-container py-28 md:py-44">
+        <div className="flex justify-center flex-col items-center" dir="auto">
           <h1 className="pretty text-2xl sm:text-3xl md:text-4xl xl:text-5xl text-main-color font-semibold">
             {t('title1')} <br /> {t('title2')}
           </h1>
           <p></p>
           <a
-            className="text-md mt-8 md:mt-4 block w-max rounded-full bg-gradient-to-r from-main-color to-main-blue-gradient px-8 py-2 text-white transition duration-300 hover:from-white hover:to-white hover:text-main-color hover:outline hover:outline-2 hover:outline-main-color max-md:mx-auto sm:px-10 sm:text-lg"
+            className="text-md mt-8 block w-max rounded-full bg-gradient-to-l from-main-color to-main-color/60 px-8 py-2 text-white transition duration-300 hover:from-white hover:to-white hover:text-main-color hover:outline hover:outline-2 hover:outline-main-color max-md:mx-auto sm:px-10 sm:text-lg"
             href="#contact"
           >
-            إبدأ الآن
+            {t('button')}
           </a>
         </div>
         {/* <svg
