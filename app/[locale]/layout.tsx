@@ -46,8 +46,6 @@ export const metadata: Metadata = {
 const readex_pro = Readex_Pro({ subsets: ['latin'] })
 
 import Providers from './providers'
-import Head from 'next/head'
-
 const LOCALES = ['en', 'ar']
 
 export async function generateStaticParams() {
@@ -56,14 +54,7 @@ export async function generateStaticParams() {
   }))
 }
 
-// Dynamically import needed messages for given locale
 async function getMessages(locale: string) {
-  // const messageModule = await import(
-  //   `../../i18n/messages/${locale === 'en' ? 'en' : 'ar'}.json`
-  // )
-
-  // return messageModule.default
-
   if (locale === 'ar') {
     const messageModule = await import(`@/i18n/messages/ar.json`)
     return messageModule.default
@@ -81,20 +72,9 @@ export default async function RootLayout({
   params,
 }: RootLayoutProps) {
   const messages = await getMessages(params.locale)
-  const LOCALES = ['en', 'ar', 'x-default']
 
   return (
     <html lang={params.locale} dir={params.locale === 'ar' ? 'rtl' : 'ltr'}>
-      {/* <head>
-        {LOCALES.map((locale) => (
-          <link
-            key={locale}
-            rel="alternate"
-            hrefLang={locale === 'ar' ? 'ar-SA' : locale}
-            href={`/${locale === 'x-default' ? 'ar' : locale}`}
-          />
-        ))}
-      </head> */}
       <body className={`${readex_pro.className} bg-slate-50`}>
         <Providers messages={messages} locale={params.locale}>
           <NavBar />
