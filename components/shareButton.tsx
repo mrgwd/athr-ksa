@@ -1,5 +1,6 @@
 'use client'
 import { CopySuccess, Link1 } from 'iconsax-react'
+import { useLocale, useTranslations } from 'next-intl'
 import { useEffect, useState } from 'react'
 
 export default function ShareButton() {
@@ -26,6 +27,8 @@ export default function ShareButton() {
       }
     }
   }
+  const t = useTranslations('blog')
+  const locale = useLocale()
   useEffect(() => {
     if (hasShared) {
       setTimeout(() => setHasShared(false), 3000)
@@ -40,17 +43,17 @@ export default function ShareButton() {
     >
       <Link1
         variant="Linear"
-        className={`transition-all inline-block absolute top-0 ml-2 left-full ${
-          hasShared && 'opacity-0'
-        }`}
+        className={`transition-all inline-block absolute top-0 ${
+          locale === 'ar' ? 'ml-2 left-full' : 'mr-2 right-full'
+        } ${hasShared ? 'opacity-0 translate-y-4' : 'translate-y-0'}`}
       />
       <CopySuccess
         variant="Linear"
-        className={`transition-all inline-block absolute top-0 ml-2 left-full ${
-          !hasShared && 'opacity-0'
-        }`}
+        className={`transition-all inline-block absolute top-0 ${
+          locale === 'ar' ? 'ml-2 left-full' : 'mr-2 right-full'
+        } ${!hasShared ? 'opacity-0 -translate-y-4' : 'translate-y-0'}`}
       />
-      <span> مشاركة</span>
+      <span> {t('share')}</span>
     </div>
   )
 }
