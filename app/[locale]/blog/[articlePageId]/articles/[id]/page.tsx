@@ -3,7 +3,6 @@ import { Metadata } from 'next'
 import ShareButton from '@/components/shareButton'
 import Recommendations from '@/components/Recommendations'
 import Link from 'next/link'
-// import { Link } from '@/i18n/navigation'
 import { Article as ArticleType, LinkInBody } from '@/types/articlesTypes'
 
 const getUserIp = async () => {
@@ -53,13 +52,25 @@ export async function generateMetadata({
 }: {
   params: Props
 }): Promise<Metadata> {
+  const article = (
+    params.locale === 'ar' ? arabicArticles : englishArticles
+  ).find((article: ArticleType) => Number(article.id) === Number(params.id))
   return {
-    title: `${(params.locale === 'ar' ? arabicArticles : englishArticles).find(
-      (article: ArticleType) => Number(article.id) === Number(params.id),
-    )?.title} - ${params.locale === 'ar' ? 'مدونة أثر' : 'ATHR Blog'}`,
-    description: arabicArticles
-      .find((article: ArticleType) => Number(article.id) === params.id)
-      ?.body.slice(0, 150),
+    title: `${article.title} - ${
+      params.locale === 'ar' ? 'مدونة أثر' : 'ATHR Blog'
+    }`,
+    description: `${article.body.slice(0, 150)}...`,
+    alternates: {
+      canonical: `https://athr-ksa.com/ar/blog/${article.category.url_name}/articles/${params.id}`,
+      languages: {
+        en: `https://athr-ksa.com/en/blog/${article.category.url_name}/articles/${params.id}`,
+        'ar-SA': `https://athr-ksa.com/ar/blog/${article.category.url_name}/articles/${params.id}`,
+      },
+    },
+    metadataBase: new URL('https://athr-ksa.com/images/images/'),
+    openGraph: {
+      images: `${article.imge}`,
+    },
   }
 }
 export default async function Article({ params }: { params: Props }) {
@@ -96,6 +107,7 @@ export default async function Article({ params }: { params: Props }) {
       `<a href="${link.url}">${link.wordToLink}</a>`,
     )
   })
+  console.log(articles)
   console.log('linkedBody', linkedBody)
   return (
     <div className="container mb-8 mx-auto sm:my-16 px-4 lg:px-8 transition duration-500">
@@ -134,12 +146,3 @@ export default async function Article({ params }: { params: Props }) {
     </div>
   )
 }
-// const handleGetArticle = () => {
-//   if (locale === 'en') {
-//     const article = enTranslation.blog.articles[`1`]
-//     return article
-//   } else {
-//     const article = arTranslation.blog.articles[`1`]
-//     return article
-//   }
-// }
