@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import { Metadata } from 'next'
-import ShareButton from '@/components/shareButton'
-import Recommendations from '@/components/Recommendations'
+import ShareButton from '@/app/_components/shareButton'
+import Recommendations from '@/app/_components/blog/Recommendations'
 import Link from 'next/link'
-import { Article as ArticleType, LinkInBody } from '@/types/articlesTypes'
+import { Article as ArticleType, LinkInBody } from '@/app/_types/articlesTypes'
 
 const getUserIp = async () => {
   const res = await fetch('https://api.ipify.org?format=json')
@@ -67,9 +67,9 @@ export async function generateMetadata({
         'ar-SA': `https://athr-ksa.com/ar/blog/${article.category.url_name}/articles/${params.id}`,
       },
     },
-    metadataBase: new URL('https://athr-ksa.com/images/images/'),
+    metadataBase: new URL('https://new.athr-ksa.com/'),
     openGraph: {
-      images: `${article.imge}`,
+      images: `/${article.imge}`,
     },
   }
 }

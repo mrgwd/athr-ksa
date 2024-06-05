@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import { Readex_Pro } from 'next/font/google'
 import './globals.css'
 
-import NavBar from '@/components/NavBar'
-import Footer from '@/components/Footer'
-import FloatingContactButton from '@/components/FloatingButtons'
+import NavBar from '@/app/_components/NavBar'
+import Footer from '@/app/_components/Footer'
+import FloatingContactButton from '@/app/_components/FloatingButtons'
 
 export const metadata: Metadata = {
   title: 'ATHR - أثر',
@@ -56,10 +56,10 @@ export async function generateStaticParams() {
 
 async function getMessages(locale: string) {
   if (locale === 'ar') {
-    const messageModule = await import(`@/i18n/messages/ar.json`)
+    const messageModule = await import(`@/app/_i18n/messages/ar.json`)
     return messageModule.default
   } else {
-    const messageModule = await import(`@/i18n/messages/en.json`)
+    const messageModule = await import(`@/app/_i18n/messages/en.json`)
     return messageModule.default
   }
 }

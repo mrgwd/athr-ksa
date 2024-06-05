@@ -1,5 +1,5 @@
-import Articles from '@/components/Articles'
-import { Article } from '@/types/articlesTypes'
+import Articles from '@/app/_components/blog/Articles'
+import { Article } from '@/app/_types/articlesTypes'
 
 const ids = [
   'tech',

@@ -1,11 +1,11 @@
-import Contact from '@/components/Contact'
-import FAQsSection from '@/components/FAQsSection'
-import Newsletter from '@/components/Newsletter'
-import FeaturedCourses from '@/components/learnings/featuredCourses'
-import Home from '@/components/learnings/home'
-import ReviewsSection from '@/components/learnings/reviewsSection'
-import Statistics from '@/components/learnings/statistics'
-import WhyUs from '@/components/learnings/whyUs'
+import Contact from '@/app/_components/Contact'
+import FAQsSection from '@/app/_components/FAQsSection'
+import Newsletter from '@/app/_components/Newsletter'
+import FeaturedCourses from '@/app/_components/learnings/featuredCourses'
+import Home from '@/app/_components/learnings/home'
+import ReviewsSection from '@/app/_components/learnings/reviewsSection'
+import Statistics from '@/app/_components/learnings/statistics'
+import WhyUs from '@/app/_components/learnings/whyUs'
 import { Metadata } from 'next'
 const arabicMetadata: Metadata = {
   title: 'أكاديمية أثر',
@@ -60,18 +60,19 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   return params.locale === 'ar' ? arabicMetadata : englishMetadata
 }
-export default async function Page() {
+export default async function Page({ params }: { params: { locale: string } }) {
   const getCourses = async () => {
     const res = await fetch('https://new.athr-ksa.com/api/all-courses/2')
     const data = await res.json()
     return data.data
   }
+  const locale = params.locale
   const courses = await getCourses()
   console.log('getCourses', await getCourses())
   return (
     <div>
       <Home />
-      <Statistics />
+      <Statistics locale={locale} />
       <WhyUs />
       <FeaturedCourses courses={courses} />
       <ReviewsSection />

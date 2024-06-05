@@ -114,3 +114,19 @@ html {
 .learnings-container {
   box-shadow: inset 0px 0px 0px 1px #cbd5e1;
 }
+
+/* .animation-container {
+  opacity: 0;
+  transition: all 2s;
+  transform: translateY(50px);
+  animation: fade-in forwards 20s ease-in-out 10s;
+  animation-timeline: view();
+  animation-range-start: 200px;
+  animation-range-end: 500px;
+}
+@keyframes fade-in {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+} */

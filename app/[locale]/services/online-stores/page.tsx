@@ -1,12 +1,12 @@
 import client1 from '@/public/images/Clients/online-stores/client1.webp'
 import client2 from '@/public/images/Clients/online-stores/client2.webp'
 import client3 from '@/public/images/Clients/online-stores/client3.webp'
-import Slideshow from '@/components/Slideshow'
-import Plan from '@/components/Plan'
-import Section from '@/components/Section'
-import PageHeader from '@/components/PageHeader'
-import FAQsSection from '@/components/FAQsSection'
-import InfoCard from '@/components/InfoCard'
+import Slideshow from '@/app/_components/Slideshow'
+import Plan from '@/app/_components/service/Plan'
+import Section from '@/app/_components/Section'
+import PageHeader from '@/app/_components/service/PageHeader'
+import FAQsSection from '@/app/_components/FAQsSection'
+import InfoCard from '@/app/_components/InfoCard'
 import { Metadata } from 'next'
 const englishMetadata: Metadata = {
   title: 'Online Stores | ATHR',
@@ -46,15 +46,12 @@ const arabicMetadata: Metadata = {
     },
   },
 }
-
 export async function generateMetadata({
   params,
-}: {
-  params: { locale: string }
-}): Promise<Metadata> {
+}: ParamsProps): Promise<Metadata> {
   return params.locale === 'ar' ? arabicMetadata : englishMetadata
 }
-export default async function Page() {
+export default async function Page({ params }: ParamsProps) {
   const images = [
     { imgSrc: client1, imgUrl: 'https://shubra.online' },
     { imgSrc: client2, imgUrl: 'https://rahatystore.com' },
@@ -62,7 +59,7 @@ export default async function Page() {
   ]
   return (
     <div>
-      <PageHeader name="OS">
+      <PageHeader locale={params.locale} name="OS">
         <svg
           width="624"
           height="246"
@@ -368,18 +365,21 @@ export default async function Page() {
       <Section name="OS.plans">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
           <Plan
+            lang={params.locale}
             isPop={false}
             plan="OS.plans.basicPlan"
             price={2499}
             features={['f1', 'f2', 'f3', 'f4']}
           />
           <Plan
+            lang={params.locale}
             isPop={false}
             plan="OS.plans.proPlan"
             price={3999}
             features={['f1', 'f2', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8']}
           />
           <Plan
+            lang={params.locale}
             isPop={true}
             plan="OS.plans.premiumPlan"
             price={5999}
@@ -397,6 +397,7 @@ export default async function Page() {
             ]}
           />
           <Plan
+            lang={params.locale}
             isPop={false}
             plan="OS.plans.platinumPlan"
             price={9999}

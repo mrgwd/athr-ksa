@@ -1,8 +1,8 @@
-import Plan from '@/components/Plan'
-import Section from '@/components/Section'
-import PageHeader from '@/components/PageHeader'
-import FAQsSection from '@/components/FAQsSection'
-import InfoCard from '@/components/InfoCard'
+import Plan from '@/app/_components/service/Plan'
+import Section from '@/app/_components/Section'
+import PageHeader from '@/app/_components/service/PageHeader'
+import FAQsSection from '@/app/_components/FAQsSection'
+import InfoCard from '@/app/_components/InfoCard'
 import { Metadata } from 'next'
 const arabicMetadata: Metadata = {
   title: 'البرامج والأنظمة | أثر',
@@ -44,15 +44,13 @@ const englishMetadata: Metadata = {
 }
 export async function generateMetadata({
   params,
-}: {
-  params: { locale: string }
-}): Promise<Metadata> {
+}: ParamsProps): Promise<Metadata> {
   return params.locale === 'ar' ? arabicMetadata : englishMetadata
 }
-export default async function Page() {
+export default async function Page({ params }: ParamsProps) {
   return (
     <div>
-      <PageHeader name="PS">
+      <PageHeader locale={params.locale} name="PS">
         <svg
           width="624"
           height="245"
@@ -348,18 +346,21 @@ export default async function Page() {
       <Section name="OS.plans">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
           <Plan
+            lang={params.locale}
             isPop={false}
             plan="PS.plans.basicPlan"
             price={2500}
             features={['f1', 'f2', 'f3']}
           />
           <Plan
+            lang={params.locale}
             isPop={false}
             plan="PS.plans.proPlan"
             price={5000}
             features={['f1', 'f2', 'f3', 'f4']}
           />
           <Plan
+            lang={params.locale}
             isPop={true}
             plan="PS.plans.premiumPlan"
             features={['f1', 'f2', 'f3', 'f4', 'f5', 'f6']}

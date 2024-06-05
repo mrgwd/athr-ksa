@@ -1,16 +1,16 @@
 // 'use client'
-import Plan from '@/components/Plan'
-import Slideshow from '@/components/Slideshow'
+import Plan from '@/app/_components/service/Plan'
+import Slideshow from '@/app/_components/Slideshow'
 
 import client1 from '@/public/images/Clients/social-media-designs/client1.webp'
 import client2 from '@/public/images/Clients/social-media-designs/client2.webp'
 import client3 from '@/public/images/Clients/social-media-designs/client3.webp'
 import client4 from '@/public/images/Clients/social-media-designs/client4.webp'
-import AdInfoCard from '@/components/AdInfoCard'
-import Section from '@/components/Section'
-import PageHeader from '@/components/PageHeader'
-import FAQsSection from '@/components/FAQsSection'
-import InfoCard from '@/components/InfoCard'
+import AdInfoCard from '@/app/_components/service/AdInfoCard'
+import Section from '@/app/_components/Section'
+import PageHeader from '@/app/_components/service/PageHeader'
+import FAQsSection from '@/app/_components/FAQsSection'
+import InfoCard from '@/app/_components/InfoCard'
 import { Metadata } from 'next'
 const arabicMetadata: Metadata = {
   title: 'تحسين محركات البحث | أثر',
@@ -60,14 +60,13 @@ const englishMetadata: Metadata = {
     },
   },
 }
-export async function generateMetadata({
-  params,
-}: {
+interface Props {
   params: { locale: string }
-}): Promise<Metadata> {
+}
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return params.locale === 'ar' ? arabicMetadata : englishMetadata
 }
-export default async function Page() {
+export default async function Page({ params }: Props) {
   const images = [
     { imgSrc: client1, imgUrl: '/' },
     { imgSrc: client2, imgUrl: '/' },
@@ -76,7 +75,7 @@ export default async function Page() {
   ]
   return (
     <div>
-      <PageHeader name="SEO">
+      <PageHeader locale={params.locale} name="SEO">
         <svg
           width="624"
           height="231"
@@ -404,10 +403,12 @@ export default async function Page() {
       <Section name="OS.plans">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
           <Plan
+            lang={params.locale}
             plan="SEO.plans.basicPlan"
             features={['f1', 'f2', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8']}
           />
           <Plan
+            lang={params.locale}
             isPop={true}
             plan="SEO.plans.proPlan"
             features={[
@@ -424,6 +425,7 @@ export default async function Page() {
             ]}
           />
           <Plan
+            lang={params.locale}
             plan="SEO.plans.premiumPlan"
             features={[
               'f1',

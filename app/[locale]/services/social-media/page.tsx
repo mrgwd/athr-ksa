@@ -1,16 +1,16 @@
 // 'use client'
-import Plan from '@/components/Plan'
-import Slideshow from '@/components/Slideshow'
+import Plan from '@/app/_components/service/Plan'
+import Slideshow from '@/app/_components/Slideshow'
 
 import client1 from '@/public/images/Clients/social-media-designs/client1.webp'
 import client2 from '@/public/images/Clients/social-media-designs/client2.webp'
 import client3 from '@/public/images/Clients/social-media-designs/client3.webp'
 import client4 from '@/public/images/Clients/social-media-designs/client4.webp'
-import AdInfoCard from '@/components/AdInfoCard'
-import Section from '@/components/Section'
-import PageHeader from '@/components/PageHeader'
-import FAQsSection from '@/components/FAQsSection'
-import InfoCard from '@/components/InfoCard'
+import AdInfoCard from '@/app/_components/service/AdInfoCard'
+import Section from '@/app/_components/Section'
+import PageHeader from '@/app/_components/service/PageHeader'
+import FAQsSection from '@/app/_components/FAQsSection'
+import InfoCard from '@/app/_components/InfoCard'
 import { Metadata } from 'next'
 const arabicMetadata: Metadata = {
   title: 'خدمات السوشيال ميديا | أثر',
@@ -52,12 +52,10 @@ const englishMetadata: Metadata = {
 }
 export async function generateMetadata({
   params,
-}: {
-  params: { locale: string }
-}): Promise<Metadata> {
+}: ParamsProps): Promise<Metadata> {
   return params.locale === 'ar' ? arabicMetadata : englishMetadata
 }
-export default async function Page() {
+export default async function Page({ params }: ParamsProps) {
   const images = [
     { imgSrc: client1, imgUrl: '/' },
     { imgSrc: client2, imgUrl: '/' },
@@ -66,7 +64,7 @@ export default async function Page() {
   ]
   return (
     <div>
-      <PageHeader name="SD">
+      <PageHeader locale={params.locale} name="SD">
         <svg
           width="624"
           height="231"
@@ -394,12 +392,14 @@ export default async function Page() {
       <Section name="OS.plans">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
           <Plan
+            lang={params.locale}
             isPop={false}
             plan="SD.plans.basicPlan"
             price={1499}
             features={['f1', 'f2', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8']}
           />
           <Plan
+            lang={params.locale}
             isPop={false}
             plan="SD.plans.proPlan"
             price={2499}
@@ -417,6 +417,7 @@ export default async function Page() {
             ]}
           />
           <Plan
+            lang={params.locale}
             isPop={true}
             plan="SD.plans.premiumPlan"
             price={3499}
@@ -439,6 +440,7 @@ export default async function Page() {
             ]}
           />
           <Plan
+            lang={params.locale}
             isPop={false}
             plan="SD.plans.extraPlan"
             price={5999}
@@ -467,9 +469,21 @@ export default async function Page() {
       </Section>
       <Section name="SD.plans">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
-          <AdInfoCard plan="snapchat" features={['i1', 'i2', 'i3', 'i4']} />
-          <AdInfoCard plan="google" features={['i1', 'i2', 'i3', 'i4']} />
-          <AdInfoCard plan="instagram" features={['i1', 'i2', 'i3', 'i4']} />
+          <AdInfoCard
+            plan="snapchat"
+            features={['i1', 'i2', 'i3', 'i4']}
+            locale={params.locale}
+          />
+          <AdInfoCard
+            plan="google"
+            features={['i1', 'i2', 'i3', 'i4']}
+            locale={params.locale}
+          />
+          <AdInfoCard
+            plan="instagram"
+            features={['i1', 'i2', 'i3', 'i4']}
+            locale={params.locale}
+          />
         </div>
       </Section>
       <FAQsSection name="SD.FAQs" />

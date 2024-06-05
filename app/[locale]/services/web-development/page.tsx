@@ -1,12 +1,12 @@
 import client1 from '@/public/images/Clients/web-development/client1.webp'
 import client2 from '@/public/images/Clients/web-development/client2.webp'
 import client3 from '@/public/images/Clients/web-development/client3.webp'
-import Plan from '@/components/Plan'
-import Slideshow from '@/components/Slideshow'
-import Section from '@/components/Section'
-import PageHeader from '@/components/PageHeader'
-import FAQsSection from '@/components/FAQsSection'
-import InfoCard from '@/components/InfoCard'
+import Plan from '@/app/_components/service/Plan'
+import Slideshow from '@/app/_components/Slideshow'
+import Section from '@/app/_components/Section'
+import PageHeader from '@/app/_components/service/PageHeader'
+import FAQsSection from '@/app/_components/FAQsSection'
+import InfoCard from '@/app/_components/InfoCard'
 import { Metadata } from 'next'
 const arabicMetadata: Metadata = {
   title: 'تطوير مواقع الويب - أثر',
@@ -86,12 +86,10 @@ const englishMetadata: Metadata = {
 }
 export async function generateMetadata({
   params,
-}: {
-  params: { locale: string }
-}): Promise<Metadata> {
+}: ParamsProps): Promise<Metadata> {
   return params.locale === 'ar' ? arabicMetadata : englishMetadata
 }
-export default async function Page() {
+export default async function Page({ params }: ParamsProps) {
   const images = [
     { imgSrc: client1, imgUrl: 'https://www.alwissamlaw.com' },
     { imgSrc: client2, imgUrl: 'https://www.qimahriyadh.com' },
@@ -99,7 +97,7 @@ export default async function Page() {
   ]
   return (
     <div>
-      <PageHeader name="WD">
+      <PageHeader locale={params.locale} name="WD">
         <svg
           width="624"
           height="249"
@@ -398,18 +396,21 @@ export default async function Page() {
       <Section name="OS.plans">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
           <Plan
+            lang={params.locale}
             isPop={false}
             plan="WD.plans.basicPlan"
             price={1399}
             features={['f1', 'f2', 'f3', 'f4', 'f5']}
           />
           <Plan
+            lang={params.locale}
             isPop={false}
             plan="WD.plans.proPlan"
             price={2399}
             features={['f1', 'f2', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8']}
           />
           <Plan
+            lang={params.locale}
             isPop={true}
             plan="WD.plans.premiumPlan"
             price={3999}

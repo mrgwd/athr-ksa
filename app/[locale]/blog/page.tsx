@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import Articles from '@/components/Articles'
+import Articles from '@/app/_components/blog/Articles'
 const arabicMetadata: Metadata = {
   title: 'المدونة: بوابتُك لِعالم التقنية',
   keywords: [

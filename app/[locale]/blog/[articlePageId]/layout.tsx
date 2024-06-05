@@ -1,4 +1,4 @@
-import { Article } from '@/types/articlesTypes'
+import { Article } from '@/app/_types/articlesTypes'
 
 const getUserIp = async () => {
   const res = await fetch('https://api.ipify.org?format=json')
