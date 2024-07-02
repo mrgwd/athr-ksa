@@ -1,12 +1,12 @@
 import client1 from '@/public/images/Clients/online-stores/client1.webp'
 import client2 from '@/public/images/Clients/online-stores/client2.webp'
 import client3 from '@/public/images/Clients/online-stores/client3.webp'
-import Slideshow from '@/app/_components/Slideshow'
+import Slideshow from '@/app/_components/common/Slideshow'
 import Plan from '@/app/_components/service/Plan'
-import Section from '@/app/_components/Section'
+import Section from '@/app/_components/common/Section'
 import PageHeader from '@/app/_components/service/PageHeader'
-import FAQsSection from '@/app/_components/FAQsSection'
-import InfoCard from '@/app/_components/InfoCard'
+import FAQsSection from '@/app/_components/common/FAQsSection'
+import InfoCard from '@/app/_components/common/InfoCard'
 import { Metadata } from 'next'
 const englishMetadata: Metadata = {
   title: 'Online Stores | ATHR',

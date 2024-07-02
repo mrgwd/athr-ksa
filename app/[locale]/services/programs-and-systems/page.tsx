@@ -1,8 +1,8 @@
 import Plan from '@/app/_components/service/Plan'
-import Section from '@/app/_components/Section'
+import Section from '@/app/_components/common/Section'
 import PageHeader from '@/app/_components/service/PageHeader'
-import FAQsSection from '@/app/_components/FAQsSection'
-import InfoCard from '@/app/_components/InfoCard'
+import FAQsSection from '@/app/_components/common/FAQsSection'
+import InfoCard from '@/app/_components/common/InfoCard'
 import { Metadata } from 'next'
 const arabicMetadata: Metadata = {
   title: 'البرامج والأنظمة | أثر',

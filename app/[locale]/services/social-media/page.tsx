@@ -1,16 +1,16 @@
 // 'use client'
 import Plan from '@/app/_components/service/Plan'
-import Slideshow from '@/app/_components/Slideshow'
+import Slideshow from '@/app/_components/common/Slideshow'
 
 import client1 from '@/public/images/Clients/social-media-designs/client1.webp'
 import client2 from '@/public/images/Clients/social-media-designs/client2.webp'
 import client3 from '@/public/images/Clients/social-media-designs/client3.webp'
 import client4 from '@/public/images/Clients/social-media-designs/client4.webp'
 import AdInfoCard from '@/app/_components/service/AdInfoCard'
-import Section from '@/app/_components/Section'
+import Section from '@/app/_components/common/Section'
 import PageHeader from '@/app/_components/service/PageHeader'
-import FAQsSection from '@/app/_components/FAQsSection'
-import InfoCard from '@/app/_components/InfoCard'
+import FAQsSection from '@/app/_components/common/FAQsSection'
+import InfoCard from '@/app/_components/common/InfoCard'
 import { Metadata } from 'next'
 const arabicMetadata: Metadata = {
   title: 'خدمات السوشيال ميديا | أثر',
