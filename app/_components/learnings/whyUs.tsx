@@ -1,11 +1,11 @@
-import { Airdrop, Moneys, People, Profile, Rank, Timer } from 'iconsax-react'
-import Feature from '../Feature'
-import Section from '../Section'
+import { Airdrop, Moneys, People, Profile, Rank, Timer } from "iconsax-react";
+import Feature from "../common/Feature";
+import Section from "../common/Section";
 
 export default async function WhyUs() {
   return (
     <Section name="learnings.whyUs">
-      <div className="flex flex-wrap gap-4 md:gap-y-12 md:gap-x-20 justify-center max-w-screen-md mx-auto">
+      <div className="mx-auto flex max-w-screen-md flex-wrap justify-center gap-4 md:gap-x-20 md:gap-y-12">
         <Feature feature="learnings.whyUs.1">
           <Rank variant="Bulk" />
         </Feature>
@@ -20,5 +20,5 @@ export default async function WhyUs() {
         </Feature>
       </div>
     </Section>
-  )
+  );
 }

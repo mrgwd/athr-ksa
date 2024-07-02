@@ -1,16 +1,16 @@
-import { getTranslations } from '@/app/_i18n'
+import { getTranslations } from "@/app/_i18n";
 
 interface StatisticProps {
-  name: string
-  locale: string
+  name: string;
+  locale: string;
 }
 export default async function Statistic({ name, locale }: StatisticProps) {
-  const t = await getTranslations({ locale, namespace: name })
+  const t = await getTranslations({ locale, namespace: name });
   return (
-    <p className="text-main-dark font-medium text-base lg:text-xl">
-      <span className="text-main-color font-bold text-3xl">{t('number')}</span>
+    <p className="text-base font-medium text-main-dark lg:text-xl">
+      <span className="text-3xl font-bold text-main-color">{t("number")}</span>
       <br />
-      {t('text')}
+      {t("text")}
     </p>
-  )
+  );
 }

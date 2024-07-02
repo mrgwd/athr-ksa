@@ -1,16 +1,16 @@
 interface ReviewProps {
   review: {
-    name: string
-    review: string
-  }
+    name: string;
+    review: string;
+  };
 }
-export default async function Review({ review }: ReviewProps) {
+export default function Review({ review }: ReviewProps) {
   return (
-    <div className="flex flex-col gap-4 items-center text-center relative">
-      <p className="text-xl text-main-dark max-w-xl">
+    <div className="relative flex flex-col items-center gap-4 text-center">
+      <p className="max-w-xl text-xl text-main-dark">
         &quot;{review.review}&quot;
       </p>
-      <span className="text-[20rem] -top-16 inline-block text-main-color/50">
+      <span className="-top-16 inline-block text-[20rem] text-main-color/50">
         <svg
           width="94"
           height="68"
@@ -24,9 +24,9 @@ export default async function Review({ review }: ReviewProps) {
           />
         </svg>
       </span>
-      <p className="text-slate-500 italic">
+      <p className="italic text-slate-500">
         {review.name}, Attended UID Course
       </p>
     </div>
-  )
+  );
 }
