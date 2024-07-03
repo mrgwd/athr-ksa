@@ -1,23 +1,19 @@
-'use client'
-import './main.css'
-import { useTranslations } from 'next-intl'
+"use client";
+import Button from "../common/Button";
+import "./learnings.css";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
-  const t = useTranslations('learnings')
+  const t = useTranslations("learnings");
   return (
     <main className="container mx-auto p-4 md:px-8" dir="rtl">
-      <div className="relative bg-gradient-to-tr from-[#E6EDF2] to-[#F7F9FB] rounded-3xl p-8 text-center overflow-hidden learnings-container py-28 md:py-44">
-        <div className="flex justify-center flex-col items-center" dir="auto">
-          <h1 className="pretty text-2xl sm:text-3xl md:text-4xl xl:text-5xl text-main-color font-semibold">
-            {t('title1')} <br /> {t('title2')}
+      <div className="learnings-container relative overflow-hidden rounded-3xl bg-gradient-to-tr from-[#E6EDF2] to-[#F7F9FB] p-8 py-28 text-center md:py-44">
+        <div className="flex flex-col items-center justify-center" dir="auto">
+          <h1 className="pretty text-2xl font-semibold text-main-color sm:text-3xl md:text-4xl xl:text-5xl">
+            {t("title1")} <br /> {t("title2")}
           </h1>
           <p></p>
-          <a
-            className="text-md mt-8 block w-max rounded-full bg-gradient-to-l from-main-color to-main-color/60 px-8 py-2 text-white transition duration-300 hover:from-white hover:to-white hover:text-main-color hover:outline hover:outline-2 hover:outline-main-color max-md:mx-auto sm:px-10 sm:text-lg"
-            href="#contact"
-          >
-            {t('button')}
-          </a>
+          <Button text={t("button")} href="#contact" className="mt-8" />
         </div>
         {/* <svg
           className="doodles absolute -left-10"
@@ -48,14 +44,14 @@ export default function Home() {
             stroke="#CBD5E1"
           />
         </svg> */}
-        <p className="doodle astrisk rotate-[60deg] -left-4 md:-left-10 md:text-[32rem] text-[16rem] -top-28 md:-top-52">
+        <p className="doodle astrisk -left-4 -top-28 rotate-[60deg] text-[16rem] md:-left-10 md:-top-52 md:text-[32rem]">
           *
         </p>
-        <p className="doodle ambersand scale-110 left-8 md:left-20 md:text-[18rem] -bottom-8 md:-bottom-14 text-9xl">
+        <p className="doodle ambersand -bottom-8 left-8 scale-110 text-9xl md:-bottom-14 md:left-20 md:text-[18rem]">
           &
         </p>
-        <p className="doodle absolute right-8 md:right-16 md:text-[20rem] text-[10rem] -bottom-20 md:-bottom-40">
-          &#60;<span className="slash -translate-x-8 inline-block">&#47;</span>
+        <p className="doodle absolute -bottom-20 right-8 text-[10rem] md:-bottom-40 md:right-16 md:text-[20rem]">
+          &#60;<span className="slash inline-block -translate-x-8">&#47;</span>
         </p>
 
         {/* <svg
@@ -76,12 +72,12 @@ export default function Home() {
             />
           </g>
         </svg> */}
-        <div className="doodles absolute top-0 -translate-y-1/2 *:rounded-full *:p-4 flex gap-4 *:md:p-10 *:bg-slate-50 *:border *:border-slate-300 *:inline-block">
+        <div className="doodles absolute top-0 flex -translate-y-1/2 gap-4 *:inline-block *:rounded-full *:border *:border-slate-300 *:bg-slate-50 *:p-4 *:md:p-10">
           <span className="dot"></span>
           <span></span>
           <span></span>
         </div>
       </div>
     </main>
-  )
+  );
 }
