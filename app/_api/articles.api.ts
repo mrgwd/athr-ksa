@@ -11,7 +11,7 @@ const userIp = await getUserIp();
 async function getArticles(endpoint: string) {
   const formData = new FormData();
   formData.append("ip_address", userIp);
-  const res = await fetch(`${url}/${endpoint}`, {
+  const res = await fetch(`${url}/api/${endpoint}`, {
     method: "POST",
     body: formData,
   });
@@ -28,7 +28,7 @@ export async function getEnglishArticles() {
 }
 
 export async function getArticlesCategories() {
-  const res = await fetch(`${url}/all-category-english`, {
+  const res = await fetch(`${url}/api/all-category-english`, {
     method: "GET",
   });
   const data = await res.json();
