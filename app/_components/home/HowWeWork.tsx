@@ -1,157 +1,157 @@
-'use client'
-import useAnimation from '@/app/_hooks/useAnimation'
-import { useTranslations } from 'next-intl'
-import { useEffect, useRef, useState } from 'react'
-import Section from '../Section'
+"use client";
+import useAnimation from "@/app/_hooks/useAnimation";
+import { useTranslations } from "next-intl";
+import { useEffect, useRef, useState } from "react";
+import Section from "../common/Section";
 export default function HowWeWork() {
-  const step1 = useRef<HTMLDivElement | null>(null)
-  const step2 = useRef<HTMLDivElement | null>(null)
-  const step3 = useRef<HTMLDivElement | null>(null)
-  const step4 = useRef<HTMLDivElement | null>(null)
+  const step1 = useRef<HTMLDivElement | null>(null);
+  const step2 = useRef<HTMLDivElement | null>(null);
+  const step3 = useRef<HTMLDivElement | null>(null);
+  const step4 = useRef<HTMLDivElement | null>(null);
 
-  const step5 = useRef<HTMLDivElement | null>(null)
-  const step6 = useRef<HTMLDivElement | null>(null)
-  const step7 = useRef<HTMLDivElement | null>(null)
-  const step8 = useRef<HTMLDivElement | null>(null)
-  const t = useTranslations()
-  useAnimation(step1, 600, 'opacity-0', 'translate-y-20')
-  useAnimation(step2, 700, 'opacity-0', 'translate-x-8')
-  useAnimation(step3, 500, 'opacity-0', '-translate-x-8')
-  useAnimation(step4, 800, 'opacity-0', 'translate-y-12')
+  const step5 = useRef<HTMLDivElement | null>(null);
+  const step6 = useRef<HTMLDivElement | null>(null);
+  const step7 = useRef<HTMLDivElement | null>(null);
+  const step8 = useRef<HTMLDivElement | null>(null);
+  const t = useTranslations();
+  useAnimation(step1, 600, "opacity-0", "translate-y-20");
+  useAnimation(step2, 700, "opacity-0", "translate-x-8");
+  useAnimation(step3, 500, "opacity-0", "-translate-x-8");
+  useAnimation(step4, 800, "opacity-0", "translate-y-12");
 
-  useAnimation(step5, 600, 'opacity-0', 'translate-x-4')
-  useAnimation(step6, 600, 'opacity-0', 'translate-x-4')
-  useAnimation(step7, 600, 'opacity-0', 'translate-x-4')
-  useAnimation(step8, 600, 'opacity-0', 'translate-x-4')
+  useAnimation(step5, 600, "opacity-0", "translate-x-4");
+  useAnimation(step6, 600, "opacity-0", "translate-x-4");
+  useAnimation(step7, 600, "opacity-0", "translate-x-4");
+  useAnimation(step8, 600, "opacity-0", "translate-x-4");
 
-  const myLineRef = useRef<SVGPathElement | null>(null)
-  const mySmallLineRef = useRef<SVGPathElement | null>(null)
+  const myLineRef = useRef<SVGPathElement | null>(null);
+  const mySmallLineRef = useRef<SVGPathElement | null>(null);
 
-  const [isActive1, setIsActive1] = useState(true)
-  const [isActive2, setIsActive2] = useState(false)
-  const [isActive3, setIsActive3] = useState(false)
-  const [isActive4, setIsActive4] = useState(false)
+  const [isActive1, setIsActive1] = useState(true);
+  const [isActive2, setIsActive2] = useState(false);
+  const [isActive3, setIsActive3] = useState(false);
+  const [isActive4, setIsActive4] = useState(false);
 
   useEffect(() => {
-    const screenWidth = window.innerWidth
-    const percent = screenWidth < 1280 ? 1900 : 2200
+    const screenWidth = window.innerWidth;
+    const percent = screenWidth < 1280 ? 1900 : 2200;
     const currentRef =
-      screenWidth < 760 ? mySmallLineRef.current : myLineRef.current
+      screenWidth < 760 ? mySmallLineRef.current : myLineRef.current;
     const updateLineOffset = () => {
-      if (!currentRef) return
-      currentRef.style.strokeDashoffset = (percent - window.scrollY).toString()
-    }
+      if (!currentRef) return;
+      currentRef.style.strokeDashoffset = (percent - window.scrollY).toString();
+    };
 
-    window.addEventListener('scroll', updateLineOffset)
+    window.addEventListener("scroll", updateLineOffset);
 
-    return () => window.removeEventListener('scroll', updateLineOffset)
-  }, [])
+    return () => window.removeEventListener("scroll", updateLineOffset);
+  }, []);
   useEffect(() => {
     const activate = () => {
-      console.log(window.scrollY)
+      console.log(window.scrollY);
       if (!step1.current || !step2.current || !step3.current || !step4.current)
-        return
+        return;
       if (window.scrollY > step1.current.offsetTop - 600) {
-        setIsActive1(true)
+        setIsActive1(true);
       }
       if (window.scrollY > step2.current.offsetTop - 700) {
-        setIsActive2(true)
-      } else setIsActive2(false)
+        setIsActive2(true);
+      } else setIsActive2(false);
       if (window.scrollY > step3.current.offsetTop - 500) {
-        setIsActive3(true)
-      } else setIsActive3(false)
+        setIsActive3(true);
+      } else setIsActive3(false);
       if (window.scrollY > step4.current.offsetTop - 800) {
-        setIsActive4(true)
-      } else setIsActive4(false)
-    }
-    window.addEventListener('scroll', activate)
-    return () => window.removeEventListener('scroll', activate)
-  })
+        setIsActive4(true);
+      } else setIsActive4(false);
+    };
+    window.addEventListener("scroll", activate);
+    return () => window.removeEventListener("scroll", activate);
+  });
   return (
     <Section name="howWeWork">
       <div className="hidden md:block">
         <div
           ref={step1}
-          className="relative translate-y-20 opacity-0 transition duration-500 text-wd-service"
+          className="relative translate-y-20 text-wd-service opacity-0 transition duration-500"
         >
           <div className="absolute right-1/2 top-0 mr-20">
             <h4 className=" font-semibold  lg:mb-2 lg:text-xl xl:text-2xl">
-              {t('howWeWork.step1.h1')}
+              {t("howWeWork.step1.h1")}
             </h4>
-            <p className="text-xs md:text-sm lg:text-base xl:text-base text-main-dark">
-              {t('howWeWork.step1.p1')}
+            <p className="text-xs text-main-dark md:text-sm lg:text-base xl:text-base">
+              {t("howWeWork.step1.p1")}
               <br />
-              {t('howWeWork.step1.p2')}
+              {t("howWeWork.step1.p2")}
               <br />
-              {t('howWeWork.step1.p3')}
+              {t("howWeWork.step1.p3")}
               <br />
-              {t('howWeWork.step1.p4')}
+              {t("howWeWork.step1.p4")}
             </p>
           </div>
         </div>
         <div
           ref={step2}
-          className="relative top-48 translate-x-8 opacity-0 transition duration-500 text-wd-service xl:top-56"
+          className="relative top-48 translate-x-8 text-wd-service opacity-0 transition duration-500 xl:top-56"
           dir="ltr"
         >
           <div className="absolute left-3/4 top-1/4 mt-16">
             <h4 className="font-semibold lg:mb-2 lg:text-xl xl:text-2xl">
-              {t('howWeWork.step2.h1')}
+              {t("howWeWork.step2.h1")}
             </h4>
-            <p className="text-xs md:text-sm lg:text-base xl:text-base text-main-dark">
-              {t('howWeWork.step2.p1')}
+            <p className="text-xs text-main-dark md:text-sm lg:text-base xl:text-base">
+              {t("howWeWork.step2.p1")}
               <br />
-              {t('howWeWork.step2.p2')}
+              {t("howWeWork.step2.p2")}
               <br />
-              {t('howWeWork.step2.p3')}
+              {t("howWeWork.step2.p3")}
               <br />
-              {t('howWeWork.step2.p4')}
+              {t("howWeWork.step2.p4")}
             </p>
           </div>
         </div>
         <div
           ref={step3}
-          className="relative top-80 -translate-x-8 opacity-0 transition duration-500 text-wd-service xl:top-[26rem]"
+          className="relative top-80 -translate-x-8 text-wd-service opacity-0 transition duration-500 xl:top-[26rem]"
         >
           <div className="absolute right-3/4 top-1/2 mt-16">
             <h4 className="font-semibold lg:mb-2 lg:text-xl xl:text-2xl">
-              {t('howWeWork.step3.h1')}
+              {t("howWeWork.step3.h1")}
             </h4>
-            <p className="text-xs md:text-sm lg:text-base xl:text-base text-main-dark">
-              {t('howWeWork.step3.p1')}
+            <p className="text-xs text-main-dark md:text-sm lg:text-base xl:text-base">
+              {t("howWeWork.step3.p1")}
               <br />
-              {t('howWeWork.step3.p2')}
+              {t("howWeWork.step3.p2")}
               <br />
-              {t('howWeWork.step3.p3')}
+              {t("howWeWork.step3.p3")}
               <br />
-              {t('howWeWork.step3.p4')}
+              {t("howWeWork.step3.p4")}
               <br />
-              {t('howWeWork.step3.p5')}
+              {t("howWeWork.step3.p5")}
             </p>
           </div>
         </div>
         <div
           ref={step4}
-          className="relative top-[48rem] translate-y-12 opacity-0 transition duration-500 text-wd-service xl:top-[60rem]"
+          className="relative top-[48rem] translate-y-12 text-wd-service opacity-0 transition duration-500 xl:top-[60rem]"
           dir="ltr"
         >
           <div className="absolute bottom-0 left-1/2 ml-20 mt-16">
             <h4 className="font-semibold lg:mb-2 lg:text-xl xl:text-2xl">
-              {t('howWeWork.step4.h1')}
+              {t("howWeWork.step4.h1")}
             </h4>
-            <p className="text-xs md:text-sm lg:text-base xl:text-base text-main-dark">
-              {t('howWeWork.step4.p1')}
+            <p className="text-xs text-main-dark md:text-sm lg:text-base xl:text-base">
+              {t("howWeWork.step4.p1")}
               <br />
-              {t('howWeWork.step4.p2')}
+              {t("howWeWork.step4.p2")}
               <br />
-              {t('howWeWork.step4.p3')}
+              {t("howWeWork.step4.p3")}
               <br />
-              {t('howWeWork.step4.p4')}
+              {t("howWeWork.step4.p4")}
             </p>
           </div>
         </div>
         <svg
-          className="mx-auto h-[44rem] xl:h-[56rem] transition duration-500"
+          className="mx-auto h-[44rem] transition duration-500 xl:h-[56rem]"
           width="519"
           height="859"
           viewBox="0 0 519 859"
@@ -163,7 +163,7 @@ export default function HowWeWork() {
             cx="258.5"
             cy="32.5"
             r="32.5"
-            fill={isActive1 ? '#45C4AE' : '#bbbbbb'}
+            fill={isActive1 ? "#45C4AE" : "#bbbbbb"}
           />
           <path
             d="M270.032 49.5846C271.504 49.5846 272.916 48.9997 273.957 47.9585C274.999 46.9173 275.584 45.5051 275.584 44.0326C275.584 42.56 274.999 41.1479 273.957 40.1066C272.916 39.0654 271.504 38.4805 270.032 38.4805C268.559 38.4805 267.147 39.0654 266.106 40.1066C265.064 41.1479 264.479 42.56 264.479 44.0326C264.479 45.5051 265.064 46.9173 266.106 47.9585C267.147 48.9997 268.559 49.5846 270.032 49.5846ZM270.459 25.668C271.818 25.668 273.121 25.128 274.083 24.1669C275.044 23.2058 275.584 21.9022 275.584 20.543C275.584 19.1837 275.044 17.8802 274.083 16.919C273.121 15.9579 271.818 15.418 270.459 15.418C269.099 15.418 267.796 15.9579 266.835 16.919C265.874 17.8802 265.334 19.1837 265.334 20.543C265.334 21.9022 265.874 23.2058 266.835 24.1669C267.796 25.128 269.099 25.668 270.459 25.668ZM246.542 25.668C247.901 25.668 249.205 25.128 250.166 24.1669C251.127 23.2058 251.667 21.9022 251.667 20.543C251.667 19.1837 251.127 17.8802 250.166 16.919C249.205 15.9579 247.901 15.418 246.542 15.418C245.183 15.418 243.879 15.9579 242.918 16.919C241.957 17.8802 241.417 19.1837 241.417 20.543C241.417 21.9022 241.957 23.2058 242.918 24.1669C243.879 25.128 245.183 25.668 246.542 25.668Z"
@@ -179,7 +179,7 @@ export default function HowWeWork() {
             cx="258.5"
             cy="826.5"
             r="32.5"
-            fill={isActive4 ? '#45C4AE' : '#bbbbbb'}
+            fill={isActive4 ? "#45C4AE" : "#bbbbbb"}
           />
           <path
             opacity="0.4"
@@ -195,7 +195,7 @@ export default function HowWeWork() {
             cx="486.5"
             cy="326.5"
             r="32.5"
-            fill={isActive2 ? '#45C4AE' : '#bbbbbb'}
+            fill={isActive2 ? "#45C4AE" : "#bbbbbb"}
           />
           <path
             d="M499.091 314.356L489.08 309.897C487.611 309.248 485.39 309.248 483.921 309.897L473.91 314.356C471.382 315.483 471.006 317.021 471.006 317.841C471.006 318.661 471.382 320.198 473.91 321.326L483.921 325.785C484.655 326.109 485.578 326.28 486.5 326.28C487.423 326.28 488.345 326.109 489.08 325.785L499.091 321.326C501.619 320.198 501.995 318.661 501.995 317.841C501.995 317.021 501.636 315.483 499.091 314.356Z"
@@ -216,7 +216,7 @@ export default function HowWeWork() {
             cx="32.5"
             cy="547.5"
             r="32.5"
-            fill={isActive3 ? '#45C4AE' : '#bbbbbb'}
+            fill={isActive3 ? "#45C4AE" : "#bbbbbb"}
           />
           <path
             d="M48.7288 545.622V534.005C48.7288 531.443 47.6355 530.418 44.9193 530.418H38.0176C35.3013 530.418 34.208 531.443 34.208 534.005V545.622C34.208 548.185 35.3013 549.21 38.0176 549.21H44.9193C47.6355 549.21 48.7288 548.185 48.7288 545.622ZM30.7913 549.38V560.997C30.7913 563.56 29.698 564.585 26.9818 564.585H20.0801C17.3638 564.585 16.2705 563.56 16.2705 560.997V549.38C16.2705 546.818 17.3638 545.793 20.0801 545.793H26.9818C29.698 545.793 30.7913 546.818 30.7913 549.38Z"
@@ -260,7 +260,7 @@ export default function HowWeWork() {
               cx="32.5"
               cy="32.5"
               r="32.5"
-              fill={isActive1 ? '#45C4AE' : '#bbbbbb'}
+              fill={isActive1 ? "#45C4AE" : "#bbbbbb"}
             />
             <path
               d="M44.0316 49.5837C45.5041 49.5837 46.9163 48.9987 47.9575 47.9575C48.9987 46.9163 49.5837 45.5041 49.5837 44.0316C49.5837 42.5591 48.9987 41.1469 47.9575 40.1057C46.9163 39.0644 45.5041 38.4795 44.0316 38.4795C42.5591 38.4795 41.1469 39.0644 40.1057 40.1057C39.0644 41.1469 38.4795 42.5591 38.4795 44.0316C38.4795 45.5041 39.0644 46.9163 40.1057 47.9575C41.1469 48.9987 42.5591 49.5837 44.0316 49.5837ZM44.4587 25.667C45.8179 25.667 47.1215 25.127 48.0826 24.1659C49.0437 23.2048 49.5837 21.9012 49.5837 20.542C49.5837 19.1828 49.0437 17.8792 48.0826 16.9181C47.1215 15.9569 45.8179 15.417 44.4587 15.417C43.0994 15.417 41.7959 15.9569 40.8347 16.9181C39.8736 17.8792 39.3337 19.1828 39.3337 20.542C39.3337 21.9012 39.8736 23.2048 40.8347 24.1659C41.7959 25.127 43.0994 25.667 44.4587 25.667ZM20.542 25.667C21.9012 25.667 23.2048 25.127 24.1659 24.1659C25.127 23.2048 25.667 21.9012 25.667 20.542C25.667 19.1828 25.127 17.8792 24.1659 16.9181C23.2048 15.9569 21.9012 15.417 20.542 15.417C19.1828 15.417 17.8792 15.9569 16.9181 16.9181C15.9569 17.8792 15.417 19.1828 15.417 20.542C15.417 21.9012 15.9569 23.2048 16.9181 24.1659C17.8792 25.127 19.1828 25.667 20.542 25.667Z"
@@ -276,7 +276,7 @@ export default function HowWeWork() {
               cx="32.5"
               cy="836.5"
               r="32.5"
-              fill={isActive2 ? '#45C4AE' : '#bbbbbb'}
+              fill={isActive2 ? "#45C4AE" : "#bbbbbb"}
             />
             <path
               opacity="0.4"
@@ -292,7 +292,7 @@ export default function HowWeWork() {
               cx="32.5"
               cy="288.5"
               r="32.5"
-              fill={isActive3 ? '#45C4AE' : '#bbbbbb'}
+              fill={isActive3 ? "#45C4AE" : "#bbbbbb"}
             />
             <path
               d="M45.0909 276.356L35.08 271.897C33.6109 271.248 31.39 271.248 29.9209 271.897L19.91 276.356C17.3817 277.483 17.0059 279.021 17.0059 279.841C17.0059 280.661 17.3817 282.198 19.91 283.326L29.9209 287.785C30.6554 288.109 31.5779 288.28 32.5004 288.28C33.4229 288.28 34.3454 288.109 35.08 287.785L45.0909 283.326C47.6192 282.198 47.995 280.661 47.995 279.841C47.995 279.021 47.6363 277.483 45.0909 276.356Z"
@@ -313,7 +313,7 @@ export default function HowWeWork() {
               cx="32.5"
               cy="562.5"
               r="32.5"
-              fill={isActive4 ? '#45C4AE' : '#bbbbbb'}
+              fill={isActive4 ? "#45C4AE" : "#bbbbbb"}
             />
             <path
               d="M48.7288 560.621V549.004C48.7288 546.442 47.6355 545.417 44.9193 545.417H38.0176C35.3013 545.417 34.208 546.442 34.208 549.004V560.621C34.208 563.184 35.3013 564.209 38.0176 564.209H44.9193C47.6355 564.209 48.7288 563.184 48.7288 560.621ZM30.7913 564.379V575.996C30.7913 578.559 29.698 579.584 26.9818 579.584H20.0801C17.3638 579.584 16.2705 578.559 16.2705 575.996V564.379C16.2705 561.817 17.3638 560.792 20.0801 560.792H26.9818C29.698 560.792 30.7913 561.817 30.7913 564.379Z"
@@ -332,16 +332,16 @@ export default function HowWeWork() {
             ref={step5}
           >
             <h5 className="font-semibold sm:text-lg lg:mb-2 lg:text-xl xl:text-2xl">
-              {t('howWeWork.step1.h1')}
+              {t("howWeWork.step1.h1")}
             </h5>
             <p className="text-sm md:text-sm lg:text-base xl:text-base">
-              {t('howWeWork.step1.p1')}
+              {t("howWeWork.step1.p1")}
               <br />
-              {t('howWeWork.step1.p2')}
+              {t("howWeWork.step1.p2")}
               <br />
-              {t('howWeWork.step1.p3')}
+              {t("howWeWork.step1.p3")}
               <br />
-              {t('howWeWork.step1.p4')}
+              {t("howWeWork.step1.p4")}
             </p>
           </div>
           <div
@@ -349,16 +349,16 @@ export default function HowWeWork() {
             ref={step6}
           >
             <h5 className="font-semibold sm:text-lg lg:mb-2 lg:text-xl xl:text-2xl">
-              {t('howWeWork.step2.h1')}
+              {t("howWeWork.step2.h1")}
             </h5>
             <p className="text-sm md:text-sm lg:text-base xl:text-base">
-              {t('howWeWork.step2.p1')}
+              {t("howWeWork.step2.p1")}
               <br />
-              {t('howWeWork.step2.p2')}
+              {t("howWeWork.step2.p2")}
               <br />
-              {t('howWeWork.step2.p3')}
+              {t("howWeWork.step2.p3")}
               <br />
-              {t('howWeWork.step2.p4')}
+              {t("howWeWork.step2.p4")}
             </p>
           </div>
           <div
@@ -366,18 +366,18 @@ export default function HowWeWork() {
             ref={step7}
           >
             <h5 className="font-semibold sm:text-lg lg:mb-2 lg:text-xl xl:text-2xl">
-              {t('howWeWork.step3.h1')}
+              {t("howWeWork.step3.h1")}
             </h5>
             <p className="text-sm md:text-sm lg:text-base xl:text-base">
-              {t('howWeWork.step3.p1')}
+              {t("howWeWork.step3.p1")}
               <br />
-              {t('howWeWork.step3.p2')}
+              {t("howWeWork.step3.p2")}
               <br />
-              {t('howWeWork.step3.p3')}
+              {t("howWeWork.step3.p3")}
               <br />
-              {t('howWeWork.step3.p4')}
+              {t("howWeWork.step3.p4")}
               <br />
-              {t('howWeWork.step3.p5')}
+              {t("howWeWork.step3.p5")}
             </p>
           </div>
           <div
@@ -385,20 +385,20 @@ export default function HowWeWork() {
             ref={step8}
           >
             <h5 className="font-semibold sm:text-lg lg:mb-2 lg:text-xl xl:text-2xl">
-              {t('howWeWork.step4.h1')}
+              {t("howWeWork.step4.h1")}
             </h5>
             <p className="text-sm md:text-sm lg:text-base xl:text-base">
-              {t('howWeWork.step4.p1')}
+              {t("howWeWork.step4.p1")}
               <br />
-              {t('howWeWork.step4.p2')}
+              {t("howWeWork.step4.p2")}
               <br />
-              {t('howWeWork.step4.p3')}
+              {t("howWeWork.step4.p3")}
               <br />
-              {t('howWeWork.step4.p4')}
+              {t("howWeWork.step4.p4")}
             </p>
           </div>
         </div>
       </div>
     </Section>
-  )
+  );
 }

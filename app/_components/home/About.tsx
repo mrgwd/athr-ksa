@@ -1,5 +1,5 @@
-import Section from '../Section'
-import InfoCard from '../InfoCard'
+import Section from '../common/Section'
+import InfoCard from '../common/InfoCard'
 export default function About() {
   return (
     <Section name="about" id="about">

@@ -1,4 +1,4 @@
-import Contact from '@/app/_components/Contact'
+import Contact from '@/app/_components/common/Contact'
 
 interface RootLayoutProps {
   children: React.ReactNode

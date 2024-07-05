@@ -1,17 +1,18 @@
-import { useForm, ValidationError } from '@formspree/react'
-import { useTranslations, useLocale } from 'next-intl'
+import { useForm, ValidationError } from "@formspree/react";
+import { useTranslations, useLocale } from "next-intl";
+import Button from "./Button";
 export default function Form() {
-  const t = useTranslations()
-  const locale = useLocale()
-  const [state, handleSubmit] = useForm('xqkvkody')
+  const t = useTranslations();
+  const locale = useLocale();
+  const [state, handleSubmit] = useForm("xqkvkody");
   return (
     <form
-      dir={locale === 'en' ? 'ltr' : 'rtl'}
+      dir={locale === "en" ? "ltr" : "rtl"}
       onSubmit={handleSubmit}
       className={`absolute top-1/2 flex w-[28rem] flex-col gap-3 rounded-[3rem] bg-white p-8 py-12 shadow-3xl max-sm:w-full sm:px-12 sm:max-md:left-1/2 sm:max-md:-translate-x-1/2 md:top-1/2 ${
-        locale === 'ar'
-          ? 'md:-translate-x-8 lg:-translate-x-12 xl:-translate-x-16 2xl:-translate-x-32'
-          : 'md:translate-x-12'
+        locale === "ar"
+          ? "md:-translate-x-8 lg:-translate-x-12 xl:-translate-x-16 2xl:-translate-x-32"
+          : "md:translate-x-12"
       } md:-translate-y-1/2`}
     >
       {state.succeeded ? (
@@ -41,7 +42,7 @@ export default function Form() {
       ) : (
         <>
           <h3 className="mb-4 text-center font-semibold text-main-color sm:text-xl">
-            {t('contact.form.formHeading')}
+            {t("contact.form.formHeading")}
           </h3>
           <div className="group relative z-0 w-full">
             <input
@@ -55,10 +56,10 @@ export default function Form() {
             <label
               htmlFor="name"
               className={`absolute ${
-                locale === 'ar' ? 'right-5' : 'left-5'
+                locale === "ar" ? "right-5" : "left-5"
               } top-3 z-10 -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:right-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-blue-600/0`}
             >
-              {t('contact.form.fullName')}
+              {t("contact.form.fullName")}
             </label>
             <ValidationError prefix="Name" field="name" errors={state.errors} />
           </div>
@@ -74,10 +75,10 @@ export default function Form() {
             <label
               htmlFor="email"
               className={`absolute ${
-                locale === 'ar' ? 'right-5' : 'left-5'
+                locale === "ar" ? "right-5" : "left-5"
               } top-3 z-10 -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:right-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-blue-600/0`}
             >
-              {t('contact.form.email')}
+              {t("contact.form.email")}
             </label>
             <ValidationError
               prefix="Email"
@@ -97,10 +98,10 @@ export default function Form() {
             <label
               htmlFor="tel-number"
               className={`absolute ${
-                locale === 'ar' ? 'right-5' : 'left-5'
+                locale === "ar" ? "right-5" : "left-5"
               } top-3 z-10 -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:right-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-blue-600/0`}
             >
-              {t('contact.form.phoneNumber')}
+              {t("contact.form.phoneNumber")}
             </label>
             <ValidationError
               prefix="Tel-number"
@@ -121,10 +122,10 @@ export default function Form() {
             <label
               htmlFor="details"
               className={`absolute ${
-                locale === 'ar' ? 'right-5' : 'left-5'
+                locale === "ar" ? "right-5" : "left-5"
               } top-3 z-10 -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:right-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-blue-600/0`}
             >
-              {t('contact.form.detailes')}
+              {t("contact.form.detailes")}
             </label>
             <ValidationError
               prefix="Message"
@@ -132,15 +133,20 @@ export default function Form() {
               errors={state.errors}
             />
           </div>
-          <button
+          <Button
+            text={t("contact.form.sendButton")}
+            type="submit"
+            disabled={state.submitting}
+          />
+          {/* <button
             type="submit"
             disabled={state.submitting}
             className="block w-full rounded-full bg-gradient-to-r from-main-color to-main-blue-gradient py-2 text-white transition duration-300 hover:from-white hover:to-white hover:text-main-color hover:outline hover:outline-2 hover:outline-main-color max-md:mx-auto sm:text-lg"
           >
-            {t('contact.form.sendButton')}
-          </button>
+            
+          </button> */}
         </>
       )}
     </form>
-  )
+  );
 }

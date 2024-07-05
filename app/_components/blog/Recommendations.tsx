@@ -1,8 +1,8 @@
 'use client'
 
 import { useEffect } from 'react'
-import ArticleCard from '../ArticleCard'
-import Section from '../Section'
+import ArticleCard from '../common/ArticleCard'
+import Section from '../common/Section'
 import { useLocale } from 'next-intl'
 import { Article } from '@/app/_types/articlesTypes'
 import Head from 'next/head'

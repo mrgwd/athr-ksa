@@ -1,5 +1,5 @@
-import ArticleSlider from '../ArticleSlider'
-import Section from '../Section'
+import ArticleSlider from '../common/ArticleSlider'
+import Section from '../common/Section'
 const arabicArticles = [
   {
     id: 1,

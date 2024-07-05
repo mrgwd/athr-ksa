@@ -1,6 +1,6 @@
 'use client'
 import { Course } from '@/app/_types/coursesTypes'
-import Section from '../Section'
+import Section from '../common/Section'
 import FeaturedCourse from './featuredCourse'
 import FeaturedCourseStatic from './featuredCourseStatic'
 import { useLocale } from 'next-intl'

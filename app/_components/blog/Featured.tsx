@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react'
-import ArticleCard from '../ArticleCard'
+import ArticleCard from '../common/ArticleCard'
 import { StaticImageData } from 'next/image'
 import { Article } from '@/app/_types/articlesTypes'
 
