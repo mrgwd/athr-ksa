@@ -1,7 +1,7 @@
 interface CourseDetailsProps {
-  children: React.ReactNode
-  name: string
-  number: number
+  children: React.ReactNode;
+  name: string;
+  number: number;
 }
 export default function CourseDetails({
   children,
@@ -15,5 +15,5 @@ export default function CourseDetails({
         {number} {name}
       </p>
     </div>
-  )
+  );
 }
