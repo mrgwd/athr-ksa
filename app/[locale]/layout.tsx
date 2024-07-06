@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import { Readex_Pro } from 'next/font/google'
 import './globals.css'
 
-import NavBar from '@/app/_components/NavBar'
-import Footer from '@/app/_components/Footer'
-import FloatingContactButton from '@/app/_components/FloatingButtons'
+import NavBar from '@/app/_components/common/NavBar'
+import Footer from '@/app/_components/common/Footer'
+import FloatingContactButton from '@/app/_components/common/FloatingButtons'
 
 export const metadata: Metadata = {
   title: 'ATHR - أثر',

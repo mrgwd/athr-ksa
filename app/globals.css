@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* .service-btn:hover + .drop-menu-container {
+  overflow: visible;
+  height: min-content;
+  width: min-content;
+} */
+/* .drop-menu-container {
+  height: 0;
+  width: 0;
+  transition: all 0.5s;
+} */
+
+.service-card:hover .blurry {
+  /* //scale the element by 20% */
+  transform: translate(-50px, 50px);
+}
+.info-card h3 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbard {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+@media screen and (max-width: 639px) {
+  .slider {
+    transform: translateX(0%);
+    transition: all 0.5s;
+    scroll-snap-type: x mandatory;
+    /* animation: slide infinite alternate linear 30s; */
+    animation: slide infinite linear 30s;
+  }
+}
+@keyframes slide {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(400%);
+  }
+}
+
+.mouse-wheel {
+  transition: all 0.5s;
+  animation: mouse-wheel 1.5s infinite ease-in-out;
+}
+
+@keyframes mouse-wheel {
+  0%,
+  100% {
+    height: 8px;
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(0px);
+    height: 18px;
+    background-color: rgb(107 114 128);
+  }
+  60% {
+    transform: translateY(7px);
+    height: 12px;
+  }
+  100% {
+    transform: translateY(0px);
+    height: 8px;
+  }
+}
+
+#line {
+  stroke-dashoffset: 287;
+  stroke-dasharray: 287;
+  animation: drawing 1s ease-in-out forwards 2s;
+}
+#line2 {
+  transition: all 0.15s;
+}
+@keyframes drawing {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.cir {
+  transition: all 0.5s;
+}
+
+#tabletSVG {
+  opacity: 0;
+  transform: translateX(50px);
+  animation: fade 1s ease-in-out forwards 2s;
+}
+#phoneSVG {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: fade 1s ease-in-out forwards 2s;
+}
+
+@keyframes fade {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.learnings-container {
+  box-shadow: inset 0px 0px 0px 1px #cbd5e1;
+}
+
+/* .animation-container {
+  opacity: 0;
+  transition: all 2s;
+  transform: translateY(50px);
+  animation: fade-in forwards 20s ease-in-out 10s;
+  animation-timeline: view();
+  animation-range-start: 200px;
+  animation-range-end: 500px;
+}
+@keyframes fade-in {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+} */
