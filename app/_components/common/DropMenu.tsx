@@ -1,20 +1,20 @@
-import { useLocale, useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from "next-intl";
 import {
   GlobalEdit,
   GlobalSearch,
   KeyboardOpen,
   ShoppingCart,
   StatusUp,
-} from 'iconsax-react'
-import DropDownMenuLink from './DropDownMenuLink'
+} from "iconsax-react";
+import DropDownMenuLink from "./DropDownMenuLink";
 
 interface DropMenuProps {
-  handleMenuDown?: () => void
+  handleMenuDown?: () => void;
 }
 export default function DropMenu({ handleMenuDown }: DropMenuProps) {
   return (
-    <div className="min-w-max min-h-max">
-      <ul className="translate-y-6 child:child:w-full *:text-main-dark rounded-2xl sm:pb-3 bg-slate-50 sm:bg-white child:mt-2 sm:block sm:px-3 sm:py-1 sm:shadow-lg">
+    <div className="sm:pt-2">
+      <ul className="translate-y-6 rounded-2xl bg-slate-50 *:text-main-dark child:mt-2 child:child:w-full sm:block sm:bg-white sm:px-3 sm:py-1 sm:pb-3 sm:shadow-lg">
         <li onClick={handleMenuDown}>
           <DropDownMenuLink index={1} route="/services/online-stores">
             <ShoppingCart variant="Linear" />
@@ -42,5 +42,5 @@ export default function DropMenu({ handleMenuDown }: DropMenuProps) {
         </li>
       </ul>
     </div>
-  )
+  );
 }

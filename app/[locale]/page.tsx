@@ -1,13 +1,13 @@
 import About from '@/app/_components/home/About'
 import BlogSection from '@/app/_components/home/BlogSection'
 import Clients from '@/app/_components/home/Clients'
-import Contact from '@/app/_components/Contact'
-import FAQsSection from '@/app/_components/FAQsSection'
-import Features from '@/app/_components/Features'
+import Contact from '@/app/_components/common/Contact'
+import FAQsSection from '@/app/_components/common/FAQsSection'
+import Features from '@/app/_components/common/Features'
 import Home from '@/app/_components/home/Home'
 import HowWeWork from '@/app/_components/home/HowWeWork'
-import Newsletter from '@/app/_components/Newsletter'
-import ServicesSection from '@/app/_components/ServicesSection'
+import Newsletter from '@/app/_components/common/Newsletter'
+import ServicesSection from '@/app/_components/common/ServicesSection'
 import { Metadata } from 'next'
 const arabicMetadata: Metadata = {
   title: 'أثر - نقدم خدمات تسويق وحلول برمجية متكاملة',
@@ -81,7 +81,7 @@ export default async function Page({ params }: ParamsProps) {
   console.log('-> paramss', params)
   return (
     <main>
-      <Home locale={params.locale} />
+      <Home /*locale={params.locale}*/ />
       <About />
       <ServicesSection />
       <Features />

@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl'
-import ScrollIndicator from '../ScrollIndicator'
+import ScrollIndicator from '../common/ScrollIndicator'
 import { getTranslations } from '@/app/_i18n'
 
 interface PageHeaderProps {

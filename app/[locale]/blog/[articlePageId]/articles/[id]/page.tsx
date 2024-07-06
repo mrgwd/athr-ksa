@@ -1,38 +1,16 @@
 import Image from 'next/image'
 import { Metadata } from 'next'
-import ShareButton from '@/app/_components/shareButton'
+import ShareButton from '@/app/_components/common/shareButton'
 import Recommendations from '@/app/_components/blog/Recommendations'
 import Link from 'next/link'
 import { Article as ArticleType, LinkInBody } from '@/app/_types/articlesTypes'
+import {
+  getArabicArticles,
+  getEnglishArticles,
+  getUserIp,
+} from '@/app/_api/articles.api'
 
-const getUserIp = async () => {
-  const res = await fetch('https://api.ipify.org?format=json')
-  const data = await res.json()
-  return data.ip
-}
 const userIp = await getUserIp()
-
-const getArabicArticles = async () => {
-  const formData = new FormData()
-  formData.append('ip_address', userIp)
-  const res = await fetch('https://new.athr-ksa.com/api/all-artical-arabic', {
-    method: 'POST',
-    body: formData,
-  })
-  const data = await res.json()
-  return data.data
-}
-const getEnglishArticles = async () => {
-  const formData = new FormData()
-  formData.append('ip_address', userIp)
-  const res = await fetch('https://new.athr-ksa.com/api/all-artical-english', {
-    method: 'POST',
-    body: formData,
-  })
-  const data = await res.json()
-  return data.data
-}
-
 const arabicArticles = await getArabicArticles()
 const englishArticles = await getEnglishArticles()
 

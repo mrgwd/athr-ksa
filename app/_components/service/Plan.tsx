@@ -11,12 +11,7 @@ interface PlanProps {
   lang?: string
   features: string[]
 }
-export default function Plan({
-  isPop = false,
-  plan,
-  features,
-  lang = 'ar',
-}: PlanProps) {
+export default function Plan({ isPop = false, plan, features }: PlanProps) {
   // const t = await getTranslations({ locale: lang })
   const t = useTranslations('')
   const locale = useLocale()

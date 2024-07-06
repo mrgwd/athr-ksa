@@ -1,3 +1,8 @@
+import {
+  getUserIp,
+  getEnglishArticles,
+  getArabicArticles,
+} from '@/app/_api/articles.api'
 import Articles from '@/app/_components/blog/Articles'
 import { Article } from '@/app/_types/articlesTypes'
 
@@ -22,37 +27,7 @@ export default async function Page({
 }: {
   params: { articlePageId: string; locale: string }
 }) {
-  const getUserIp = async () => {
-    const res = await fetch('https://api.ipify.org?format=json')
-    const data = await res.json()
-    return data.ip
-  }
   const userIp = await getUserIp()
-
-  const getArabicArticles = async () => {
-    const formData = new FormData()
-    formData.append('ip_address', userIp)
-    const res = await fetch('https://new.athr-ksa.com/api/all-artical-arabic', {
-      method: 'POST',
-      body: formData,
-    })
-    const data = await res.json()
-    return data.data
-  }
-  const getEnglishArticles = async () => {
-    const formData = new FormData()
-    formData.append('ip_address', userIp)
-    const res = await fetch(
-      'https://new.athr-ksa.com/api/all-artical-english',
-      {
-        method: 'POST',
-        body: formData,
-      },
-    )
-    const data = await res.json()
-    return data.data
-  }
-
   const englishArticles = await getEnglishArticles()
   const arabicArticles = await getArabicArticles()
 
@@ -64,7 +39,7 @@ export default async function Page({
   )
   return (
     <div>
-      {/* <Articles arabicArticles={arArticles} englishArticles={enArticles} /> */}
+      <Articles arabicArticles={arArticles} englishArticles={enArticles} />
     </div>
   )
 }

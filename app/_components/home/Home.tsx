@@ -1,20 +1,25 @@
-import ScrollIndicator from '../ScrollIndicator'
-import { getTranslations } from '@/app/_i18n/getTranslations'
-export default async function Home({
-  locale = 'ar',
-}: {
-  locale: string | undefined
-}) {
-  const t = await getTranslations({ locale: locale })
+"use client";
+import { useTranslations } from "next-intl";
+import ScrollIndicator from "../common/ScrollIndicator";
+import { getTranslations } from "@/app/_i18n/getTranslations";
+import Button from "../common/Button";
+export default /*async*/ function Home() {
+  //   {
+  //   locale = 'ar',
+  // }: {
+  //   locale: string | undefined
+  // }
+  // const t = await getTranslations({ locale: locale })
+  const t = useTranslations();
   return (
-    <div className="container flex flex-col-reverse mx-auto md:mt-16 md:flex md:flex-row items-center px-4 mt-8 lg:px-8 sm:mt-16 gap-4 md:gap-16 lg:gap-10 xl:gap-44 justify-between lg:mt-28 xl:mt-32">
-      <div className="child:max-md:text-center max-sm:flex flex-col items-center">
-        <h1 className="mb-4 max-sm:mt-8 text-main-dark sm:text-xl sm:font-light md:text-2xl 2xl:text-3xl">
-          {t('home.heading')}
-          <span className="text-main-color"> {t('home.athr')}</span>
+    <div className="container mx-auto mt-8 flex flex-col-reverse items-center justify-between gap-4 px-4 sm:mt-16 md:mt-16 md:flex md:flex-row md:gap-16 lg:mt-28 lg:gap-10 lg:px-8 xl:mt-32 xl:gap-44">
+      <div className="flex-col items-center child:max-md:text-center max-sm:flex">
+        <h1 className="mb-4 text-main-dark max-sm:mt-8 sm:text-xl sm:font-light md:text-2xl 2xl:text-3xl">
+          {t("home.heading")}
+          <span className="text-main-color"> {t("home.athr")}</span>
         </h1>
-        <h2 className="text-2xl font-semibold text-main-dark sm:text-3xl lg:max-w-md 2xl:max-w-lg sm:!leading-normal 2xl:text-4xl ">
-          {t('home.paragraph1')}
+        <h2 className="text-2xl font-semibold text-main-dark sm:text-3xl sm:!leading-normal lg:max-w-md 2xl:max-w-lg 2xl:text-4xl ">
+          {t("home.paragraph1")}
         </h2>
         <svg
           className="w-48 max-md:mx-auto sm:w-auto"
@@ -33,12 +38,8 @@ export default async function Home({
           />
         </svg>
 
-        <a
-          className="text-md block w-max rounded-full bg-gradient-to-l from-main-color to-main-color/75 px-8 py-3 text-white transition duration-300 hover:from-white hover:to-white hover:text-main-color hover:outline hover:outline-2 hover:outline-main-color max-md:mx-auto sm:px-10 sm:py-3 sm:text-lg"
-          href="#contact"
-        >
-          {t('home.mainButton')}
-        </a>
+        <Button text={t("home.mainButton")} href="#contact" className="w-max" />
+
         <ScrollIndicator variant="simple" />
       </div>
 
@@ -261,5 +262,5 @@ export default async function Home({
         </g>
       </svg>
     </div>
-  )
+  );
 }

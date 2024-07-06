@@ -976,6 +976,54 @@
       }
     }
   },
+  "careers": {
+    "heading1": "Discover",
+    "athr": "The Impact",
+    "heading2": "You Can Make!",
+    "button": "Careers",
+    "benefits": {
+      "heading": "Benefits",
+      "1": {
+        "subHeading": "Competitive Salaries",
+        "description": "We offer competitive salaries and additional benefits to our employees."
+      },
+      "2": {
+        "subHeading": "Comfortable Work Environment",
+        "description": "We strive to provide a comfortable and motivating work environment for our employees."
+      },
+      "3": {
+        "subHeading": "Development Opportunities",
+        "description": "We provide development and training opportunities for our employees to enhance their skills."
+      },
+      "4": {
+        "subHeading": "Work-Life Balance",
+        "description": "We prioritize work-life balance for our employees."
+      }
+    },
+    "lifeAtAthr": {
+      "heading": "Life at Impact",
+      "1": {
+        "subHeading": "Comfortable Work Environment",
+        "description": "We strive to provide a comfortable and motivating work environment for our employees."
+      },
+      "2": {
+        "subHeading": "Creative and Innovative Team",
+        "description": "We work as a creative and innovative team to achieve our goals."
+      },
+      "3": {
+        "subHeading": "Work-Life Balance",
+        "description": "We prioritize work-life balance for our employees."
+      }
+    },
+    "jobs": {
+      "heading": "Job Openings",
+      "filter": {
+        "filterBy": "Filter By",
+        "apply": "Apply"
+      },
+      "openPosition": "Open Position"
+    }
+  },
   "FAQsSection": {
     "heading": "Frequently Asked Questions",
     "faqs": {
