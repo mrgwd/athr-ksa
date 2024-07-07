@@ -1,6 +1,8 @@
 import { Job } from "@/app/_types/jobsTypes";
 import JobCard from "./JobCard";
 import { useTranslations } from "next-intl";
+import Note from "./Note";
+import { InfoCircle } from "iconsax-react";
 
 export default function JobsList({ jobs }: { jobs: Job[] }) {
   const t = useTranslations("careers.jobs");
@@ -21,6 +23,18 @@ export default function JobsList({ jobs }: { jobs: Job[] }) {
             location={job.location === "1" ? "Remote" : "Onsite"}
           />
         ))}
+      </div>
+      <div className="*:mt-4" dir="auto">
+        {!jobs.length && (
+          <p className="text-center text-slate-400">{t("noJobs")}</p>
+        )}
+        <Note
+          note={t("cantFindJob")}
+          buttonText={t("sendCV")}
+          buttonLink="mailto:info@athr-sa.com"
+        >
+          <InfoCircle />
+        </Note>
       </div>
     </div>
   );
