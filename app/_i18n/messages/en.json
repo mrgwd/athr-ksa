@@ -1021,7 +1021,10 @@
         "filterBy": "Filter By",
         "apply": "Apply"
       },
-      "openPosition": "Open Position"
+      "openPosition": "Open Position",
+      "noJobs": "There are no open positions for this specific location or team. Check again soon!",
+      "cantFindJob": "Can't find the right role? Email your CV to info@athr-sa.com to be considered for new positions in the future.",
+      "sendCV": "Send CV"
     }
   },
   "FAQsSection": {
